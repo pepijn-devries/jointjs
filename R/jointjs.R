@@ -1,57 +1,40 @@
 #' Create an Interactive JointJS Diagram
 #'
 #' TODO
-#' @param gridSize TODO
-#' @param drawGrid TODO
-#' @param backgroundColor TODO
+#' @param paper TODO
+#' @param graph TODO
 #' @param width TODO
 #' @param height TODO
 #' @param elementId TODO
 #' @returns TODO
 #' @examples
 #' if (interactive()) {
-#'   jointjs(gridSize = 20, drawGrid = TRUE, backgroundColor = "#E9ECEF")
+#'   jointjs(list(gridSize = 20, drawGrid = TRUE, backgroundColor = "#E9ECEF"))
 #' }
 #' @export
-jointjs <- function(gridSize = 20, drawGrid = TRUE, backgroundColor = "#E9ECEF", 
-                    width = NULL, height = NULL, elementId = NULL) {
-  
-  x = list(
-    gridSize = gridSize,
-    drawGrid = drawGrid,
-    backgroundColor = backgroundColor
-  )
+jointjs <- function(
+    paper = list(
+      gridSize = 20,
+      drawGrid = TRUE,
+      color = "#E9ECEF"
+    ),
+    graph = NULL,
+    width = NULL,
+    height = NULL,
+    elementId = NULL) {
   
   htmlwidgets::createWidget(
     name      = "jointjs",
-    x,
+    list(
+      paper = paper,
+      graph = graph
+    ),
     width     = width,
     height    = height,
     package   = "jointjs",
     elementId = elementId
   )
 }
-
-#' Custom HTML Layout for JointJS Widget
-#' 
-#' This function is automatically recognized by htmlwidgets. 
-#' It builds the menu and canvas container as a single unit.
-#' @noRd
-jointjs_html <- function(id, style, class, ...) {
-  htmltools::tags$div(
-    id = paste0("wrapper-", id),
-    class = "jointjs-widget-wrapper",
-    htmltools::tags$div(
-      class = "jointjs-menu",
-      style = "padding: 10px; background: #343a40; color: white; display: flex; gap: 10px; align-items: center;",
-      htmltools::tags$h4("Controls:", style = "margin: 0; font-size: 14px; font-family: sans-serif;"),
-      htmltools::tags$button(id = "btn-add-rect", "Add Rectangle", class = "btn"),
-      htmltools::tags$button(id = "btn-clear", "Clear Canvas", class = "btn")
-    ),
-    htmltools::tags$div(id = id, style = style, class = class)
-  )
-}
-
 
 #' Shiny bindings for jointjs
 #'

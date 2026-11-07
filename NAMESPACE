@@ -2,4 +2,6 @@
 
 export(jointjs)
 export(jointjsOutput)
+export(jointjs_cell)
+export(jointjs_element)
 export(renderJointjs)

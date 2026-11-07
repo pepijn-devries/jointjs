@@ -1,3 +1,11 @@
+if (window.jQuery && !window.jQuery.camelCase) {
+    window.jQuery.camelCase = function(string) {
+        return string.replace(/-([a-z])/g, function(all, letter) {
+            return letter.toUpperCase();
+        });
+    };
+}
+
 HTMLWidgets.widget({
 
   name: 'jointjs',
@@ -21,11 +29,28 @@ HTMLWidgets.widget({
           model: graph,
           width: el.clientWidth || width || 800,
           height: el.clientHeight || height || 500,
-          gridSize: x.gridSize || 10,
-          // In v3.x, passing drawGrid as true inside options triggers the base grid
-          drawGrid: x.drawGrid || false,
-          background: { color: x.backgroundColor || '#F8F9FA' },
-          interactive: true 
+          gridSize: x.paper.gridSize || 10,
+          drawGrid: x.paper.drawGrid || false,
+          background: { color: x.paper.color || '#F8F9FA' },
+          interactive: x.paper.interactive || true,
+          snapLinks: { radius: 20 },
+          allowLink: x.paper.allowLink || true,
+    
+          // This function decides if a link can connect to a target element
+          validateConnection: function(cellViewS, magnetS, cellViewT, magnetT, end, linkView) {
+            // Prevent linking an element to itself
+            if (cellViewS === cellViewT) return false;
+            // Ensure a connection is only made if dragging onto a valid target element
+            return cellViewT && cellViewT.model.isElement();
+          },
+
+          // This tells JointJS what kind of link object to create when the user drags a new connection
+          defaultLink: new joint.dia.Link({
+            attrs: {
+              '.connection': { stroke: '#2c3e50', 'stroke-width': 2 },
+              '.marker-target': { fill: '#2c3e50', d: 'M 10 0 L 0 5 L 10 10 z' } // Adds an arrowhead
+            }
+          })
         });
 
         // Optional Grid styling overrides for JointJS v3.x
@@ -38,35 +63,51 @@ HTMLWidgets.widget({
         }
 
         graph.clear();
-
-        // --- GLOBAL EVENT LISTENER ---
-        if (window._jointjsClickListener) {
-          document.removeEventListener('click', window._jointjsClickListener);
+        if (x.graph) {
+          graph.fromJSON(x.graph);
         }
+        
+        var elId = el.id;
 
-        window._jointjsClickListener = function(event) {
-          if (event.target.id === 'btn-add-rect') {
-            event.preventDefault();
-            var rect = new joint.shapes.standard.Rectangle();
-            var randomX = Math.floor(Math.random() * 200) + 50;
-            var randomY = Math.floor(Math.random() * 200) + 50;
-            
-            rect.position(randomX, randomY);
-            rect.resize(120, 50);
-            rect.attr({
-              body: { fill: '#007BFF', rx: 5, ry: 5, stroke: '#0056B3', strokeWidth: 2 },
-              label: { text: 'New Node', fill: 'white', fontSize: 13, fontFamily: 'sans-serif' }
-            });
-            graph.addCell(rect);
+        paper.on('cell:pointerclick', function(cellView) {
+          var model = cellView.model;
+          var eventData = { 
+            id: model.id, 
+            type: model.get('type'),
+            timestamp: new Date().getTime() 
+          };
+          if (window.Shiny) {
+            Shiny.setInputValue(elId + '_cell_click', eventData, {priority: 'event'});
+          }
+        });
+        
+        graph.on('add remove change change:position', function() {
+          // Locate the native SVG element rendered by JointJS inside wrapper div
+          var svgElement = el.querySelector('svg');
+          if (!svgElement) return;
+
+          // Serialize the live DOM element into an XML text string
+          var serializer = new XMLSerializer();
+          var svgString = serializer.serializeToString(svgElement);
+
+          // Wrap it in standard XML headers so it's a valid standalone SVG file
+          if (!svgString.startsWith('<?xml')) {
+            svgString = '<?xml version="1.0" encoding="utf-8"?>\n' + svgString;
           }
 
-          if (event.target.id === 'btn-clear') {
-            event.preventDefault();
-            graph.clear();
+          // Stream the raw string back to Shiny app
+          if (window.Shiny) {
+            Shiny.setInputValue(elId + '_svg', svgString);
           }
-        };
+        });
+        
+        graph.on('add remove change', function() {
+          var graphJSON = graph.toJSON();
+          if (window.Shiny) {
+            Shiny.setInputValue(elId + '_graph_state', graphJSON);
+          }
+        });
 
-        document.addEventListener('click', window._jointjsClickListener);
       },
 
       resize: function(width, height) {

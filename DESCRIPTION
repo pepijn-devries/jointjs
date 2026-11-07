@@ -16,7 +16,6 @@ Authors@R:
     )
 Description: Create interactive JointJS diagrams. - TODO.
 Imports:
-    htmltools,
     htmlwidgets
 License: GPL (>= 3)
 Encoding: UTF-8

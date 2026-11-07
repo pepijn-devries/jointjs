@@ -5,20 +5,17 @@
 \title{Create an Interactive JointJS Diagram}
 \usage{
 jointjs(
-  gridSize = 20,
-  drawGrid = TRUE,
-  backgroundColor = "#E9ECEF",
+  paper = list(gridSize = 20, drawGrid = TRUE, color = "#E9ECEF"),
+  graph = NULL,
   width = NULL,
   height = NULL,
   elementId = NULL
 )
 }
 \arguments{
-\item{gridSize}{TODO}
+\item{paper}{TODO}
 
-\item{drawGrid}{TODO}
-
-\item{backgroundColor}{TODO}
+\item{graph}{TODO}
 
 \item{width}{TODO}
 
