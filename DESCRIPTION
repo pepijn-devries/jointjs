@@ -16,9 +16,18 @@ Authors@R:
     )
 Description: Create interactive JointJS diagrams. - TODO.
 Imports:
-    htmlwidgets
+    htmlwidgets,
+    rlang,
+    R6
 License: GPL (>= 3)
 Encoding: UTF-8
 Language: en-GB
 Roxygen: list(markdown = TRUE)
 Config/roxygen2/version: 8.1.0
+Collate: 
+    'helpers.R'
+    'cells.R'
+    'elements.R'
+    'graphs.R'
+    'jointjs-package.R'
+    'jointjs.R'

@@ -1,79 +1,29 @@
+#' @title jointjs_cell: The Basis for JointJS Elements
+#' @description
 #' TODO
-#' 
-#' TODo
-#' @param id TODO
-#' @param type TODO
-#' @param z TODO
-#' @param attrs TODO
-#' @returns TODO
-#' @examples
-#' # TODO
-#' 
+#' @include helpers.R
 #' @export
-jointjs_cell <- function(id, type, z, attrs) {
-  structure(
-    list(
-      id    = id,
-      type  = type,
-      z     = z,
-      attrs = attrs
+jointjs_cell <-
+  R6::R6Class(
+    "jointjs_cell",
+    public = list(
+      #' @description
+      #' A short description...
+      #' 
+      #' @param id TODO
+      #' @param type TODO
+      #' @param z TODO
+      #' @param ... TODO
+      initialize = \(id, type, z, ...) {
+        if (missing(id)) private$id <- .generate_hex_id()
+        attrs <- list(...)
+        if (length(attrs) > 0) private$attrs <- attrs
+      }
     ),
-    class = "jointjs_cell"
-  )
-}
-
-#' TODO
-#' 
-#' TODO
-#' @inheritParams jointjs_cell
-#' @param body TODO
-#' @param label TODO
-#' @param position TODO
-#' @param size TODO
-#' @param angle TODO
-#' @param ports TODO
-#' @param ... TODO
-#' @returns TODO
-#' @examples
-#' # TODO
-#' @export
-jointjs_element <- function(
-    id,
-    type     = "standard.Rectangle",
-    z        = 1L,
-    body     = list(
-      stroke = "#000000",
-      fill   = "#FFFFFF",
-      rx     = 5L,
-      ry     = 5L,
-      magnet = TRUE
-    ),
-    label    = list(
-      fontSize   = 13L,
-      fill       = "#000000",
-      text       = "Node",
-      fontFamily = "sans-serif"
-    ),
-    position = list(x = 0, y = 0),
-    size     = list(width = 120, height = 50),
-    angle    = 0,
-    ports    = list(),
-    ...) {
-  attrs <- list(
-    body = body,
-    label = label
-  )
-  cell <- jointjs_cell(id = id, type = type, z = z, attrs = attrs) |>
-    unclass() |>
-    c(
-      list(
-        position = position,
-        size     = size,
-        angle    = angle,
-        ports    = ports
-      ),
-      list(...)
+    private = list(
+      id    = -1L,
+      type  = "standard.Rectangle",
+      z     = 1L,
+      attrs = NULL
     )
-  class(cell) <- c("jointjs_element", "jointjs_cell")
-  cell
-}
+  )

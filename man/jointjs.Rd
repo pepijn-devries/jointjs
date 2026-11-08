@@ -31,6 +31,6 @@ TODO
 }
 \examples{
 if (interactive()) {
-  jointjs(gridSize = 20, drawGrid = TRUE, backgroundColor = "#E9ECEF")
+  jointjs(list(gridSize = 20, drawGrid = TRUE, backgroundColor = "#E9ECEF"))
 }
 }

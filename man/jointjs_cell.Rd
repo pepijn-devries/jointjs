@@ -2,26 +2,56 @@
 % Please edit documentation in R/cells.R
 \name{jointjs_cell}
 \alias{jointjs_cell}
-\title{TODO}
-\usage{
-jointjs_cell(id, type, z, attrs)
-}
-\arguments{
-\item{id}{TODO}
-
-\item{type}{TODO}
-
-\item{z}{TODO}
-
-\item{attrs}{TODO}
-}
-\value{
+\title{jointjs_cell: The Basis for JointJS Elements}
+\description{
 TODO
 }
-\description{
-TODo
+\section{Methods}{
+\subsection{Public methods}{
+  \itemize{
+    \item \href{#method-jointjs_cell-initialize}{\code{jointjs_cell$new()}}
+    \item \href{#method-jointjs_cell-clone}{\code{jointjs_cell$clone()}}
+  }
 }
-\examples{
-# TODO
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_cell-initialize"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_cell-initialize}{}}}
+\subsection{\code{jointjs_cell$new()}}{
+  A short description...
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_cell$new(id, type, z, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{id}}{TODO}
+      \item{\code{type}}{TODO}
+      \item{\code{z}}{TODO}
+      \item{\code{...}}{TODO}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_cell-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_cell-clone}{}}}
+\subsection{\code{jointjs_cell$clone()}}{
+  The objects of this class are cloneable with this method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_cell$clone(deep = FALSE)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{deep}}{Whether to make a deep clone.}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
 
 }
