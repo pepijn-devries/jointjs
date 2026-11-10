@@ -15,13 +15,16 @@ jointjs_cell <-
       #' @param z TODO
       #' @param ... TODO
       initialize = \(id, type, z, ...) {
-        if (missing(id)) private$id <- .generate_hex_id()
+        if (missing(id)) private$id <- .generate_hex_id() else
+          private$id <- id
+        if (!missing(type)) private$type <- type
+        if (!missing(z)) private$z <- z
         attrs <- list(...)
         if (length(attrs) > 0) private$attrs <- attrs
       }
     ),
     private = list(
-      id    = -1L,
+      id    = "",
       type  = "standard.Rectangle",
       z     = 1L,
       attrs = NULL

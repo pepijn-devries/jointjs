@@ -21,6 +21,7 @@ TODO
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="get_list"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-get_list'><code>jointjs_element$get_list()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_body"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_body'><code>jointjs_element$set_body()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_label"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_label'><code>jointjs_element$set_label()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_line"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_line'><code>jointjs_element$set_line()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_position"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_position'><code>jointjs_element$set_position()</code></a></span></li>
 </ul>
 </details>}}

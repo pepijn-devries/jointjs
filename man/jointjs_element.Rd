@@ -12,33 +12,19 @@ TODO
 \section{Methods}{
 \subsection{Public methods}{
   \itemize{
-    \item \href{#method-jointjs_element-initialize}{\code{jointjs_element$new()}}
     \item \href{#method-jointjs_element-set_position}{\code{jointjs_element$set_position()}}
     \item \href{#method-jointjs_element-set_label}{\code{jointjs_element$set_label()}}
     \item \href{#method-jointjs_element-set_body}{\code{jointjs_element$set_body()}}
+    \item \href{#method-jointjs_element-set_line}{\code{jointjs_element$set_line()}}
     \item \href{#method-jointjs_element-get_list}{\code{jointjs_element$get_list()}}
     \item \href{#method-jointjs_element-clone}{\code{jointjs_element$clone()}}
   }
 }
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-jointjs_element-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-jointjs_element-initialize}{}}}
-\subsection{\code{jointjs_element$new()}}{
-  TODO
-  \subsection{Usage}{
-    \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$new(...)}
-    \if{html}{\out{</div>}}
-  }
-  \subsection{Arguments}{
-    \if{html}{\out{<div class="arguments">}}
-    \describe{
-      \item{\code{...}}{TODO}
-    }
-    \if{html}{\out{</div>}}
-  }
-}
-
+\if{html}{\out{<details open><summary>Inherited methods</summary>
+<ul>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_cell" data-id="initialize"><a href='../../jointjs/html/jointjs_cell.html#method-jointjs_cell-initialize'><code>jointjs_cell$initialize()</code></a></span></li>
+</ul>
+</details>}}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-jointjs_element-set_position"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_position}{}}}
@@ -98,6 +84,27 @@ TODO
       \item{\code{stroke}}{TODO}
       \item{\code{strokeWidth}}{TODO}
       \item{\code{magnet}}{TODO}
+      \item{\code{...}}{TODO}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_line"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_line}{}}}
+\subsection{\code{jointjs_element$set_line()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_line(stroke, strokeWidth, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{stroke}}{TODO}
+      \item{\code{strokeWidth}}{TODO}
       \item{\code{...}}{TODO}
     }
     \if{html}{\out{</div>}}

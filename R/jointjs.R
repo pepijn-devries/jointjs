@@ -53,7 +53,7 @@ jointjs <- function(
 #' @name jointjs-shiny
 #'
 #' @export
-jointjsOutput <- function(outputId, width = "100%", height = "400px"){
+jointjsOutput <- function(outputId, width = "100%", height = "400px") {
   htmlwidgets::shinyWidgetOutput(outputId, "jointjs", width, height, package = "jointjs")
 }
 

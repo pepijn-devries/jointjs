@@ -1,0 +1,50 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# jointjs
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+The goal of jointjs is to …
+
+## Installation
+
+You can install the development version of jointjs from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("pepijn-devries/jointjs")
+```
+
+## Example
+
+``` r
+library(jointjs)
+graph <-
+  jointjs_graph$
+  ## Create a new graph:
+  new()$
+  ## Add elements:
+  add_elements(
+    ## Add a rectangle:
+    jointjs_rectangle$new(id = "hello")$
+      set_body("white", "black", 2L, magnet = TRUE, rx = 5, ry = 5)$
+      set_label("Hello", "black")$
+      set_position(10, 10),
+    ## Add a circle:
+    jointjs_circle$new(id = "world")$
+      set_body("white", "black", 2L, magnet = TRUE)$
+      set_label("world", "black")$
+      set_position(100, 10),
+    ## Add a link, joining the rectangle and circle:
+    jointjs_link$new(list(id = "hello"), list(id = "world"))$
+      set_line("black", 2)
+  )
+## Get and show widget:
+graph$get_widget(width = 170, height = 70)
+```
+
+<img src="man/figures/README-example-1.png" alt="" width="100%" />

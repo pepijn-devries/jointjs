@@ -1,3 +1,4 @@
+// Fix for mismatch in jQuery dependency of JointJS and Shiny
 if (window.jQuery && !window.jQuery.camelCase) {
     window.jQuery.camelCase = function(string) {
         return string.replace(/-([a-z])/g, function(all, letter) {
@@ -22,6 +23,33 @@ HTMLWidgets.widget({
         
         // Wipe out old elements inside the container target
         el.innerHTML = '';
+        
+        function syncGraphToShiny() {
+          if (window.Shiny) {
+            var graphJSON = graph.toJSON();
+            Shiny.setInputValue(elId + '_graph_state', graphJSON);
+          }
+        }
+
+        function syncSvgToShiny() {
+          // Locate the native SVG element rendered by JointJS inside wrapper div
+          var svgElement = el.querySelector('svg');
+          if (!svgElement) return;
+
+          // Serialize the live DOM element into an XML text string
+          var serializer = new XMLSerializer();
+          var svgString = serializer.serializeToString(svgElement);
+
+          // Wrap it in standard XML headers so it's a valid standalone SVG file
+          if (!svgString.startsWith('<?xml')) {
+            svgString = '<?xml version="1.0" encoding="utf-8"?>\n' + svgString;
+          }
+
+          // Stream the raw string back to Shiny app
+          if (window.Shiny) {
+            Shiny.setInputValue(elId + '_svg', svgString);
+          }
+        }
 
         // Initialize JointJS Paper using 3.7.7 syntax
         paper = new joint.dia.Paper({
@@ -82,32 +110,14 @@ HTMLWidgets.widget({
         });
         
         graph.on('add remove change change:position', function() {
-          // Locate the native SVG element rendered by JointJS inside wrapper div
-          var svgElement = el.querySelector('svg');
-          if (!svgElement) return;
-
-          // Serialize the live DOM element into an XML text string
-          var serializer = new XMLSerializer();
-          var svgString = serializer.serializeToString(svgElement);
-
-          // Wrap it in standard XML headers so it's a valid standalone SVG file
-          if (!svgString.startsWith('<?xml')) {
-            svgString = '<?xml version="1.0" encoding="utf-8"?>\n' + svgString;
-          }
-
-          // Stream the raw string back to Shiny app
-          if (window.Shiny) {
-            Shiny.setInputValue(elId + '_svg', svgString);
-          }
-        });
-        
-        graph.on('add remove change', function() {
-          var graphJSON = graph.toJSON();
-          if (window.Shiny) {
-            Shiny.setInputValue(elId + '_graph_state', graphJSON);
-          }
+          syncSvgToShiny();
+          syncGraphToShiny();
         });
 
+        paper.on('render:done', function() {
+          syncSvgToShiny();
+          syncGraphToShiny();
+        });
       },
 
       resize: function(width, height) {

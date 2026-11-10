@@ -12,6 +12,7 @@ TODO
     \item \href{#method-jointjs_graph-initialize}{\code{jointjs_graph$new()}}
     \item \href{#method-jointjs_graph-add_elements}{\code{jointjs_graph$add_elements()}}
     \item \href{#method-jointjs_graph-get_widget}{\code{jointjs_graph$get_widget()}}
+    \item \href{#method-jointjs_graph-get_list}{\code{jointjs_graph$get_list()}}
     \item \href{#method-jointjs_graph-clone}{\code{jointjs_graph$clone()}}
   }
 }
@@ -69,6 +70,18 @@ TODO
     \describe{
       \item{\code{...}}{TODO}
     }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_graph-get_list"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_graph-get_list}{}}}
+\subsection{\code{jointjs_graph$get_list()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_graph$get_list()}
     \if{html}{\out{</div>}}
   }
 }

@@ -9,12 +9,6 @@ jointjs_element <- R6::R6Class(
   public = list(
     #' @description
     #' TODO
-    #' @param ... TODO
-    initialize = \(...) {
-      
-    },
-    #' @description
-    #' TODO
     #' @param x,y TODO
     set_position = \(x, y) {
       private$position <- list(x = x, y = y)
@@ -28,11 +22,7 @@ jointjs_element <- R6::R6Class(
     #' @param fontSize TODO
     #' @param ... TODO
     set_label = function(text, color, fontFamily, fontSize, ...) {
-      non_missing <- names(formals())
-      non_missing <- non_missing[!non_missing %in% "..."]
-      non_missing <- Filter(function(x) !rlang::is_missing(x),
-                            mget(non_missing))
-      non_missing <- c(non_missing, list(...))
+      non_missing <- .capture_r6_inputs()
       private$attrs$label[names(non_missing)] <- non_missing
       self
     },
@@ -44,12 +34,18 @@ jointjs_element <- R6::R6Class(
     #' @param magnet TODO
     #' @param ... TODO
     set_body = function(fill, stroke, strokeWidth, magnet, ...) {
-      non_missing <- names(formals())
-      non_missing <- non_missing[!non_missing %in% "..."]
-      non_missing <- Filter(function(x) !rlang::is_missing(x),
-                            mget(non_missing))
-      non_missing <- c(non_missing, list(...))
+      non_missing <- .capture_r6_inputs()
       private$attrs$body[names(non_missing)] <- non_missing
+      self
+    },
+    #' @description
+    #' TODO
+    #' @param stroke TODO
+    #' @param strokeWidth TODO
+    #' @param ... TODO
+    set_line = function(stroke, strokeWidth, ...) {
+      non_missing <- .capture_r6_inputs()
+      private$attrs$line[names(non_missing)] <- non_missing
       self
     },
     #' @description
@@ -93,6 +89,7 @@ jointjs_circle <- R6::R6Class(
     #' TODO
     #' @param ... TODO
     initialize = \(...) {
+      super$initialize(...)
       private$type <- "standard.Circle"
     }
   ),
@@ -113,10 +110,37 @@ jointjs_rectangle <- R6::R6Class(
     #' TODO
     #' @param ... TODO
     initialize = \(...) {
+      super$initialize(...)
       private$type <- "standard.Rectangle"
     }
   ),
   private = list(
     
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_link <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param source TODO
+    #' @param target TODO
+    #' @param ... TODO
+    initialize = \(source, target, ...) {
+      super$initialize(...)
+      private$source <- source
+      private$target <- target
+      private$type <- "standard.Link"
+    }
+  ),
+  private = list(
+    source = list(id = NULL),
+    target = list(id = NULL)
   )
 )
