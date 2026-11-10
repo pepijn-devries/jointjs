@@ -14,11 +14,17 @@ Authors@R:
         role = "cph",
         comment = "Authors of the bundled JointJS library")
     )
-Description: Create interactive JointJS diagrams. - TODO.
+Description: Create interactive 'JointJS' diagrams. Wraps the JavaScript library
+    'JointJS' to create interactive html widgets. It will let the user draw
+    and interact with diagrams.
+Depends:
+    R (>= 4.1.0)
 Imports:
     htmlwidgets,
-    rlang,
-    R6
+    R6,
+    rlang
+Suggests:
+    shiny
 License: GPL (>= 3)
 Encoding: UTF-8
 Language: en-GB

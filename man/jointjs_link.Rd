@@ -42,7 +42,7 @@ TODO
   TODO
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$new(source, target, ...)}
+    \preformatted{jointjs_element$new(source, target, vertices, ...)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
@@ -50,6 +50,7 @@ TODO
     \describe{
       \item{\code{source}}{TODO}
       \item{\code{target}}{TODO}
+      \item{\code{vertices}}{TODO}
       \item{\code{...}}{TODO}
     }
     \if{html}{\out{</div>}}

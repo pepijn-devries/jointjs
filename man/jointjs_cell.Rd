@@ -4,7 +4,10 @@
 \alias{jointjs_cell}
 \title{jointjs_cell: The Basis for JointJS Elements}
 \description{
-TODO
+It is a backbone structure used by jointjs to construct elements for a diagram.
+Usually you don't initiate cells directly. Rather, it is more efficient to
+create its grandchildren: \link{jointjs_circle}, \link{jointjs_image}, \link{jointjs_rectangle},
+etc.
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -17,7 +20,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_cell-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_cell-initialize}{}}}
 \subsection{\code{jointjs_cell$new()}}{
-  A short description...
+  Initialise a jointjs_cell class object.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_cell$new(id, type, z, ...)}
@@ -26,10 +29,17 @@ TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{id}}{TODO}
-      \item{\code{type}}{TODO}
-      \item{\code{z}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{id}}{A unique identifier (\code{character}) used to identify the cell.
+It can be used to link cells together, by referring to these ids. By
+default a 16 character random hexadecimal code is generated as an id.}
+      \item{\code{type}}{Specifies the type of cell this object represents. Its advised
+to create cells using its or grand-children
+(e.g. \link{jointjs_circle}, \link{jointjs_rectangle}, etc.). They will automatically
+assign the correct type for you. By default it will be set to
+\code{"standard.Rectangle"} (a rectangle).}
+      \item{\code{z}}{A depth index. It will determine the plotting order on its
+parent container.}
+      \item{\code{...}}{Parameters that will be set as SVG attributes to this object.}
     }
     \if{html}{\out{</div>}}
   }

@@ -1,6 +1,9 @@
 #' @title jointjs_cell: The Basis for JointJS Elements
 #' @description
-#' TODO
+#' It is a backbone structure used by jointjs to construct elements for a diagram.
+#' Usually you don't initiate cells directly. Rather, it is more efficient to
+#' create its grandchildren: [jointjs_circle], [jointjs_image], [jointjs_rectangle],
+#' etc.
 #' @include helpers.R
 #' @export
 jointjs_cell <-
@@ -8,12 +11,18 @@ jointjs_cell <-
     "jointjs_cell",
     public = list(
       #' @description
-      #' A short description...
-      #' 
-      #' @param id TODO
-      #' @param type TODO
-      #' @param z TODO
-      #' @param ... TODO
+      #' Initialise a jointjs_cell class object.
+      #' @param id A unique identifier (`character`) used to identify the cell.
+      #' It can be used to link cells together, by referring to these ids. By
+      #' default a 16 character random hexadecimal code is generated as an id.
+      #' @param type Specifies the type of cell this object represents. Its advised
+      #' to create cells using its or grand-children
+      #' (e.g. [jointjs_circle], [jointjs_rectangle], etc.). They will automatically
+      #' assign the correct type for you. By default it will be set to
+      #' `"standard.Rectangle"` (a rectangle).
+      #' @param z A depth index. It will determine the plotting order on its
+      #' parent container.
+      #' @param ... Parameters that will be set as SVG attributes to this object.
       initialize = \(id, type, z, ...) {
         if (missing(id)) private$id <- .generate_hex_id() else
           private$id <- id

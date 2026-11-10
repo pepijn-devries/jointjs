@@ -42,12 +42,13 @@ TODO
   TODO
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$new(...)}
+    \preformatted{jointjs_element$new(href, ...)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
+      \item{\code{href}}{TODO}
       \item{\code{...}}{TODO}
     }
     \if{html}{\out{</div>}}

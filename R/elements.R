@@ -154,8 +154,9 @@ jointjs_borderedImage <- R6::R6Class(
   public = list(
     #' @description
     #' TODO
+    #' @param href TODO
     #' @param ... TODO
-    initialize = \(...) {
+    initialize = \(href, ...) {
       super$initialize(...)
       private$type <- "standard.BorderedImage"
     }
@@ -224,7 +225,35 @@ jointjs_cylinder <- R6::R6Class(
 #' 
 #' TODO
 #' @export
-jointjs_rectangle <- R6::R6Class(
+jointjs_doubleLink <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param source TODO
+    #' @param target TODO
+    #' @param vertices TODO
+    #' @param ... TODO
+    initialize = \(source, target, vertices, ...) {
+      super$initialize(...)
+      private$source <- source
+      private$target <- target
+      private$vertices <- target
+      private$type <- "standard.DoubleLink"
+    }
+  ),
+  private = list(
+    source = list(id = NULL),
+    target = list(id = NULL)
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_ellipse <- R6::R6Class(
   "jointjs_element",
   inherit = jointjs_element,
   public = list(
@@ -233,11 +262,101 @@ jointjs_rectangle <- R6::R6Class(
     #' @param ... TODO
     initialize = \(...) {
       super$initialize(...)
-      private$type <- "standard.Rectangle"
+      private$type <- "standard.Ellipse"
     }
   ),
   private = list(
-    
+    #TODO
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_embeddedImage <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param href TODO
+    #' @param ... TODO
+    initialize = \(...) {
+      super$initialize(...)
+      private$type <- "standard.EmbeddedImage"
+    }
+  ),
+  private = list(
+    #TODO
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_headeredRectangle <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param headerFill TODO
+    #' @param headerText TODO
+    #' @param bodyText TODO
+    #' @param ... TODO
+    initialize = \(headerFill, headerText, bodyText, ...) {
+      super$initialize(...)
+      private$type <- "standard.HeaderedRectangle"
+    }
+  ),
+  private = list(
+    #TODO
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_image <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param href TODO
+    #' @param ... TODO
+    initialize = \(href, ...) {
+      super$initialize(...)
+      private$type <- "standard.Image"
+    }
+  ),
+  private = list(
+    #TODO
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_inscribedImage <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param href TODO
+    #' @param ... TODO
+    initialize = \(...) {
+      super$initialize(...)
+      private$type <- "standard.InscribedImage"
+    }
+  ),
+  private = list(
+    #TODO
   )
 )
 
@@ -253,8 +372,9 @@ jointjs_link <- R6::R6Class(
     #' TODO
     #' @param source TODO
     #' @param target TODO
+    #' @param vertices TODO
     #' @param ... TODO
-    initialize = \(source, target, ...) {
+    initialize = \(source, target, vertices, ...) {
       super$initialize(...)
       private$source <- source
       private$target <- target
@@ -264,5 +384,141 @@ jointjs_link <- R6::R6Class(
   private = list(
     source = list(id = NULL),
     target = list(id = NULL)
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_path <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param refD TODO
+    #' @param ... TODO
+    initialize = \(refD, ...) {
+      super$initialize(...)
+      private$type <- "standard.Path"
+    }
+  ),
+  private = list(
+    source = list(id = NULL),
+    target = list(id = NULL)
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_polygon <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param refPoints TODO
+    #' @param ... TODO
+    initialize = \(refPoints, ...) {
+      super$initialize(...)
+      private$type <- "standard.Polygon"
+    }
+  ),
+  private = list(
+    #TODO
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_polyline <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param refPoints TODO
+    #' @param ... TODO
+    initialize = \(refPoints, ...) {
+      super$initialize(...)
+      private$type <- "standard.Polyline"
+    }
+  ),
+  private = list(
+    #TODO
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_rectangle <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param ... TODO
+    initialize = \(...) {
+      super$initialize(...)
+      private$type <- "standard.Rectangle"
+    }
+  ),
+  private = list(
+    #TODO
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_shadowLink <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param source TODO
+    #' @param target TODO
+    #' @param vertices TODO
+    #' @param ... TODO
+    initialize = \(source, target, vertices, ...) {
+      super$initialize(...)
+      private$source <- source
+      private$target <- target
+      private$type <- "standard.ShadowLink"
+    }
+  ),
+  private = list(
+    source = list(id = NULL),
+    target = list(id = NULL)
+  )
+)
+
+#' TODO
+#' 
+#' TODO
+#' @export
+jointjs_textBlock <- R6::R6Class(
+  "jointjs_element",
+  inherit = jointjs_element,
+  public = list(
+    #' @description
+    #' TODO
+    #' @param ... TODO
+    initialize = \(...) {
+      super$initialize(...)
+      private$type <- "standard.TextBlock"
+    }
+  ),
+  private = list(
+    #TODO
   )
 )
