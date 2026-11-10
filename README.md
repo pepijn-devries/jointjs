@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/pepijn-devries/jointjs/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/pepijn-devries/jointjs/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/pepijn-devries/jointjs/graph/badge.svg)](https://app.codecov.io/gh/pepijn-devries/jointjs)
 <!-- badges: end -->
 
 Create interactive ‘JointJS’ diagrams. This package wraps the [‘JointJS’
