@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/pepijn-devries/jointjs/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/pepijn-devries/jointjs/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Create interactive ‘JointJS’ diagrams. This package wraps the [‘JointJS’

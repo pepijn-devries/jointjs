@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # jointjs <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/pepijn-devries/jointjs/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/pepijn-devries/jointjs/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Create interactive 'JointJS' diagrams. This package wraps the
