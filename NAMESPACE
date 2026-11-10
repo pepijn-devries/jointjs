@@ -2,8 +2,10 @@
 
 export(jointjs)
 export(jointjsOutput)
+export(jointjs_borderedImage)
 export(jointjs_cell)
 export(jointjs_circle)
+export(jointjs_cylinder)
 export(jointjs_element)
 export(jointjs_graph)
 export(jointjs_link)

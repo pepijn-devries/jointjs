@@ -4,7 +4,7 @@
 \alias{jointjs_element}
 \title{TODO}
 \description{
-TODO
+A generic template to create shapes for a \link{jointjs_graph}. TODO
 }
 \section{Super class}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{jointjs_element}
@@ -13,9 +13,19 @@ TODO
 \subsection{Public methods}{
   \itemize{
     \item \href{#method-jointjs_element-set_position}{\code{jointjs_element$set_position()}}
-    \item \href{#method-jointjs_element-set_label}{\code{jointjs_element$set_label()}}
-    \item \href{#method-jointjs_element-set_body}{\code{jointjs_element$set_body()}}
+    \item \href{#method-jointjs_element-set_image}{\code{jointjs_element$set_image()}}
+    \item \href{#method-jointjs_element-set_border}{\code{jointjs_element$set_border()}}
+    \item \href{#method-jointjs_element-set_background}{\code{jointjs_element$set_background()}}
+    \item \href{#method-jointjs_element-set_top}{\code{jointjs_element$set_top()}}
     \item \href{#method-jointjs_element-set_line}{\code{jointjs_element$set_line()}}
+    \item \href{#method-jointjs_element-set_shadow}{\code{jointjs_element$set_shadow()}}
+    \item \href{#method-jointjs_element-set_outline}{\code{jointjs_element$set_outline()}}
+    \item \href{#method-jointjs_element-set_wrapper}{\code{jointjs_element$set_wrapper()}}
+    \item \href{#method-jointjs_element-set_header}{\code{jointjs_element$set_header()}}
+    \item \href{#method-jointjs_element-set_headerText}{\code{jointjs_element$set_headerText()}}
+    \item \href{#method-jointjs_element-set_bodyText}{\code{jointjs_element$set_bodyText()}}
+    \item \href{#method-jointjs_element-set_body}{\code{jointjs_element$set_body()}}
+    \item \href{#method-jointjs_element-set_label}{\code{jointjs_element$set_label()}}
     \item \href{#method-jointjs_element-get_list}{\code{jointjs_element$get_list()}}
     \item \href{#method-jointjs_element-clone}{\code{jointjs_element$clone()}}
   }
@@ -45,23 +55,238 @@ TODO
 }
 
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-jointjs_element-set_label"></a>}}
-\if{latex}{\out{\hypertarget{method-jointjs_element-set_label}{}}}
-\subsection{\code{jointjs_element$set_label()}}{
+\if{html}{\out{<a id="method-jointjs_element-set_image"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_image}{}}}
+\subsection{\code{jointjs_element$set_image()}}{
   TODO
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$set_label(text, color, fontFamily, fontSize, ...)}
+    \preformatted{jointjs_element$set_image(href, ...)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{text}}{TODO}
-      \item{\code{color}}{TODO}
-      \item{\code{fontFamily}}{TODO}
-      \item{\code{fontSize}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{href}}{A Uniform Resource Identifier (URI) to locate a resource (e.g. image)}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_border"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_border}{}}}
+\subsection{\code{jointjs_element$set_border()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_border(fill, stroke, strokeWidth, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{fill}}{TODO}
+      \item{\code{stroke}}{Stroke colour}
+      \item{\code{strokeWidth}}{Width of the stroke line}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_background"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_background}{}}}
+\subsection{\code{jointjs_element$set_background()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_background(fill, stroke, strokeWidth, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{fill}}{TODO}
+      \item{\code{stroke}}{Stroke colour}
+      \item{\code{strokeWidth}}{Width of the stroke line}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_top"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_top}{}}}
+\subsection{\code{jointjs_element$set_top()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_top(fill, stroke, strokeWidth, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{fill}}{TODO}
+      \item{\code{stroke}}{Stroke colour}
+      \item{\code{strokeWidth}}{Width of the stroke line}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_line"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_line}{}}}
+\subsection{\code{jointjs_element$set_line()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_line(stroke, strokeWidth, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{stroke}}{Stroke colour}
+      \item{\code{strokeWidth}}{Width of the stroke line}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_shadow"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_shadow}{}}}
+\subsection{\code{jointjs_element$set_shadow()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_shadow(stroke, strokeWidth, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{stroke}}{Stroke colour}
+      \item{\code{strokeWidth}}{Width of the stroke line}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_outline"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_outline}{}}}
+\subsection{\code{jointjs_element$set_outline()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_outline(stroke, strokeWidth, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{stroke}}{Stroke colour}
+      \item{\code{strokeWidth}}{Width of the stroke line}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_wrapper"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_wrapper}{}}}
+\subsection{\code{jointjs_element$set_wrapper()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_wrapper(stroke, strokeWidth, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{stroke}}{Stroke colour}
+      \item{\code{strokeWidth}}{Width of the stroke line}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_header"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_header}{}}}
+\subsection{\code{jointjs_element$set_header()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_header(fill, stroke, strokeWidth, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{fill}}{TODO}
+      \item{\code{stroke}}{Stroke colour}
+      \item{\code{strokeWidth}}{Width of the stroke line}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_headerText"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_headerText}{}}}
+\subsection{\code{jointjs_element$set_headerText()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_headerText(text, color, fontFamily, fontSize, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{text}}{A text to display}
+      \item{\code{color}}{Colour of the element}
+      \item{\code{fontFamily}}{Font family for the text to display}
+      \item{\code{fontSize}}{Font size for the text to display}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_bodyText"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_bodyText}{}}}
+\subsection{\code{jointjs_element$set_bodyText()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_bodyText(text, color, fontFamily, fontSize, ...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{text}}{A text to display}
+      \item{\code{color}}{Colour of the element}
+      \item{\code{fontFamily}}{Font family for the text to display}
+      \item{\code{fontSize}}{Font size for the text to display}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
     }
     \if{html}{\out{</div>}}
   }
@@ -81,31 +306,33 @@ TODO
     \if{html}{\out{<div class="arguments">}}
     \describe{
       \item{\code{fill}}{TODO}
-      \item{\code{stroke}}{TODO}
-      \item{\code{strokeWidth}}{TODO}
+      \item{\code{stroke}}{Stroke colour}
+      \item{\code{strokeWidth}}{Width of the stroke line}
       \item{\code{magnet}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
     }
     \if{html}{\out{</div>}}
   }
 }
 
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-jointjs_element-set_line"></a>}}
-\if{latex}{\out{\hypertarget{method-jointjs_element-set_line}{}}}
-\subsection{\code{jointjs_element$set_line()}}{
+\if{html}{\out{<a id="method-jointjs_element-set_label"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_label}{}}}
+\subsection{\code{jointjs_element$set_label()}}{
   TODO
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$set_line(stroke, strokeWidth, ...)}
+    \preformatted{jointjs_element$set_label(text, color, fontFamily, fontSize, ...)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{stroke}}{TODO}
-      \item{\code{strokeWidth}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{text}}{A text to display}
+      \item{\code{color}}{Colour of the element}
+      \item{\code{fontFamily}}{Font family for the text to display}
+      \item{\code{fontSize}}{Font size for the text to display}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
     }
     \if{html}{\out{</div>}}
   }

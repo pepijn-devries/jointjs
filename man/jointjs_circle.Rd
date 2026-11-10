@@ -16,13 +16,23 @@ TODO
     \item \href{#method-jointjs_element-clone}{\code{jointjs_element$clone()}}
   }
 }
-\if{html}{\out{<details open><summary>Inherited methods</summary>
+\if{html}{\out{<details><summary>Inherited methods</summary>
 <ul>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="get_list"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-get_list'><code>jointjs_element$get_list()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_background"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_background'><code>jointjs_element$set_background()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_body"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_body'><code>jointjs_element$set_body()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_bodyText"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_bodyText'><code>jointjs_element$set_bodyText()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_border"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_border'><code>jointjs_element$set_border()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_header"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_header'><code>jointjs_element$set_header()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_headerText"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_headerText'><code>jointjs_element$set_headerText()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_image"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_image'><code>jointjs_element$set_image()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_label"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_label'><code>jointjs_element$set_label()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_line"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_line'><code>jointjs_element$set_line()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_outline"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_outline'><code>jointjs_element$set_outline()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_position"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_position'><code>jointjs_element$set_position()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_shadow"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_shadow'><code>jointjs_element$set_shadow()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_top"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_top'><code>jointjs_element$set_top()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_wrapper"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_wrapper'><code>jointjs_element$set_wrapper()</code></a></span></li>
 </ul>
 </details>}}
 \if{html}{\out{<hr>}}
