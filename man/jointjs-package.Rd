@@ -5,6 +5,8 @@
 \alias{jointjs-package}
 \title{jointjs: Interactive JointJS Diagrams}
 \description{
+\if{html}{\figure{logo.svg}{options: style='float: right' alt='logo' width='120'}}
+
 Create interactive 'JointJS' diagrams. Wraps the JavaScript library 'JointJS' to create interactive html widgets. It will let the user draw and interact with diagrams.
 }
 \author{
