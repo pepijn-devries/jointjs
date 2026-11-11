@@ -5,7 +5,7 @@
 \title{Create an Interactive JointJS Diagram}
 \usage{
 jointjs(
-  paper = list(gridSize = 20, drawGrid = TRUE, color = "#E9ECEF"),
+  paper = jointjs_paper$new()$get_list(),
   graph = NULL,
   width = NULL,
   height = NULL,

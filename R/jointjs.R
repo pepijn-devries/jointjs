@@ -13,11 +13,12 @@
 #' }
 #' @export
 jointjs <- function(
-    paper = list(
-      gridSize = 20,
-      drawGrid = TRUE,
-      color = "#E9ECEF"
-    ),
+    paper = jointjs_paper$new()$get_list(),
+    #   list( #TODO
+    #   gridSize = 20,
+    #   drawGrid = TRUE,
+    #   color = "#E9ECEF"
+    # ),
     graph = NULL,
     width = NULL,
     height = NULL,

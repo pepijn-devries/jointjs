@@ -9,6 +9,13 @@
 
 Create interactive 'JointJS' diagrams. Wraps the JavaScript library 'JointJS' to create interactive html widgets. It will let the user draw and interact with diagrams.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://pepijn-devries.github.io/jointjs/}
+}
+
+}
 \author{
 \strong{Maintainer}: Pepijn de Vries \email{pepijn.devries@outlook.com} (\href{https://orcid.org/0000-0002-7961-6646}{ORCID}) [data contributor]
 

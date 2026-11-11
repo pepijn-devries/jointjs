@@ -1,9 +1,15 @@
-#' TODO
+#' Elements to Build a JointJS Diagram
 #' 
-#' A generic template to create shapes for a [jointjs_graph]. TODO
+#' A generic template to create shapes for a [jointjs_graph]. Shapes are
+#' visualised by [https://www.w3.org/groups/wg/svg/](SVG) elements.
+#' `jointjs_element` objects are R's representation of such elements.
+#' This R class specifies the elements such that they can be used to
+#' construct a [jointjs_graph]. It's usually more effective to initialise
+#' a child class, such as [jointjs_rectangle], [jointjs_image], [jointjs_circle],
+#' etc. #TODO Camel Case
 #' @include cells.R
-#' @param x,y TODO
-#' @param fill TODO
+#' @param x,y Coordinates relative to its parent container.
+#' @param fill Fill colour
 #' @param stroke Stroke colour
 #' @param strokeWidth Width of the stroke line
 #' @param text A text to display
@@ -11,6 +17,7 @@
 #' @param fontFamily Font family for the text to display
 #' @param fontSize Font size for the text to display
 #' @param href A Uniform Resource Identifier (URI) to locate a resource (e.g. image)
+#' @param magnet TODO
 #' @param ... Additional SVG attributes accepted by the specific SVG element
 #' @export
 jointjs_element <- R6::R6Class(
@@ -18,105 +25,105 @@ jointjs_element <- R6::R6Class(
   inherit = jointjs_cell,
   public = list(
     #' @description
-    #' TODO
+    #' Set the element's position relative to its parent container.
     set_position = \(x, y) {
       private$position <- list(x = x, y = y)
       self
     },
     #' @description
-    #' TODO
+    #' Set image attributes for the element.
     set_image = function(href, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$image[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Set border attributes for the element.
     set_border = function(fill, stroke, strokeWidth, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$border[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Set background attributes for the element.
     set_background = function(fill, stroke, strokeWidth, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$background[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Set top attributes for the element (used to visualise the top of
+    #' a cylinder base).
     set_top = function(fill, stroke, strokeWidth, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$top[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Set line attributes for the element.
     set_line = function(stroke, strokeWidth, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$line[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Set shadow attributes for the element.
     set_shadow = function(stroke, strokeWidth, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$shadow[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Set outline attributes for the element.
     set_outline = function(stroke, strokeWidth, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$outline[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Set wrapper attributes for the element.
     set_wrapper = function(stroke, strokeWidth, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$wrapper[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Set header attributes for the element.
     set_header = function(fill, stroke, strokeWidth, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$header[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Set headerText attributes for the element.
     set_headerText = function(text, color, fontFamily, fontSize, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$headerText[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Set bodyText attributes for the element.
     set_bodyText = function(text, color, fontFamily, fontSize, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$bodyText[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
-    #' @param magnet TODO
+    #' Set body attributes for the element.
     set_body = function(fill, stroke, strokeWidth, magnet, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$body[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Set label attributes for the element.
     set_label = function(text, color, fontFamily, fontSize, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$label[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' TODO
+    #' Returns a named list representation of the element.
     get_list = \() {
       result <- lapply(private, \(x) x)
       result[!unlist(lapply(result, is.null))]
@@ -149,7 +156,7 @@ jointjs_element <- R6::R6Class(
 #' TODO
 #' @export
 jointjs_borderedImage <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_borderedImage",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -171,7 +178,7 @@ jointjs_borderedImage <- R6::R6Class(
 #' TODO
 #' @export
 jointjs_circle <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_circle",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -192,7 +199,7 @@ jointjs_circle <- R6::R6Class(
 #' TODO
 #' @export
 jointjs_cylinder <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_cylinder",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -225,36 +232,8 @@ jointjs_cylinder <- R6::R6Class(
 #' 
 #' TODO
 #' @export
-jointjs_doubleLink <- R6::R6Class(
-  "jointjs_element",
-  inherit = jointjs_element,
-  public = list(
-    #' @description
-    #' TODO
-    #' @param source TODO
-    #' @param target TODO
-    #' @param vertices TODO
-    #' @param ... TODO
-    initialize = \(source, target, vertices, ...) {
-      super$initialize(...)
-      private$source <- source
-      private$target <- target
-      private$vertices <- target
-      private$type <- "standard.DoubleLink"
-    }
-  ),
-  private = list(
-    source = list(id = NULL),
-    target = list(id = NULL)
-  )
-)
-
-#' TODO
-#' 
-#' TODO
-#' @export
 jointjs_ellipse <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_ellipse",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -275,7 +254,7 @@ jointjs_ellipse <- R6::R6Class(
 #' TODO
 #' @export
 jointjs_embeddedImage <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_embeddedImage",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -297,7 +276,7 @@ jointjs_embeddedImage <- R6::R6Class(
 #' TODO
 #' @export
 jointjs_headeredRectangle <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_headeredRectangle",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -321,7 +300,7 @@ jointjs_headeredRectangle <- R6::R6Class(
 #' TODO
 #' @export
 jointjs_image <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_image",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -343,7 +322,7 @@ jointjs_image <- R6::R6Class(
 #' TODO
 #' @export
 jointjs_inscribedImage <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_inscribedImage",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -364,35 +343,8 @@ jointjs_inscribedImage <- R6::R6Class(
 #' 
 #' TODO
 #' @export
-jointjs_link <- R6::R6Class(
-  "jointjs_element",
-  inherit = jointjs_element,
-  public = list(
-    #' @description
-    #' TODO
-    #' @param source TODO
-    #' @param target TODO
-    #' @param vertices TODO
-    #' @param ... TODO
-    initialize = \(source, target, vertices, ...) {
-      super$initialize(...)
-      private$source <- source
-      private$target <- target
-      private$type <- "standard.Link"
-    }
-  ),
-  private = list(
-    source = list(id = NULL),
-    target = list(id = NULL)
-  )
-)
-
-#' TODO
-#' 
-#' TODO
-#' @export
 jointjs_path <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_path",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -415,7 +367,7 @@ jointjs_path <- R6::R6Class(
 #' TODO
 #' @export
 jointjs_polygon <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_polygon",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -437,7 +389,7 @@ jointjs_polygon <- R6::R6Class(
 #' TODO
 #' @export
 jointjs_polyline <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_polyline",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -459,7 +411,7 @@ jointjs_polyline <- R6::R6Class(
 #' TODO
 #' @export
 jointjs_rectangle <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_rectangle",
   inherit = jointjs_element,
   public = list(
     #' @description
@@ -479,35 +431,8 @@ jointjs_rectangle <- R6::R6Class(
 #' 
 #' TODO
 #' @export
-jointjs_shadowLink <- R6::R6Class(
-  "jointjs_element",
-  inherit = jointjs_element,
-  public = list(
-    #' @description
-    #' TODO
-    #' @param source TODO
-    #' @param target TODO
-    #' @param vertices TODO
-    #' @param ... TODO
-    initialize = \(source, target, vertices, ...) {
-      super$initialize(...)
-      private$source <- source
-      private$target <- target
-      private$type <- "standard.ShadowLink"
-    }
-  ),
-  private = list(
-    source = list(id = NULL),
-    target = list(id = NULL)
-  )
-)
-
-#' TODO
-#' 
-#' TODO
-#' @export
 jointjs_textBlock <- R6::R6Class(
-  "jointjs_element",
+  "jointjs_textBlock",
   inherit = jointjs_element,
   public = list(
     #' @description

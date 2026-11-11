@@ -7,13 +7,13 @@
 TODO
 }
 \section{Super classes}{
-\code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_element}
+\code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_borderedImage}
 }
 \section{Methods}{
 \subsection{Public methods}{
   \itemize{
-    \item \href{#method-jointjs_element-initialize}{\code{jointjs_element$new()}}
-    \item \href{#method-jointjs_element-clone}{\code{jointjs_element$clone()}}
+    \item \href{#method-jointjs_borderedImage-initialize}{\code{jointjs_borderedImage$new()}}
+    \item \href{#method-jointjs_borderedImage-clone}{\code{jointjs_borderedImage$clone()}}
   }
 }
 \if{html}{\out{<details><summary>Inherited methods</summary>
@@ -36,13 +36,13 @@ TODO
 </ul>
 </details>}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-jointjs_element-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-jointjs_element-initialize}{}}}
-\subsection{\code{jointjs_element$new()}}{
+\if{html}{\out{<a id="method-jointjs_borderedImage-initialize"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_borderedImage-initialize}{}}}
+\subsection{\code{jointjs_borderedImage$new()}}{
   TODO
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$new(href, ...)}
+    \preformatted{jointjs_borderedImage$new(href, ...)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
@@ -56,13 +56,13 @@ TODO
 }
 
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-jointjs_element-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-jointjs_element-clone}{}}}
-\subsection{\code{jointjs_element$clone()}}{
+\if{html}{\out{<a id="method-jointjs_borderedImage-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_borderedImage-clone}{}}}
+\subsection{\code{jointjs_borderedImage$clone()}}{
   The objects of this class are cloneable with this method.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$clone(deep = FALSE)}
+    \preformatted{jointjs_borderedImage$clone(deep = FALSE)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{

@@ -7,14 +7,14 @@
 TODO
 }
 \section{Super classes}{
-\code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_element}
+\code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_cylinder}
 }
 \section{Methods}{
 \subsection{Public methods}{
   \itemize{
-    \item \href{#method-jointjs_element-initialize}{\code{jointjs_element$new()}}
-    \item \href{#method-jointjs_element-set_body}{\code{jointjs_element$set_body()}}
-    \item \href{#method-jointjs_element-clone}{\code{jointjs_element$clone()}}
+    \item \href{#method-jointjs_cylinder-initialize}{\code{jointjs_cylinder$new()}}
+    \item \href{#method-jointjs_cylinder-set_body}{\code{jointjs_cylinder$set_body()}}
+    \item \href{#method-jointjs_cylinder-clone}{\code{jointjs_cylinder$clone()}}
   }
 }
 \if{html}{\out{<details><summary>Inherited methods</summary>
@@ -36,13 +36,13 @@ TODO
 </ul>
 </details>}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-jointjs_element-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-jointjs_element-initialize}{}}}
-\subsection{\code{jointjs_element$new()}}{
+\if{html}{\out{<a id="method-jointjs_cylinder-initialize"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_cylinder-initialize}{}}}
+\subsection{\code{jointjs_cylinder$new()}}{
   TODO
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$new(...)}
+    \preformatted{jointjs_cylinder$new(...)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
@@ -55,19 +55,19 @@ TODO
 }
 
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-jointjs_element-set_body"></a>}}
-\if{latex}{\out{\hypertarget{method-jointjs_element-set_body}{}}}
-\subsection{\code{jointjs_element$set_body()}}{
+\if{html}{\out{<a id="method-jointjs_cylinder-set_body"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_cylinder-set_body}{}}}
+\subsection{\code{jointjs_cylinder$set_body()}}{
   TODO
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$set_body(fill, stroke, strokeWidth, magnet, topRy, ...)}
+    \preformatted{jointjs_cylinder$set_body(fill, stroke, strokeWidth, magnet, topRy, ...)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{TODO}
+      \item{\code{fill}}{Fill colour}
       \item{\code{stroke}}{Stroke colour}
       \item{\code{strokeWidth}}{Width of the stroke line}
       \item{\code{magnet}}{TODO}
@@ -79,13 +79,13 @@ TODO
 }
 
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-jointjs_element-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-jointjs_element-clone}{}}}
-\subsection{\code{jointjs_element$clone()}}{
+\if{html}{\out{<a id="method-jointjs_cylinder-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_cylinder-clone}{}}}
+\subsection{\code{jointjs_cylinder$clone()}}{
   The objects of this class are cloneable with this method.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$clone(deep = FALSE)}
+    \preformatted{jointjs_cylinder$clone(deep = FALSE)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/cells.R
 \name{jointjs_cell}
 \alias{jointjs_cell}
-\title{jointjs_cell: The Basis for JointJS Elements}
+\title{The Backbone of JointJS Elements}
 \description{
 It is a backbone structure used by jointjs to construct elements for a diagram.
 Usually you don't initiate cells directly. Rather, it is more efficient to
@@ -13,6 +13,7 @@ etc.
 \subsection{Public methods}{
   \itemize{
     \item \href{#method-jointjs_cell-initialize}{\code{jointjs_cell$new()}}
+    \item \href{#method-jointjs_cell-get_list}{\code{jointjs_cell$get_list()}}
     \item \href{#method-jointjs_cell-clone}{\code{jointjs_cell$clone()}}
   }
 }
@@ -41,6 +42,18 @@ assign the correct type for you. By default it will be set to
 parent container.}
       \item{\code{...}}{Parameters that will be set as SVG attributes to this object.}
     }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_cell-get_list"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_cell-get_list}{}}}
+\subsection{\code{jointjs_cell$get_list()}}{
+  TODO
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_cell$get_list()}
     \if{html}{\out{</div>}}
   }
 }

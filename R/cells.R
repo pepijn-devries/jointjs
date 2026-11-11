@@ -1,4 +1,4 @@
-#' @title jointjs_cell: The Basis for JointJS Elements
+#' @title The Backbone of JointJS Elements
 #' @description
 #' It is a backbone structure used by jointjs to construct elements for a diagram.
 #' Usually you don't initiate cells directly. Rather, it is more efficient to
@@ -30,10 +30,16 @@ jointjs_cell <-
         if (!missing(z)) private$z <- z
         attrs <- list(...)
         if (length(attrs) > 0) private$attrs <- attrs
+      },
+      #' @description
+      #' TODO
+      get_list = \() {
+        result <- as.list(private)
+        result[lengths(result) > 0]
       }
     ),
     private = list(
-      id    = "",
+      id    = NULL,
       type  = "standard.Rectangle",
       z     = 1L,
       attrs = NULL

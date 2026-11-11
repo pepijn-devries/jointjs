@@ -2,9 +2,15 @@
 % Please edit documentation in R/elements.R
 \name{jointjs_element}
 \alias{jointjs_element}
-\title{TODO}
+\title{Elements to Build a JointJS Diagram}
 \description{
-A generic template to create shapes for a \link{jointjs_graph}. TODO
+A generic template to create shapes for a \link{jointjs_graph}. Shapes are
+visualised by \href{SVG}{https://www.w3.org/groups/wg/svg/} elements.
+\code{jointjs_element} objects are R's representation of such elements.
+This R class specifies the elements such that they can be used to
+construct a \link{jointjs_graph}. It's usually more effective to initialise
+a child class, such as \link{jointjs_rectangle}, \link{jointjs_image}, \link{jointjs_circle},
+etc. #TODO Camel Case
 }
 \section{Super class}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{jointjs_element}
@@ -39,7 +45,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_position"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_position}{}}}
 \subsection{\code{jointjs_element$set_position()}}{
-  TODO
+  Set the element's position relative to its parent container.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_position(x, y)}
@@ -48,7 +54,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{x, y}}{TODO}
+      \item{\code{x, y}}{Coordinates relative to its parent container.}
     }
     \if{html}{\out{</div>}}
   }
@@ -58,7 +64,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_image"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_image}{}}}
 \subsection{\code{jointjs_element$set_image()}}{
-  TODO
+  Set image attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_image(href, ...)}
@@ -78,7 +84,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_border"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_border}{}}}
 \subsection{\code{jointjs_element$set_border()}}{
-  TODO
+  Set border attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_border(fill, stroke, strokeWidth, ...)}
@@ -87,7 +93,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{TODO}
+      \item{\code{fill}}{Fill colour}
       \item{\code{stroke}}{Stroke colour}
       \item{\code{strokeWidth}}{Width of the stroke line}
       \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
@@ -100,7 +106,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_background"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_background}{}}}
 \subsection{\code{jointjs_element$set_background()}}{
-  TODO
+  Set background attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_background(fill, stroke, strokeWidth, ...)}
@@ -109,7 +115,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{TODO}
+      \item{\code{fill}}{Fill colour}
       \item{\code{stroke}}{Stroke colour}
       \item{\code{strokeWidth}}{Width of the stroke line}
       \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
@@ -122,7 +128,8 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_top"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_top}{}}}
 \subsection{\code{jointjs_element$set_top()}}{
-  TODO
+  Set top attributes for the element (used to visualise the top of
+a cylinder base).
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_top(fill, stroke, strokeWidth, ...)}
@@ -131,7 +138,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{TODO}
+      \item{\code{fill}}{Fill colour}
       \item{\code{stroke}}{Stroke colour}
       \item{\code{strokeWidth}}{Width of the stroke line}
       \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
@@ -144,7 +151,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_line"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_line}{}}}
 \subsection{\code{jointjs_element$set_line()}}{
-  TODO
+  Set line attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_line(stroke, strokeWidth, ...)}
@@ -165,7 +172,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_shadow"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_shadow}{}}}
 \subsection{\code{jointjs_element$set_shadow()}}{
-  TODO
+  Set shadow attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_shadow(stroke, strokeWidth, ...)}
@@ -186,7 +193,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_outline"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_outline}{}}}
 \subsection{\code{jointjs_element$set_outline()}}{
-  TODO
+  Set outline attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_outline(stroke, strokeWidth, ...)}
@@ -207,7 +214,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_wrapper"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_wrapper}{}}}
 \subsection{\code{jointjs_element$set_wrapper()}}{
-  TODO
+  Set wrapper attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_wrapper(stroke, strokeWidth, ...)}
@@ -228,7 +235,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_header"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_header}{}}}
 \subsection{\code{jointjs_element$set_header()}}{
-  TODO
+  Set header attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_header(fill, stroke, strokeWidth, ...)}
@@ -237,7 +244,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{TODO}
+      \item{\code{fill}}{Fill colour}
       \item{\code{stroke}}{Stroke colour}
       \item{\code{strokeWidth}}{Width of the stroke line}
       \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
@@ -250,7 +257,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_headerText"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_headerText}{}}}
 \subsection{\code{jointjs_element$set_headerText()}}{
-  TODO
+  Set headerText attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_headerText(text, color, fontFamily, fontSize, ...)}
@@ -273,7 +280,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_bodyText"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_bodyText}{}}}
 \subsection{\code{jointjs_element$set_bodyText()}}{
-  TODO
+  Set bodyText attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_bodyText(text, color, fontFamily, fontSize, ...)}
@@ -296,7 +303,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_body"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_body}{}}}
 \subsection{\code{jointjs_element$set_body()}}{
-  TODO
+  Set body attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_body(fill, stroke, strokeWidth, magnet, ...)}
@@ -305,7 +312,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{TODO}
+      \item{\code{fill}}{Fill colour}
       \item{\code{stroke}}{Stroke colour}
       \item{\code{strokeWidth}}{Width of the stroke line}
       \item{\code{magnet}}{TODO}
@@ -319,7 +326,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-set_label"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_label}{}}}
 \subsection{\code{jointjs_element$set_label()}}{
-  TODO
+  Set label attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_label(text, color, fontFamily, fontSize, ...)}
@@ -342,7 +349,7 @@ A generic template to create shapes for a \link{jointjs_graph}. TODO
 \if{html}{\out{<a id="method-jointjs_element-get_list"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-get_list}{}}}
 \subsection{\code{jointjs_element$get_list()}}{
-  TODO
+  Returns a named list representation of the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$get_list()}
