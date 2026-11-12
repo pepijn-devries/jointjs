@@ -4,7 +4,7 @@
 \alias{jointjs_path}
 \title{A Path Element}
 \description{
-TODO
+A vector of vertices connected by lines.
 }
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_path}

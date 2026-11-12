@@ -158,13 +158,11 @@ jointjs_element <- R6::R6Class(
   )
 )
 
-.image_params <- c(
-  "@param href A Uniform Resource Identifier"
-)
-
 #' An Image Element
 #' 
 #' An image with a label.
+#' @param href A Uniform Resource Identifier (URI) to locate the image
+#' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_image <- R6::R6Class(
   "jointjs_image",
@@ -172,8 +170,6 @@ jointjs_image <- R6::R6Class(
   public = list(
     #' @description
     #' Initialise the object
-    #' @param href TODO
-    #' @param ... Arguments passed to parent class initialiser
     initialize = \(href, ...) {
       super$initialize(...)
       if (!missing(href)) private$attrs$image$href <- href
@@ -192,8 +188,6 @@ jointjs_inscribedImage <- R6::R6Class(
   public = list(
     #' @description
     #' Initialise the object
-    #' @param href TODO
-    #' @param ... Arguments passed to parent class initialiser
     initialize = \(href, ...) {
       super$initialize(href, ...)
       private$type <- "standard.InscribedImage"
@@ -211,8 +205,6 @@ jointjs_borderedImage <- R6::R6Class(
   public = list(
     #' @description
     #' Initialise the object
-    #' @param href TODO
-    #' @param ... Arguments passed to parent class initialiser
     initialize = \(href, ...) {
       super$initialize(href, ...)
       private$type <- "standard.BorderedImage"
@@ -230,8 +222,6 @@ jointjs_embeddedImage <- R6::R6Class(
   public = list(
     #' @description
     #' Initialise the object
-    #' @param href TODO
-    #' @param ... Arguments passed to parent class initialiser
     initialize = \(href, ...) {
       super$initialize(href, ...)
       private$type <- "standard.EmbeddedImage"
@@ -242,7 +232,7 @@ jointjs_embeddedImage <- R6::R6Class(
 
 #' A Circle Element
 #' 
-#' TODO
+#' A circle shape.
 #' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_circle <- R6::R6Class(
@@ -260,8 +250,9 @@ jointjs_circle <- R6::R6Class(
 
 #' A Cylinder Element
 #' 
-#' TODO
-#' @param topRy TODO
+#' A cylinder with a vertical base and an elliptical top.
+#' @param topRy The vertical radius of the exposed area of the cylinder base,
+#' as an absolute value or a percentage.
 #' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_cylinder <- R6::R6Class(
@@ -274,7 +265,8 @@ jointjs_cylinder <- R6::R6Class(
       super$initialize(...)
       private$type <- "standard.Cylinder"
     },
-    #' @description TODO
+    #' @description
+    #' Set body attributes for the element.
     set_body = function(fill, stroke, strokeWidth, magnet, topRy, ...) {
       if (missing(topRy)) {
         rlang::abort(c(
@@ -291,7 +283,7 @@ jointjs_cylinder <- R6::R6Class(
 
 #' An Ellipse Element
 #' 
-#' TODO
+#' An elliptical shape.
 #' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_ellipse <- R6::R6Class(
@@ -309,11 +301,11 @@ jointjs_ellipse <- R6::R6Class(
 
 #' A Headered Rectangle Element
 #' 
-#' TODO
+#' A rectangle with a header.
 #' @param headerFill TODO
 #' @param headerText TODO
 #' @param bodyText TODO
-#' @param ... TODO
+#' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_headeredRectangle <- R6::R6Class(
   "jointjs_headeredRectangle",
@@ -330,7 +322,7 @@ jointjs_headeredRectangle <- R6::R6Class(
 
 #' A Path Element
 #' 
-#' TODO
+#' A vector of vertices connected by lines.
 #' @param refD TODO
 #' @param ... Arguments passed to parent class initialiser
 #' @export
@@ -353,7 +345,7 @@ jointjs_path <- R6::R6Class(
 
 #' A Polygon Element
 #' 
-#' TODO
+#' A vector of vertices connected as a polygon.
 #' @param refPoints TODO
 #' @param ... Arguments passed to parent class initialiser
 #' @export
@@ -372,7 +364,7 @@ jointjs_polygon <- R6::R6Class(
 
 #' A Polyline Element
 #' 
-#' TODO
+#' A polyline with a label.
 #' @param refPoints TODO
 #' @param ... Arguments passed to parent class initialiser
 #' @export
@@ -391,7 +383,7 @@ jointjs_polyline <- R6::R6Class(
 
 #' A Rectangle Element
 #' 
-#' TODO
+#' A Rectangle shape.
 #' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_rectangle <- R6::R6Class(
@@ -409,7 +401,7 @@ jointjs_rectangle <- R6::R6Class(
 
 #' A Text Block Element
 #' 
-#' TODO
+#' A rectangle shape with text.
 #' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_textBlock <- R6::R6Class(

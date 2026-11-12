@@ -4,7 +4,7 @@
 \alias{jointjs_polyline}
 \title{A Polyline Element}
 \description{
-TODO
+A polyline with a label.
 }
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_polyline}

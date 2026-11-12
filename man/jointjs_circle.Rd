@@ -4,7 +4,7 @@
 \alias{jointjs_circle}
 \title{A Circle Element}
 \description{
-TODO
+A circle shape.
 }
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_circle}

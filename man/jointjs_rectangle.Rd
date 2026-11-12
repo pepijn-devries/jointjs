@@ -4,7 +4,7 @@
 \alias{jointjs_rectangle}
 \title{A Rectangle Element}
 \description{
-TODO
+A Rectangle shape.
 }
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_rectangle}

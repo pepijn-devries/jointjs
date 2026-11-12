@@ -4,7 +4,7 @@
 \alias{jointjs_textBlock}
 \title{A Text Block Element}
 \description{
-TODO
+A rectangle shape with text.
 }
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_textBlock}

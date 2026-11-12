@@ -4,7 +4,7 @@
 \alias{jointjs_headeredRectangle}
 \title{A Headered Rectangle Element}
 \description{
-TODO
+A rectangle with a header.
 }
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_headeredRectangle}
@@ -51,7 +51,7 @@ TODO
       \item{\code{headerFill}}{TODO}
       \item{\code{headerText}}{TODO}
       \item{\code{bodyText}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
   }

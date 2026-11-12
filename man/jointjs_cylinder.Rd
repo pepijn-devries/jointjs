@@ -4,7 +4,7 @@
 \alias{jointjs_cylinder}
 \title{A Cylinder Element}
 \description{
-TODO
+A cylinder with a vertical base and an elliptical top.
 }
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_cylinder}
@@ -58,7 +58,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_cylinder-set_body"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_cylinder-set_body}{}}}
 \subsection{\code{jointjs_cylinder$set_body()}}{
-  TODO
+  Set body attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_cylinder$set_body(fill, stroke, strokeWidth, magnet, topRy, ...)}
@@ -72,7 +72,8 @@ TODO
       \item{\code{strokeWidth}}{Width of the stroke line}
       \item{\code{magnet}}{When set to \code{TRUE}, the element can be used as
 source or target for a \link{jointjs_link}.}
-      \item{\code{topRy}}{TODO}
+      \item{\code{topRy}}{The vertical radius of the exposed area of the cylinder base,
+as an absolute value or a percentage.}
       \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}

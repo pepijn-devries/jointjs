@@ -48,7 +48,7 @@ An image inscribed in an ellipse with a label.
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{href}}{TODO}
+      \item{\code{href}}{A Uniform Resource Identifier (URI) to locate the image}
       \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
