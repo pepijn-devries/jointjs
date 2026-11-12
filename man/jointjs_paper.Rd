@@ -2,9 +2,11 @@
 % Please edit documentation in R/paper.R
 \name{jointjs_paper}
 \alias{jointjs_paper}
-\title{TODO}
+\title{A Paper to Draw JointJS Diagrams on}
 \description{
-#TODO
+Set up a sheet of paper to draw jointjs diagrams on. This class can be used
+to define the paper specifications. These specifications are needed when
+creating a widget with \code{\link[=jointjs]{jointjs()}}.
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -18,7 +20,7 @@
 \if{html}{\out{<a id="method-jointjs_paper-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_paper-initialize}{}}}
 \subsection{\code{jointjs_paper$new()}}{
-  TODO
+  Initiate a paper object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_paper$new(
@@ -28,11 +30,10 @@
   gridSize = 20,
   drawGrid = list(name = "dot", args = list(color = "#808080", thickness = 1)),
   interactive = TRUE,
-  allowLink = TRUE,
   snapLinks = list(radius = 20),
   defaultLink = jointjs::jointjs_cell$new(NULL, "standard.Link", .connection =
     list(stroke = "#2C3E50", strokeWidth = 2), `.marker-target` = list(fill = "#2C3E50",
-    d = "M 10 0 L 0 5 L 10 10 z"))$get_list(),
+    d = "M 10 0 L 0 5 L 10 10 z")),
   validateConnection =
     htmlwidgets::JS("\\n        function(cellViewS, magnetS, cellViewT, magnetT, end, linkView) {\\n          if (cellViewS === cellViewT) return false;\\n          return cellViewT && cellViewT.model.isElement();\\n        }\\n      "),
   ...
@@ -42,17 +43,33 @@
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{width}}{TODO}
-      \item{\code{height}}{TODO}
-      \item{\code{background}}{TODO}
-      \item{\code{gridSize}}{TODO}
-      \item{\code{drawGrid}}{TODO}
-      \item{\code{interactive}}{TODO}
-      \item{\code{allowLink}}{TODO}
-      \item{\code{snapLinks}}{TODO}
-      \item{\code{defaultLink}}{TODO}
-      \item{\code{validateConnection}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{width}}{Paper width in CSS units.}
+      \item{\code{height}}{Paper height in CSS units.}
+      \item{\code{background}}{A named list with background properties. The list can
+contain the elements \code{color}, \code{image} (an URL for a background image),
+\code{position} (\code{x} and \code{y} coordinate for the image), \code{size} of the
+background image (\code{width} and \code{height}), \code{repeat} a CSS \verb{background-repeat}
+property, \code{quality} coefficient for image quality, \code{opacity} in the
+range of 0-1, \code{watermarkAngle} in degrees. If set to \code{FALSE} no
+background is drawn.}
+      \item{\code{gridSize}}{gridSize in CSS units}
+      \item{\code{drawGrid}}{A named list specifying how to draw a grid on the paper.
+An element \code{name} can use any of these predefined grid patterns:
+\code{"dot"} (default), \code{"fixedDot"}, \code{"mesh"}, or \code{"doubleMesh"}.
+Use an element named \code{args} to specify pattern properties.
+If set to \code{FALSE}, no grid is drawn.}
+      \item{\code{interactive}}{Use a \code{logical} value to enable or disable all
+interactive elements. Or use a named list of interactions with
+logical values to enable or disable specific interactions}
+      \item{\code{snapLinks}}{A \code{logical} value indicating if links should be snapped
+to magnets. Or a named \code{list} with element \code{radius} in pixels, giving
+the distance for snapping links.}
+      \item{\code{defaultLink}}{Default properties for links. A \link{jointjs_link} class
+object.}
+      \item{\code{validateConnection}}{A JavaScript function that validates if
+a connection between a specific source and target is allowed. It
+should return a logical value.}
+      \item{\code{...}}{Other options passed to the JointJS JavaScript library.}
     }
     \if{html}{\out{</div>}}
   }
@@ -62,7 +79,7 @@
 \if{html}{\out{<a id="method-jointjs_paper-get_list"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_paper-get_list}{}}}
 \subsection{\code{jointjs_paper$get_list()}}{
-  TODO
+  Coerce JointJS paper options to a named list.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_paper$get_list()}

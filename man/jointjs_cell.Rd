@@ -6,8 +6,8 @@
 \description{
 It is a backbone structure used by jointjs to construct elements for a diagram.
 Usually you don't initiate cells directly. Rather, it is more efficient to
-create its grandchildren: \link{jointjs_circle}, \link{jointjs_image}, \link{jointjs_rectangle},
-etc.
+create its children and grandchildren, e.g.:
+\link{jointjs_circle}, \link{jointjs_image}, \link{jointjs_rectangle}, etc.
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -50,7 +50,7 @@ parent container.}
 \if{html}{\out{<a id="method-jointjs_cell-get_list"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_cell-get_list}{}}}
 \subsection{\code{jointjs_cell$get_list()}}{
-  TODO
+  Coerce the \code{jointjs_cell} object to a named list.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_cell$get_list()}

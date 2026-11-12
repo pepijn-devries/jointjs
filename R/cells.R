@@ -2,8 +2,8 @@
 #' @description
 #' It is a backbone structure used by jointjs to construct elements for a diagram.
 #' Usually you don't initiate cells directly. Rather, it is more efficient to
-#' create its grandchildren: [jointjs_circle], [jointjs_image], [jointjs_rectangle],
-#' etc.
+#' create its children and grandchildren, e.g.:
+#' [jointjs_circle], [jointjs_image], [jointjs_rectangle], etc.
 #' @include helpers.R
 #' @export
 jointjs_cell <-
@@ -32,7 +32,7 @@ jointjs_cell <-
         if (length(attrs) > 0) private$attrs <- attrs
       },
       #' @description
-      #' TODO
+      #' Coerce the `jointjs_cell` object to a named list.
       get_list = \() {
         result <- as.list(private)
         result[lengths(result) > 0]
