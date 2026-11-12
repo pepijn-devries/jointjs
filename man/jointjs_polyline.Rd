@@ -2,7 +2,7 @@
 % Please edit documentation in R/elements.R
 \name{jointjs_polyline}
 \alias{jointjs_polyline}
-\title{TODO}
+\title{A Polyline Element}
 \description{
 TODO
 }
@@ -39,7 +39,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_polyline-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_polyline-initialize}{}}}
 \subsection{\code{jointjs_polyline$new()}}{
-  TODO
+  Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_polyline$new(refPoints, ...)}
@@ -49,7 +49,7 @@ TODO
     \if{html}{\out{<div class="arguments">}}
     \describe{
       \item{\code{refPoints}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
   }

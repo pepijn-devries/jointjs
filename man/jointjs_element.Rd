@@ -10,7 +10,13 @@ visualised by \href{SVG}{https://www.w3.org/groups/wg/svg/} elements.
 This R class specifies the elements such that they can be used to
 construct a \link{jointjs_graph}. It's usually more effective to initialise
 a child class, such as \link{jointjs_rectangle}, \link{jointjs_image}, \link{jointjs_circle},
-etc. #TODO Camel Case
+etc.
+
+Parameters are all based on SVG attributes, you can use the
+\code{...} arguments to pass other valid attributes. Note that the
+attributes are renamed in camel-case conform the JointJS spefications.
+So, SVG attribute \code{font-family} becomes \code{fontFamily}, \code{stroke-width}
+becomes \code{strokeWidth}, etc.
 }
 \section{Super class}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{jointjs_element}
@@ -315,7 +321,8 @@ a cylinder base).
       \item{\code{fill}}{Fill colour}
       \item{\code{stroke}}{Stroke colour}
       \item{\code{strokeWidth}}{Width of the stroke line}
-      \item{\code{magnet}}{TODO}
+      \item{\code{magnet}}{When set to \code{TRUE}, the element can be used as
+source or target for a \link{jointjs_link}.}
       \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
     }
     \if{html}{\out{</div>}}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/elements.R
 \name{jointjs_headeredRectangle}
 \alias{jointjs_headeredRectangle}
-\title{TODO}
+\title{A Headered Rectangle Element}
 \description{
 TODO
 }
@@ -39,7 +39,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_headeredRectangle-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_headeredRectangle-initialize}{}}}
 \subsection{\code{jointjs_headeredRectangle$new()}}{
-  TODO
+  Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_headeredRectangle$new(headerFill, headerText, bodyText, ...)}

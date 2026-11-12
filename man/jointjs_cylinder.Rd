@@ -2,7 +2,7 @@
 % Please edit documentation in R/elements.R
 \name{jointjs_cylinder}
 \alias{jointjs_cylinder}
-\title{TODO}
+\title{A Cylinder Element}
 \description{
 TODO
 }
@@ -39,7 +39,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_cylinder-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_cylinder-initialize}{}}}
 \subsection{\code{jointjs_cylinder$new()}}{
-  TODO
+  Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_cylinder$new(...)}
@@ -48,7 +48,7 @@ TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{...}}{TODO}
+      \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
   }
@@ -70,9 +70,10 @@ TODO
       \item{\code{fill}}{Fill colour}
       \item{\code{stroke}}{Stroke colour}
       \item{\code{strokeWidth}}{Width of the stroke line}
-      \item{\code{magnet}}{TODO}
+      \item{\code{magnet}}{When set to \code{TRUE}, the element can be used as
+source or target for a \link{jointjs_link}.}
       \item{\code{topRy}}{TODO}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
   }

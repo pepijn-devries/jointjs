@@ -2,7 +2,7 @@
 % Please edit documentation in R/elements.R
 \name{jointjs_polygon}
 \alias{jointjs_polygon}
-\title{TODO}
+\title{A Polygon Element}
 \description{
 TODO
 }
@@ -39,7 +39,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_polygon-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_polygon-initialize}{}}}
 \subsection{\code{jointjs_polygon$new()}}{
-  TODO
+  Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_polygon$new(refPoints, ...)}
@@ -49,7 +49,7 @@ TODO
     \if{html}{\out{<div class="arguments">}}
     \describe{
       \item{\code{refPoints}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
   }

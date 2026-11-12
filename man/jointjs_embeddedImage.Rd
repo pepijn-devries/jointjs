@@ -2,12 +2,12 @@
 % Please edit documentation in R/elements.R
 \name{jointjs_embeddedImage}
 \alias{jointjs_embeddedImage}
-\title{TODO}
+\title{A Embedded Image Element}
 \description{
-TODO
+An image embedded into a rectangle with a label.
 }
 \section{Super classes}{
-\code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_embeddedImage}
+\code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{\link[jointjs:jointjs_image]{jointjs_image}} -> \code{jointjs_embeddedImage}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -39,17 +39,17 @@ TODO
 \if{html}{\out{<a id="method-jointjs_embeddedImage-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_embeddedImage-initialize}{}}}
 \subsection{\code{jointjs_embeddedImage$new()}}{
-  TODO
+  Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_embeddedImage$new(...)}
+    \preformatted{jointjs_embeddedImage$new(href, ...)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{...}}{TODO}
       \item{\code{href}}{TODO}
+      \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
   }

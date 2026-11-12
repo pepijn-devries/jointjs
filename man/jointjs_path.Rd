@@ -2,7 +2,7 @@
 % Please edit documentation in R/elements.R
 \name{jointjs_path}
 \alias{jointjs_path}
-\title{TODO}
+\title{A Path Element}
 \description{
 TODO
 }
@@ -39,7 +39,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_path-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_path-initialize}{}}}
 \subsection{\code{jointjs_path$new()}}{
-  TODO
+  Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_path$new(refD, ...)}
@@ -49,7 +49,7 @@ TODO
     \if{html}{\out{<div class="arguments">}}
     \describe{
       \item{\code{refD}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
   }

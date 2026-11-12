@@ -2,9 +2,9 @@
 % Please edit documentation in R/elements.R
 \name{jointjs_image}
 \alias{jointjs_image}
-\title{TODO}
+\title{An Image Element}
 \description{
-TODO
+An image with a label.
 }
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_image}
@@ -39,7 +39,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_image-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_image-initialize}{}}}
 \subsection{\code{jointjs_image$new()}}{
-  TODO
+  Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_image$new(href, ...)}
@@ -49,7 +49,7 @@ TODO
     \if{html}{\out{<div class="arguments">}}
     \describe{
       \item{\code{href}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
   }

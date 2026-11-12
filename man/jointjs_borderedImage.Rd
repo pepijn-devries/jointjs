@@ -2,12 +2,12 @@
 % Please edit documentation in R/elements.R
 \name{jointjs_borderedImage}
 \alias{jointjs_borderedImage}
-\title{TODO}
+\title{A Bordered Image Element}
 \description{
-TODO
+An image with a border and label.
 }
 \section{Super classes}{
-\code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_borderedImage}
+\code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{\link[jointjs:jointjs_image]{jointjs_image}} -> \code{jointjs_borderedImage}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -39,7 +39,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_borderedImage-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_borderedImage-initialize}{}}}
 \subsection{\code{jointjs_borderedImage$new()}}{
-  TODO
+  Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_borderedImage$new(href, ...)}
@@ -49,7 +49,7 @@ TODO
     \if{html}{\out{<div class="arguments">}}
     \describe{
       \item{\code{href}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
   }

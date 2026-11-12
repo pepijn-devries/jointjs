@@ -6,7 +6,13 @@
 #' This R class specifies the elements such that they can be used to
 #' construct a [jointjs_graph]. It's usually more effective to initialise
 #' a child class, such as [jointjs_rectangle], [jointjs_image], [jointjs_circle],
-#' etc. #TODO Camel Case
+#' etc.
+#' 
+#' Parameters are all based on SVG attributes, you can use the
+#' `...` arguments to pass other valid attributes. Note that the
+#' attributes are renamed in camel-case conform the JointJS spefications.
+#' So, SVG attribute `font-family` becomes `fontFamily`, `stroke-width`
+#' becomes `strokeWidth`, etc.
 #' @include cells.R
 #' @param x,y Coordinates relative to its parent container.
 #' @param fill Fill colour
@@ -17,7 +23,8 @@
 #' @param fontFamily Font family for the text to display
 #' @param fontSize Font size for the text to display
 #' @param href A Uniform Resource Identifier (URI) to locate a resource (e.g. image)
-#' @param magnet TODO
+#' @param magnet When set to `TRUE`, the element can be used as
+#' source or target for a [jointjs_link].
 #' @param ... Additional SVG attributes accepted by the specific SVG element
 #' @export
 jointjs_element <- R6::R6Class(
@@ -151,66 +158,123 @@ jointjs_element <- R6::R6Class(
   )
 )
 
-#' TODO
+.image_params <- c(
+  "@param href A Uniform Resource Identifier"
+)
+
+#' An Image Element
 #' 
-#' TODO
+#' An image with a label.
 #' @export
-jointjs_borderedImage <- R6::R6Class(
-  "jointjs_borderedImage",
+jointjs_image <- R6::R6Class(
+  "jointjs_image",
   inherit = jointjs_element,
   public = list(
     #' @description
-    #' TODO
+    #' Initialise the object
     #' @param href TODO
-    #' @param ... TODO
+    #' @param ... Arguments passed to parent class initialiser
     initialize = \(href, ...) {
       super$initialize(...)
-      private$type <- "standard.BorderedImage"
+      if (!missing(href)) private$attrs$image$href <- href
+      private$type <- "standard.Image"
     }
-  ),
-  private = list(
-    #TODO
   )
 )
 
-#' TODO
+#' An Inscribed Image Element
+#' 
+#' An image inscribed in an ellipse with a label.
+#' @export
+jointjs_inscribedImage <- R6::R6Class(
+  "jointjs_inscribedImage",
+  inherit = jointjs_image,
+  public = list(
+    #' @description
+    #' Initialise the object
+    #' @param href TODO
+    #' @param ... Arguments passed to parent class initialiser
+    initialize = \(href, ...) {
+      super$initialize(href, ...)
+      private$type <- "standard.InscribedImage"
+    }
+  )
+)
+
+#' A Bordered Image Element
+#' 
+#' An image with a border and label.
+#' @export
+jointjs_borderedImage <- R6::R6Class(
+  "jointjs_borderedImage",
+  inherit = jointjs_image,
+  public = list(
+    #' @description
+    #' Initialise the object
+    #' @param href TODO
+    #' @param ... Arguments passed to parent class initialiser
+    initialize = \(href, ...) {
+      super$initialize(href, ...)
+      private$type <- "standard.BorderedImage"
+    }
+  )
+)
+
+#' A Embedded Image Element
+#' 
+#' An image embedded into a rectangle with a label.
+#' @export
+jointjs_embeddedImage <- R6::R6Class(
+  "jointjs_embeddedImage",
+  inherit = jointjs_image,
+  public = list(
+    #' @description
+    #' Initialise the object
+    #' @param href TODO
+    #' @param ... Arguments passed to parent class initialiser
+    initialize = \(href, ...) {
+      super$initialize(href, ...)
+      private$type <- "standard.EmbeddedImage"
+    }
+  )
+)
+
+
+#' A Circle Element
 #' 
 #' TODO
+#' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_circle <- R6::R6Class(
   "jointjs_circle",
   inherit = jointjs_element,
   public = list(
     #' @description
-    #' TODO
-    #' @param ... TODO
+    #' Initialise the object
     initialize = \(...) {
       super$initialize(...)
       private$type <- "standard.Circle"
     }
-  ),
-  private = list(
-    #TODO
   )
 )
 
-#' TODO
+#' A Cylinder Element
 #' 
 #' TODO
+#' @param topRy TODO
+#' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_cylinder <- R6::R6Class(
   "jointjs_cylinder",
   inherit = jointjs_element,
   public = list(
     #' @description
-    #' TODO
-    #' @param ... TODO
+    #' Initialise the object
     initialize = \(...) {
       super$initialize(...)
       private$type <- "standard.Cylinder"
     },
     #' @description TODO
-    #' @param topRy TODO
     set_body = function(fill, stroke, strokeWidth, magnet, topRy, ...) {
       if (missing(topRy)) {
         rlang::abort(c(
@@ -222,135 +286,60 @@ jointjs_cylinder <- R6::R6Class(
       private$attrs$body[names(non_missing)] <- non_missing
       self
     }
-  ),
-  private = list(
-    #TODO
   )
 )
 
-#' TODO
+#' An Ellipse Element
 #' 
 #' TODO
+#' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_ellipse <- R6::R6Class(
   "jointjs_ellipse",
   inherit = jointjs_element,
   public = list(
     #' @description
-    #' TODO
-    #' @param ... TODO
+    #' Initialise the object
     initialize = \(...) {
       super$initialize(...)
       private$type <- "standard.Ellipse"
     }
-  ),
-  private = list(
-    #TODO
   )
 )
 
-#' TODO
+#' A Headered Rectangle Element
 #' 
 #' TODO
-#' @export
-jointjs_embeddedImage <- R6::R6Class(
-  "jointjs_embeddedImage",
-  inherit = jointjs_element,
-  public = list(
-    #' @description
-    #' TODO
-    #' @param href TODO
-    #' @param ... TODO
-    initialize = \(...) {
-      super$initialize(...)
-      private$type <- "standard.EmbeddedImage"
-    }
-  ),
-  private = list(
-    #TODO
-  )
-)
-
-#' TODO
-#' 
-#' TODO
+#' @param headerFill TODO
+#' @param headerText TODO
+#' @param bodyText TODO
+#' @param ... TODO
 #' @export
 jointjs_headeredRectangle <- R6::R6Class(
   "jointjs_headeredRectangle",
   inherit = jointjs_element,
   public = list(
     #' @description
-    #' TODO
-    #' @param headerFill TODO
-    #' @param headerText TODO
-    #' @param bodyText TODO
-    #' @param ... TODO
+    #' Initialise the object
     initialize = \(headerFill, headerText, bodyText, ...) {
       super$initialize(...)
       private$type <- "standard.HeaderedRectangle"
     }
-  ),
-  private = list(
-    #TODO
   )
 )
 
-#' TODO
+#' A Path Element
 #' 
 #' TODO
-#' @export
-jointjs_image <- R6::R6Class(
-  "jointjs_image",
-  inherit = jointjs_element,
-  public = list(
-    #' @description
-    #' TODO
-    #' @param href TODO
-    #' @param ... TODO
-    initialize = \(href, ...) {
-      super$initialize(...)
-      private$type <- "standard.Image"
-    }
-  ),
-  private = list(
-    #TODO
-  )
-)
-
-#' TODO
-#' 
-#' TODO
-#' @export
-jointjs_inscribedImage <- R6::R6Class(
-  "jointjs_inscribedImage",
-  inherit = jointjs_element,
-  public = list(
-    #' @description
-    #' TODO
-    #' @param href TODO
-    #' @param ... TODO
-    initialize = \(...) {
-      super$initialize(...)
-      private$type <- "standard.InscribedImage"
-    }
-  ),
-  private = list(
-    #TODO
-  )
-)
-
-#' TODO
-#' 
-#' TODO
+#' @param refD TODO
+#' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_path <- R6::R6Class(
   "jointjs_path",
   inherit = jointjs_element,
   public = list(
     #' @description
-    #' TODO
-    #' @param refD TODO
-    #' @param ... TODO
+    #' Initialise the object
     initialize = \(refD, ...) {
       super$initialize(...)
       private$type <- "standard.Path"
@@ -362,88 +351,76 @@ jointjs_path <- R6::R6Class(
   )
 )
 
-#' TODO
+#' A Polygon Element
 #' 
 #' TODO
+#' @param refPoints TODO
+#' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_polygon <- R6::R6Class(
   "jointjs_polygon",
   inherit = jointjs_element,
   public = list(
     #' @description
-    #' TODO
-    #' @param refPoints TODO
-    #' @param ... TODO
+    #' Initialise the object
     initialize = \(refPoints, ...) {
       super$initialize(...)
       private$type <- "standard.Polygon"
     }
-  ),
-  private = list(
-    #TODO
   )
 )
 
-#' TODO
+#' A Polyline Element
 #' 
 #' TODO
+#' @param refPoints TODO
+#' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_polyline <- R6::R6Class(
   "jointjs_polyline",
   inherit = jointjs_element,
   public = list(
     #' @description
-    #' TODO
-    #' @param refPoints TODO
-    #' @param ... TODO
+    #' Initialise the object
     initialize = \(refPoints, ...) {
       super$initialize(...)
       private$type <- "standard.Polyline"
     }
-  ),
-  private = list(
-    #TODO
   )
 )
 
-#' TODO
+#' A Rectangle Element
 #' 
 #' TODO
+#' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_rectangle <- R6::R6Class(
   "jointjs_rectangle",
   inherit = jointjs_element,
   public = list(
     #' @description
-    #' TODO
-    #' @param ... TODO
+    #' Initialise the object
     initialize = \(...) {
       super$initialize(...)
       private$type <- "standard.Rectangle"
     }
-  ),
-  private = list(
-    #TODO
   )
 )
 
-#' TODO
+#' A Text Block Element
 #' 
 #' TODO
+#' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_textBlock <- R6::R6Class(
   "jointjs_textBlock",
   inherit = jointjs_element,
   public = list(
     #' @description
-    #' TODO
-    #' @param ... TODO
+    #' Initialise the object
     initialize = \(...) {
       super$initialize(...)
       private$type <- "standard.TextBlock"
     }
-  ),
-  private = list(
-    #TODO
   )
 )

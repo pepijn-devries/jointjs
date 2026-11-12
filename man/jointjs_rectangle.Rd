@@ -2,7 +2,7 @@
 % Please edit documentation in R/elements.R
 \name{jointjs_rectangle}
 \alias{jointjs_rectangle}
-\title{TODO}
+\title{A Rectangle Element}
 \description{
 TODO
 }
@@ -39,7 +39,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_rectangle-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_rectangle-initialize}{}}}
 \subsection{\code{jointjs_rectangle$new()}}{
-  TODO
+  Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_rectangle$new(...)}
@@ -48,7 +48,7 @@ TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{...}}{TODO}
+      \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
   }
