@@ -32,6 +32,14 @@ jointjs_cell <-
         if (length(attrs) > 0) private$attrs <- attrs
       },
       #' @description
+      #' Set attributes to the cell
+      #' @param ... Any valid attributes to a JointJS cell.
+      set_attrs = function(...) {
+        attrs <- list(...)
+        if (length(attrs) > 0) private$attrs[names(attrs)] <- attrs
+        self
+      },
+      #' @description
       #' Coerce the `jointjs_cell` object to a named list.
       get_list = \() {
         result <- as.list(private)

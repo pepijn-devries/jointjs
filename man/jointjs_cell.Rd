@@ -13,6 +13,7 @@ create its children and grandchildren, e.g.:
 \subsection{Public methods}{
   \itemize{
     \item \href{#method-jointjs_cell-initialize}{\code{jointjs_cell$new()}}
+    \item \href{#method-jointjs_cell-set_attrs}{\code{jointjs_cell$set_attrs()}}
     \item \href{#method-jointjs_cell-get_list}{\code{jointjs_cell$get_list()}}
     \item \href{#method-jointjs_cell-clone}{\code{jointjs_cell$clone()}}
   }
@@ -41,6 +42,25 @@ assign the correct type for you. By default it will be set to
       \item{\code{z}}{A depth index. It will determine the plotting order on its
 parent container.}
       \item{\code{...}}{Parameters that will be set as SVG attributes to this object.}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_cell-set_attrs"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_cell-set_attrs}{}}}
+\subsection{\code{jointjs_cell$set_attrs()}}{
+  Set attributes to the cell
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_cell$set_attrs(...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{...}}{Any valid attributes to a JointJS cell.}
     }
     \if{html}{\out{</div>}}
   }

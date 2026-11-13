@@ -21,6 +21,7 @@ jointjs_path$new('M 0 5 10 0 C 20 0 20 20 10 20 L 0 15 Z')
 }
 \if{html}{\out{<details><summary>Inherited methods</summary>
 <ul>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_cell" data-id="set_attrs"><a href='../../jointjs/html/jointjs_cell.html#method-jointjs_cell-set_attrs'><code>jointjs_cell$set_attrs()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="get_list"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-get_list'><code>jointjs_element$get_list()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_background"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_background'><code>jointjs_element$set_background()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_body"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_body'><code>jointjs_element$set_body()</code></a></span></li>

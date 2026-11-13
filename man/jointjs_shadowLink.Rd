@@ -2,9 +2,10 @@
 % Please edit documentation in R/links.R
 \name{jointjs_shadowLink}
 \alias{jointjs_shadowLink}
-\title{TODO}
+\title{Shadow Links Between Elements in a JointJS Diagram}
 \description{
-TODO
+Create a thicker line link with shadow between a source and
+target element or location in a JointJS diagram.
 }
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_link]{jointjs_link}} -> \code{jointjs_shadowLink}
@@ -19,13 +20,14 @@ TODO
 \if{html}{\out{<details open><summary>Inherited methods</summary>
 <ul>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_cell" data-id="get_list"><a href='../../jointjs/html/jointjs_cell.html#method-jointjs_cell-get_list'><code>jointjs_cell$get_list()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_cell" data-id="set_attrs"><a href='../../jointjs/html/jointjs_cell.html#method-jointjs_cell-set_attrs'><code>jointjs_cell$set_attrs()</code></a></span></li>
 </ul>
 </details>}}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-jointjs_shadowLink-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_shadowLink-initialize}{}}}
 \subsection{\code{jointjs_shadowLink$new()}}{
-  TODO
+  The link initialiser.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_shadowLink$new(source, target, vertices, ...)}
@@ -34,10 +36,16 @@ TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{source}}{TODO}
-      \item{\code{target}}{TODO}
-      \item{\code{vertices}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{source, target}}{\code{source} and \code{target} indicate
+the route the link should take. It can be a point (a \code{list} with
+an \code{x} and \code{y} coordinate), or a \code{list} containing an \code{id} of
+the element that should be linked. You can also provide a \code{port}
+value to that list if you wish to connect to a specific port
+on the element.}
+      \item{\code{vertices}}{A \code{list} of coordinates where the link should
+pass through. The list is unnamed and each element should
+be a list of and \code{x} and \code{y} value.}
+      \item{\code{...}}{Arguments passed to parent class initialiser.}
     }
     \if{html}{\out{</div>}}
   }

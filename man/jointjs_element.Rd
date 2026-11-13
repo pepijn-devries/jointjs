@@ -45,6 +45,7 @@ becomes \code{strokeWidth}, etc.
 \if{html}{\out{<details open><summary>Inherited methods</summary>
 <ul>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_cell" data-id="initialize"><a href='../../jointjs/html/jointjs_cell.html#method-jointjs_cell-initialize'><code>jointjs_cell$initialize()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_cell" data-id="set_attrs"><a href='../../jointjs/html/jointjs_cell.html#method-jointjs_cell-set_attrs'><code>jointjs_cell$set_attrs()</code></a></span></li>
 </ul>
 </details>}}
 \if{html}{\out{<hr>}}
