@@ -318,9 +318,9 @@ jointjs_headeredRectangle <- R6::R6Class(
       super$initialize(...)
       if (inherits(header, "jointjs_rectangle"))
         header <- header$get_list()
-      private$attrs$header     <- header
-      private$attrs$headerText <- headerText
-      private$attrs$bodyText   <- bodyText
+      if (!missing(header))     private$attrs$header     <- header
+      if (!missing(headerText)) private$attrs$headerText <- headerText
+      if (!missing(bodyText))   private$attrs$bodyText   <- bodyText
       private$type <- "standard.HeaderedRectangle"
     }
   )
@@ -343,7 +343,7 @@ jointjs_path <- R6::R6Class(
     #' Initialise the object
     initialize = \(refD, ...) {
       super$initialize(...)
-      private$attrs$body$refD <- refD
+      if (!missing(refD)) private$attrs$body$refD <- refD
       private$type <- "standard.Path"
     }
   ),
@@ -371,7 +371,7 @@ jointjs_polygon <- R6::R6Class(
     #' Initialise the object
     initialize = \(refPoints, ...) {
       super$initialize(...)
-      private$attrs$body$refPoints <- refPoints
+      if (!missing(refPoints)) private$attrs$body$refPoints <- refPoints
       private$type <- "standard.Polygon"
     }
   )
@@ -395,7 +395,7 @@ jointjs_polyline <- R6::R6Class(
     #' Initialise the object
     initialize = \(refPoints, ...) {
       super$initialize(...)
-      private$attrs$body$refPoints <- refPoints
+      if (!missing(refPoints)) private$attrs$body$refPoints <- refPoints
       private$type <- "standard.Polyline"
     }
   )
@@ -433,7 +433,7 @@ jointjs_textBlock <- R6::R6Class(
     #' Initialise the object
     initialize = \(text, ...) {
       super$initialize(...)
-      private$attrs$label$text <- text
+      if (!missing(text)) private$attrs$label$text <- text
       private$type <- "standard.TextBlock"
     }
   )
