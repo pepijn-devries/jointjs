@@ -42,15 +42,16 @@ A rectangle with a header.
   Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_headeredRectangle$new(headerFill, headerText, bodyText, ...)}
+    \preformatted{jointjs_headeredRectangle$new(header, headerText, bodyText, ...)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{headerFill}}{TODO}
-      \item{\code{headerText}}{TODO}
-      \item{\code{bodyText}}{TODO}
+      \item{\code{header}}{Either a \link{jointjs_rectangle} or a named \code{list} with
+SVG rectangle attributes.}
+      \item{\code{headerText}}{A named \code{list} with SVG text element properties}
+      \item{\code{bodyText}}{A named \code{list} with SVG text element properties}
       \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}

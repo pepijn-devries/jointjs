@@ -6,6 +6,9 @@
 \description{
 A vector of vertices connected by lines.
 }
+\examples{
+jointjs_path$new('M 0 5 10 0 C 20 0 20 20 10 20 L 0 15 Z')
+}
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_path}
 }
@@ -48,7 +51,8 @@ A vector of vertices connected by lines.
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{refD}}{TODO}
+      \item{\code{refD}}{A \code{character} string that is used to set the
+\code{d} attribute of an SVG \code{path} element.}
       \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}

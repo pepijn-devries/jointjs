@@ -302,9 +302,10 @@ jointjs_ellipse <- R6::R6Class(
 #' A Headered Rectangle Element
 #' 
 #' A rectangle with a header.
-#' @param headerFill TODO
-#' @param headerText TODO
-#' @param bodyText TODO
+#' @param header Either a [jointjs_rectangle] or a named `list` with
+#' SVG rectangle attributes.
+#' @param headerText A named `list` with SVG text element properties
+#' @param bodyText A named `list` with SVG text element properties
 #' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_headeredRectangle <- R6::R6Class(
@@ -313,8 +314,13 @@ jointjs_headeredRectangle <- R6::R6Class(
   public = list(
     #' @description
     #' Initialise the object
-    initialize = \(headerFill, headerText, bodyText, ...) {
+    initialize = \(header, headerText, bodyText, ...) {
       super$initialize(...)
+      if (inherits(header, "jointjs_rectangle"))
+        header <- header$get_list()
+      private$attrs$header     <- header
+      private$attrs$headerText <- headerText
+      private$attrs$bodyText   <- bodyText
       private$type <- "standard.HeaderedRectangle"
     }
   )
@@ -323,8 +329,11 @@ jointjs_headeredRectangle <- R6::R6Class(
 #' A Path Element
 #' 
 #' A vector of vertices connected by lines.
-#' @param refD TODO
+#' @param refD A `character` string that is used to set the
+#' `d` attribute of an SVG `path` element.
 #' @param ... Arguments passed to parent class initialiser
+#' @examples
+#' jointjs_path$new('M 0 5 10 0 C 20 0 20 20 10 20 L 0 15 Z')
 #' @export
 jointjs_path <- R6::R6Class(
   "jointjs_path",
@@ -334,6 +343,7 @@ jointjs_path <- R6::R6Class(
     #' Initialise the object
     initialize = \(refD, ...) {
       super$initialize(...)
+      private$attrs$body$refD <- refD
       private$type <- "standard.Path"
     }
   ),
@@ -346,8 +356,12 @@ jointjs_path <- R6::R6Class(
 #' A Polygon Element
 #' 
 #' A vector of vertices connected as a polygon.
-#' @param refPoints TODO
+#' @param refPoints A `character` string of
+#' coordinates that is used to set the SVG `points` attribute
+#' of `polygon` or `polyline` elements.
 #' @param ... Arguments passed to parent class initialiser
+#' @examples
+#' jointjs_polygon$new("10,10 30,10 30,30")
 #' @export
 jointjs_polygon <- R6::R6Class(
   "jointjs_polygon",
@@ -357,6 +371,7 @@ jointjs_polygon <- R6::R6Class(
     #' Initialise the object
     initialize = \(refPoints, ...) {
       super$initialize(...)
+      private$attrs$body$refPoints <- refPoints
       private$type <- "standard.Polygon"
     }
   )
@@ -365,8 +380,12 @@ jointjs_polygon <- R6::R6Class(
 #' A Polyline Element
 #' 
 #' A polyline with a label.
-#' @param refPoints TODO
+#' @param refPoints A `character` string of
+#' coordinates that is used to set the SVG `points` attribute
+#' of `polygon` or `polyline` elements.
 #' @param ... Arguments passed to parent class initialiser
+#' @examples
+#' jointjs_polyline$new("10,10 30,10 30,30")
 #' @export
 jointjs_polyline <- R6::R6Class(
   "jointjs_polyline",
@@ -376,6 +395,7 @@ jointjs_polyline <- R6::R6Class(
     #' Initialise the object
     initialize = \(refPoints, ...) {
       super$initialize(...)
+      private$attrs$body$refPoints <- refPoints
       private$type <- "standard.Polyline"
     }
   )
@@ -402,6 +422,7 @@ jointjs_rectangle <- R6::R6Class(
 #' A Text Block Element
 #' 
 #' A rectangle shape with text.
+#' @param text A `character` string to be displayed.
 #' @param ... Arguments passed to parent class initialiser
 #' @export
 jointjs_textBlock <- R6::R6Class(
@@ -410,8 +431,9 @@ jointjs_textBlock <- R6::R6Class(
   public = list(
     #' @description
     #' Initialise the object
-    initialize = \(...) {
+    initialize = \(text, ...) {
       super$initialize(...)
+      private$attrs$label$text <- text
       private$type <- "standard.TextBlock"
     }
   )

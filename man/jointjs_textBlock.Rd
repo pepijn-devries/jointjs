@@ -42,12 +42,13 @@ A rectangle shape with text.
   Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_textBlock$new(...)}
+    \preformatted{jointjs_textBlock$new(text, ...)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
+      \item{\code{text}}{A \code{character} string to be displayed.}
       \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}

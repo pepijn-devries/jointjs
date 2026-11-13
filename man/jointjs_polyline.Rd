@@ -6,6 +6,9 @@
 \description{
 A polyline with a label.
 }
+\examples{
+jointjs_polyline$new("10,10 30,10 30,30")
+}
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_polyline}
 }
@@ -48,7 +51,9 @@ A polyline with a label.
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{refPoints}}{TODO}
+      \item{\code{refPoints}}{A \code{character} string of
+coordinates that is used to set the SVG \code{points} attribute
+of \code{polygon} or \code{polyline} elements.}
       \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
