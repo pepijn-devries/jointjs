@@ -2,6 +2,7 @@
 #' 
 #' Create a link between a source and target element or location
 #' in a JointJS diagram.
+#' @family link
 #' @export
 jointjs_link <- R6::R6Class(
   "jointjs_link",
@@ -43,6 +44,7 @@ jointjs_link <- R6::R6Class(
 #' 
 #' Create a double line link between a source and target element or location
 #' in a JointJS diagram.
+#' @family link
 #' @export
 jointjs_doubleLink <- R6::R6Class(
   "jointjs_doubleLink",
@@ -61,6 +63,7 @@ jointjs_doubleLink <- R6::R6Class(
 #' 
 #' Create a thicker line link with shadow between a source and
 #' target element or location in a JointJS diagram.
+#' @family link
 #' @export
 jointjs_shadowLink <- R6::R6Class(
   "jointjs_shadowLink",

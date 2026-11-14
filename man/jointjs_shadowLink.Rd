@@ -7,6 +7,12 @@
 Create a thicker line link with shadow between a source and
 target element or location in a JointJS diagram.
 }
+\seealso{
+Other link:
+\code{\link{jointjs_doubleLink}},
+\code{\link{jointjs_link}}
+}
+\concept{link}
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_link]{jointjs_link}} -> \code{jointjs_shadowLink}
 }

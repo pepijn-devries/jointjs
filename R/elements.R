@@ -26,6 +26,7 @@
 #' @param magnet When set to `TRUE`, the element can be used as
 #' source or target for a [jointjs_link].
 #' @param ... Additional SVG attributes accepted by the specific SVG element
+#' @family elements
 #' @export
 jointjs_element <- R6::R6Class(
   "jointjs_element",
@@ -163,6 +164,7 @@ jointjs_element <- R6::R6Class(
 #' An image with a label.
 #' @param href A Uniform Resource Identifier (URI) to locate the image
 #' @param ... Arguments passed to parent class initialiser
+#' @family elements
 #' @export
 jointjs_image <- R6::R6Class(
   "jointjs_image",
@@ -181,6 +183,7 @@ jointjs_image <- R6::R6Class(
 #' An Inscribed Image Element
 #' 
 #' An image inscribed in an ellipse with a label.
+#' @family elements
 #' @export
 jointjs_inscribedImage <- R6::R6Class(
   "jointjs_inscribedImage",
@@ -234,6 +237,7 @@ jointjs_embeddedImage <- R6::R6Class(
 #' 
 #' A circle shape.
 #' @param ... Arguments passed to parent class initialiser
+#' @family elements
 #' @export
 jointjs_circle <- R6::R6Class(
   "jointjs_circle",
@@ -254,6 +258,7 @@ jointjs_circle <- R6::R6Class(
 #' @param topRy The vertical radius of the exposed area of the cylinder base,
 #' as an absolute value or a percentage.
 #' @param ... Arguments passed to parent class initialiser
+#' @family elements
 #' @export
 jointjs_cylinder <- R6::R6Class(
   "jointjs_cylinder",
@@ -285,6 +290,7 @@ jointjs_cylinder <- R6::R6Class(
 #' 
 #' An elliptical shape.
 #' @param ... Arguments passed to parent class initialiser
+#' @family elements
 #' @export
 jointjs_ellipse <- R6::R6Class(
   "jointjs_ellipse",
@@ -307,6 +313,7 @@ jointjs_ellipse <- R6::R6Class(
 #' @param headerText A named `list` with SVG text element properties
 #' @param bodyText A named `list` with SVG text element properties
 #' @param ... Arguments passed to parent class initialiser
+#' @family elements
 #' @export
 jointjs_headeredRectangle <- R6::R6Class(
   "jointjs_headeredRectangle",
@@ -334,6 +341,7 @@ jointjs_headeredRectangle <- R6::R6Class(
 #' @param ... Arguments passed to parent class initialiser
 #' @examples
 #' jointjs_path$new('M 0 5 10 0 C 20 0 20 20 10 20 L 0 15 Z')
+#' @family elements
 #' @export
 jointjs_path <- R6::R6Class(
   "jointjs_path",
@@ -362,6 +370,7 @@ jointjs_path <- R6::R6Class(
 #' @param ... Arguments passed to parent class initialiser
 #' @examples
 #' jointjs_polygon$new("10,10 30,10 30,30")
+#' @family elements
 #' @export
 jointjs_polygon <- R6::R6Class(
   "jointjs_polygon",
@@ -386,6 +395,7 @@ jointjs_polygon <- R6::R6Class(
 #' @param ... Arguments passed to parent class initialiser
 #' @examples
 #' jointjs_polyline$new("10,10 30,10 30,30")
+#' @family elements
 #' @export
 jointjs_polyline <- R6::R6Class(
   "jointjs_polyline",
@@ -405,6 +415,7 @@ jointjs_polyline <- R6::R6Class(
 #' 
 #' A Rectangle shape.
 #' @param ... Arguments passed to parent class initialiser
+#' @family elements
 #' @export
 jointjs_rectangle <- R6::R6Class(
   "jointjs_rectangle",
@@ -424,6 +435,7 @@ jointjs_rectangle <- R6::R6Class(
 #' A rectangle shape with text.
 #' @param text A `character` string to be displayed.
 #' @param ... Arguments passed to parent class initialiser
+#' @family elements
 #' @export
 jointjs_textBlock <- R6::R6Class(
   "jointjs_textBlock",

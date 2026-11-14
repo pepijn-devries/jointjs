@@ -2,10 +2,17 @@
 % Please edit documentation in R/graphs.R
 \name{jointjs_graph}
 \alias{jointjs_graph}
-\title{TODO}
+\title{Create A JointJS Graph}
 \description{
-TODO
+Use the \code{jointjs_graph} class to define a diagram that can be rendered
+with \code{\link[=jointjs]{jointjs()}}.
 }
+\seealso{
+Other root-classes:
+\code{\link{jointjs_cell}},
+\code{\link{jointjs_paper}}
+}
+\concept{root-classes}
 \section{Methods}{
 \subsection{Public methods}{
   \itemize{
@@ -20,7 +27,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_graph-initialize"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_graph-initialize}{}}}
 \subsection{\code{jointjs_graph$new()}}{
-  TODO
+  Initialise a JointJS Graph
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_graph$new(x, ...)}
@@ -29,8 +36,10 @@ TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{x}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{x}}{A named \code{list} of cell objects represented as \code{list}s.
+You can use the graph state object returned by a Shiny widget
+to initiate a graph class object.}
+      \item{\code{...}}{Ignored}
     }
     \if{html}{\out{</div>}}
   }
@@ -40,7 +49,10 @@ TODO
 \if{html}{\out{<a id="method-jointjs_graph-add_elements"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_graph-add_elements}{}}}
 \subsection{\code{jointjs_graph$add_elements()}}{
-  TODO
+  Add elements to the graph. These can be any object that inherit
+from the \link{jointjs_cell} class. So, these can be shapes like
+\link{jointjs_rectangle} and \link{jointjs_image}, but also links like
+\link{jointjs_doubleLink}.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_graph$add_elements(...)}
@@ -49,7 +61,8 @@ TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{...}}{TODO}
+      \item{\code{...}}{Pass any number of items to be added to the graph
+here.}
     }
     \if{html}{\out{</div>}}
   }
@@ -59,7 +72,8 @@ TODO
 \if{html}{\out{<a id="method-jointjs_graph-get_widget"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_graph-get_widget}{}}}
 \subsection{\code{jointjs_graph$get_widget()}}{
-  TODO
+  This is just short for \code{jointjs(graph = x)}, where \code{x}
+is a \code{jointjs_graph} class object.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_graph$get_widget(...)}
@@ -68,7 +82,7 @@ TODO
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{...}}{TODO}
+      \item{\code{...}}{Arguments passed to \code{\link[=jointjs]{jointjs()}}}
     }
     \if{html}{\out{</div>}}
   }
@@ -78,7 +92,7 @@ TODO
 \if{html}{\out{<a id="method-jointjs_graph-get_list"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_graph-get_list}{}}}
 \subsection{\code{jointjs_graph$get_list()}}{
-  TODO
+  Returns the \code{list} of cells that define the graph.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_graph$get_list()}

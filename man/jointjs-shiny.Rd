@@ -28,3 +28,8 @@ is useful if you want to save an expression in a variable.}
 Output and render functions for using jointjs within Shiny
 applications and interactive Rmd documents.
 }
+\seealso{
+Other widgets:
+\code{\link[=jointjs]{jointjs()}}
+}
+\concept{widgets}

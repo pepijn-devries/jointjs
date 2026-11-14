@@ -9,6 +9,12 @@ Usually you don't initiate cells directly. Rather, it is more efficient to
 create its children and grandchildren, e.g.:
 \link{jointjs_circle}, \link{jointjs_image}, \link{jointjs_rectangle}, etc.
 }
+\seealso{
+Other root-classes:
+\code{\link{jointjs_graph}},
+\code{\link{jointjs_paper}}
+}
+\concept{root-classes}
 \section{Methods}{
 \subsection{Public methods}{
   \itemize{
