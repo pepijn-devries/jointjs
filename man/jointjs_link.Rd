@@ -19,11 +19,11 @@ jointjs_link$new(vertices = list(
   ))
 }
 \seealso{
-Other link:
+Other links:
 \code{\link{jointjs_doubleLink}},
 \code{\link{jointjs_shadowLink}}
 }
-\concept{link}
+\concept{links}
 \section{Super class}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{jointjs_link}
 }
