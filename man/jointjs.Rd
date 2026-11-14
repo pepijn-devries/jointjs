@@ -5,7 +5,7 @@
 \title{Create an Interactive JointJS Diagram}
 \usage{
 jointjs(
-  paper = jointjs_paper$new()$get_list(),
+  paper = jointjs_paper$new(),
   graph = NULL,
   width = NULL,
   height = NULL,
@@ -13,24 +13,45 @@ jointjs(
 )
 }
 \arguments{
-\item{paper}{TODO}
+\item{paper}{Either a named list with paper properties, or
+a \link{jointjs_paper} class object.}
 
-\item{graph}{TODO}
+\item{graph}{Either a named list of cells to draw, or a
+\link{jointjs_graph} class object}
 
-\item{width}{TODO}
+\item{width}{Fixed width for widget (in css units). The default is
+\code{NULL}, which results in intelligent automatic sizing based on the
+widget's container.}
 
-\item{height}{TODO}
+\item{height}{Fixed height for widget (in css units). The default is
+\code{NULL}, which results in intelligent automatic sizing based on the
+widget's container.}
 
-\item{elementId}{TODO}
+\item{elementId}{Use an explicit element ID for the widget (rather than an
+automatically generated one). Useful if you have other JavaScript that
+needs to explicitly discover and interact with a specific widget instance.}
 }
 \value{
-TODO
+An object of class \code{htmlwidget} that will intelligently print
+  itself into HTML in a variety of contexts including the R console, within R
+  Markdown documents, and within Shiny output bindings.
 }
 \description{
-TODO
+A wrapper around the JavaScript JointJS library to create an
+interactive html widget. It can be used to draw and edit diagrams.
 }
 \examples{
 if (interactive()) {
-  jointjs(list(gridSize = 20, drawGrid = TRUE, backgroundColor = "#E9ECEF"))
+  graph <-
+    jointjs_graph$new()$
+      add_elements(
+        jointjs_rectangle$new(id = "hello", label = list(text = "Hello"))$
+          set_position(5, 5),
+        jointjs_circle$new(id = "world", label = list(text = "World"))$
+          set_position(70, 5),
+        jointjs_doubleLink$new(source = list(id = "hello"),
+                               target = list(id = "world"))
+      )
+  jointjs(graph = graph)
 }
 }
