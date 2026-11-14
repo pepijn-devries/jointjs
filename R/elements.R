@@ -201,6 +201,7 @@ jointjs_inscribedImage <- R6::R6Class(
 #' A Bordered Image Element
 #' 
 #' An image with a border and label.
+#' @family elements
 #' @export
 jointjs_borderedImage <- R6::R6Class(
   "jointjs_borderedImage",
@@ -218,6 +219,7 @@ jointjs_borderedImage <- R6::R6Class(
 #' A Embedded Image Element
 #' 
 #' An image embedded into a rectangle with a label.
+#' @family elements
 #' @export
 jointjs_embeddedImage <- R6::R6Class(
   "jointjs_embeddedImage",

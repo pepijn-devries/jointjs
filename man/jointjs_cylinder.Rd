@@ -8,9 +8,11 @@ A cylinder with a vertical base and an elliptical top.
 }
 \seealso{
 Other elements:
+\code{\link{jointjs_borderedImage}},
 \code{\link{jointjs_circle}},
 \code{\link{jointjs_element}},
 \code{\link{jointjs_ellipse}},
+\code{\link{jointjs_embeddedImage}},
 \code{\link{jointjs_headeredRectangle}},
 \code{\link{jointjs_image}},
 \code{\link{jointjs_inscribedImage}},
