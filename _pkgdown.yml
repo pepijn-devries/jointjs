@@ -1,10 +1,26 @@
 url: https://pepijn-devries.github.io/jointjs/
 template:
   bootstrap: 5
+reference:
+  - title: "Widget Functions"
+    desc: "Functions to build html widgets"
+    contents:
+      - has_concept("widgets")
+  - title: "Root Classes"
+    desc: "Essential R6 classes used to construct diagrams for interactive widgets"
+    contents:
+      - has_concept("root-classes")
+  - title: "Diagram Elements"
+    desc: "Elements for constructing diagrams for interactive widgets"
+    contents:
+      - has_concept("elements")
+  - title: "Link Diagram Elements"
+    desc: "Create links between elements in a diagram"
+    contents:
+      - has_concept("links")
 authors:
   Pepijn de Vries:
     href: https://github.com/pepijn-devries/
     html: '<img src="https://avatars.githubusercontent.com/u/13707449" class="d-inline-block
       align-middle me-2" style="width: 62px; height: 62px; border-radius: 50%" alt="Pepijn
       de Vries"/> Pepijn de Vries'
-

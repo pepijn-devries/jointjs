@@ -8,11 +8,11 @@ Create a double line link between a source and target element or location
 in a JointJS diagram.
 }
 \seealso{
-Other link:
+Other links:
 \code{\link{jointjs_link}},
 \code{\link{jointjs_shadowLink}}
 }
-\concept{link}
+\concept{links}
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_link]{jointjs_link}} -> \code{jointjs_doubleLink}
 }
