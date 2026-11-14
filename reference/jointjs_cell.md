@@ -8,6 +8,12 @@ efficient to create its children and grandchildren, e.g.:
 [jointjs_rectangle](https://pepijn-devries.github.io/jointjs/reference/jointjs_rectangle.md),
 etc.
 
+## See also
+
+Other root-classes:
+[`jointjs_graph`](https://pepijn-devries.github.io/jointjs/reference/jointjs_graph.md),
+[`jointjs_paper`](https://pepijn-devries.github.io/jointjs/reference/jointjs_paper.md)
+
 ## Methods
 
 ### Public methods

@@ -5,6 +5,12 @@ used to define the paper specifications. These specifications are needed
 when creating a widget with
 [`jointjs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs.md).
 
+## See also
+
+Other root-classes:
+[`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md),
+[`jointjs_graph`](https://pepijn-devries.github.io/jointjs/reference/jointjs_graph.md)
+
 ## Methods
 
 ### Public methods

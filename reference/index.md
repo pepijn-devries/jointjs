@@ -24,7 +24,7 @@
 - [`jointjs_embeddedImage`](https://pepijn-devries.github.io/jointjs/reference/jointjs_embeddedImage.md)
   : A Embedded Image Element
 - [`jointjs_graph`](https://pepijn-devries.github.io/jointjs/reference/jointjs_graph.md)
-  : TODO
+  : Create A JointJS Graph
 - [`jointjs_headeredRectangle`](https://pepijn-devries.github.io/jointjs/reference/jointjs_headeredRectangle.md)
   : A Headered Rectangle Element
 - [`jointjs_image`](https://pepijn-devries.github.io/jointjs/reference/jointjs_image.md)

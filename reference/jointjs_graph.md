@@ -1,6 +1,14 @@
-# TODO
+# Create A JointJS Graph
 
-TODO
+Use the `jointjs_graph` class to define a diagram that can be rendered
+with
+[`jointjs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs.md).
+
+## See also
+
+Other root-classes:
+[`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md),
+[`jointjs_paper`](https://pepijn-devries.github.io/jointjs/reference/jointjs_paper.md)
 
 ## Methods
 
@@ -20,7 +28,7 @@ TODO
 
 ### `jointjs_graph$new()`
 
-TODO
+Initialise a JointJS Graph
 
 #### Usage
 
@@ -30,17 +38,26 @@ TODO
 
 - `x`:
 
-  TODO
+  A named `list` of cell objects represented as `list`s. You can use the
+  graph state object returned by a Shiny widget to initiate a graph
+  class object.
 
 - `...`:
 
-  TODO
+  Ignored
 
 ------------------------------------------------------------------------
 
 ### `jointjs_graph$add_elements()`
 
-TODO
+Add elements to the graph. These can be any object that inherit from the
+[jointjs_cell](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)
+class. So, these can be shapes like
+[jointjs_rectangle](https://pepijn-devries.github.io/jointjs/reference/jointjs_rectangle.md)
+and
+[jointjs_image](https://pepijn-devries.github.io/jointjs/reference/jointjs_image.md),
+but also links like
+[jointjs_doubleLink](https://pepijn-devries.github.io/jointjs/reference/jointjs_doubleLink.md).
 
 #### Usage
 
@@ -50,13 +67,14 @@ TODO
 
 - `...`:
 
-  TODO
+  Pass any number of items to be added to the graph here.
 
 ------------------------------------------------------------------------
 
 ### `jointjs_graph$get_widget()`
 
-TODO
+This is just short for `jointjs(graph = x)`, where `x` is a
+`jointjs_graph` class object.
 
 #### Usage
 
@@ -66,13 +84,14 @@ TODO
 
 - `...`:
 
-  TODO
+  Arguments passed to
+  [`jointjs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs.md)
 
 ------------------------------------------------------------------------
 
 ### `jointjs_graph$get_list()`
 
-TODO
+Returns the `list` of cells that define the graph.
 
 #### Usage
 

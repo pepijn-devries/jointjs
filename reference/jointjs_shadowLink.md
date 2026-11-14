@@ -3,6 +3,12 @@
 Create a thicker line link with shadow between a source and target
 element or location in a JointJS diagram.
 
+## See also
+
+Other link:
+[`jointjs_doubleLink`](https://pepijn-devries.github.io/jointjs/reference/jointjs_doubleLink.md),
+[`jointjs_link`](https://pepijn-devries.github.io/jointjs/reference/jointjs_link.md)
+
 ## Super classes
 
 [`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)

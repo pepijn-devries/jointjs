@@ -54,6 +54,11 @@ An object of class `htmlwidget` that will intelligently print itself
 into HTML in a variety of contexts including the R console, within R
 Markdown documents, and within Shiny output bindings.
 
+## See also
+
+Other widgets:
+[`jointjs-shiny`](https://pepijn-devries.github.io/jointjs/reference/jointjs-shiny.md)
+
 ## Examples
 
 ``` r

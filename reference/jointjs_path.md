@@ -2,6 +2,21 @@
 
 A vector of vertices connected by lines.
 
+## See also
+
+Other elements:
+[`jointjs_circle`](https://pepijn-devries.github.io/jointjs/reference/jointjs_circle.md),
+[`jointjs_cylinder`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cylinder.md),
+[`jointjs_element`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.md),
+[`jointjs_ellipse`](https://pepijn-devries.github.io/jointjs/reference/jointjs_ellipse.md),
+[`jointjs_headeredRectangle`](https://pepijn-devries.github.io/jointjs/reference/jointjs_headeredRectangle.md),
+[`jointjs_image`](https://pepijn-devries.github.io/jointjs/reference/jointjs_image.md),
+[`jointjs_inscribedImage`](https://pepijn-devries.github.io/jointjs/reference/jointjs_inscribedImage.md),
+[`jointjs_polygon`](https://pepijn-devries.github.io/jointjs/reference/jointjs_polygon.md),
+[`jointjs_polyline`](https://pepijn-devries.github.io/jointjs/reference/jointjs_polyline.md),
+[`jointjs_rectangle`](https://pepijn-devries.github.io/jointjs/reference/jointjs_rectangle.md),
+[`jointjs_textBlock`](https://pepijn-devries.github.io/jointjs/reference/jointjs_textBlock.md)
+
 ## Super classes
 
 [`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)

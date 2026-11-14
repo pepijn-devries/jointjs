@@ -3,6 +3,12 @@
 Create a link between a source and target element or location in a
 JointJS diagram.
 
+## See also
+
+Other link:
+[`jointjs_doubleLink`](https://pepijn-devries.github.io/jointjs/reference/jointjs_doubleLink.md),
+[`jointjs_shadowLink`](https://pepijn-devries.github.io/jointjs/reference/jointjs_shadowLink.md)
+
 ## Super class
 
 [`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)
