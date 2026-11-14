@@ -1,8 +1,24 @@
-# TODO
+# Elements to Build a JointJS Diagram
 
 A generic template to create shapes for a
 [jointjs_graph](https://pepijn-devries.github.io/jointjs/reference/jointjs_graph.md).
-TODO
+Shapes are visualised by
+[https://www.w3.org/groups/wg/svg/](https://pepijn-devries.github.io/jointjs/reference/SVG)
+elements. `jointjs_element` objects are R's representation of such
+elements. This R class specifies the elements such that they can be used
+to construct a
+[jointjs_graph](https://pepijn-devries.github.io/jointjs/reference/jointjs_graph.md).
+It's usually more effective to initialise a child class, such as
+[jointjs_rectangle](https://pepijn-devries.github.io/jointjs/reference/jointjs_rectangle.md),
+[jointjs_image](https://pepijn-devries.github.io/jointjs/reference/jointjs_image.md),
+[jointjs_circle](https://pepijn-devries.github.io/jointjs/reference/jointjs_circle.md),
+etc.
+
+Parameters are all based on SVG attributes, you can use the `...`
+arguments to pass other valid attributes. Note that the attributes are
+renamed in camel-case conform the JointJS spefications. So, SVG
+attribute `font-family` becomes `fontFamily`, `stroke-width` becomes
+`strokeWidth`, etc.
 
 ## Super class
 
@@ -48,12 +64,13 @@ TODO
 Inherited methods
 
 - [`jointjs_cell$initialize()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.html#method-initialize)
+- [`jointjs_cell$set_attrs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.html#method-set_attrs)
 
 ------------------------------------------------------------------------
 
 ### `jointjs_element$set_position()`
 
-TODO
+Set the element's position relative to its parent container.
 
 #### Usage
 
@@ -63,13 +80,13 @@ TODO
 
 - `x, y`:
 
-  TODO
+  Coordinates relative to its parent container.
 
 ------------------------------------------------------------------------
 
 ### `jointjs_element$set_image()`
 
-TODO
+Set image attributes for the element.
 
 #### Usage
 
@@ -89,7 +106,7 @@ TODO
 
 ### `jointjs_element$set_border()`
 
-TODO
+Set border attributes for the element.
 
 #### Usage
 
@@ -99,7 +116,7 @@ TODO
 
 - `fill`:
 
-  TODO
+  Fill colour
 
 - `stroke`:
 
@@ -117,7 +134,7 @@ TODO
 
 ### `jointjs_element$set_background()`
 
-TODO
+Set background attributes for the element.
 
 #### Usage
 
@@ -127,7 +144,7 @@ TODO
 
 - `fill`:
 
-  TODO
+  Fill colour
 
 - `stroke`:
 
@@ -145,7 +162,8 @@ TODO
 
 ### `jointjs_element$set_top()`
 
-TODO
+Set top attributes for the element (used to visualise the top of a
+cylinder base).
 
 #### Usage
 
@@ -155,7 +173,7 @@ TODO
 
 - `fill`:
 
-  TODO
+  Fill colour
 
 - `stroke`:
 
@@ -173,7 +191,7 @@ TODO
 
 ### `jointjs_element$set_line()`
 
-TODO
+Set line attributes for the element.
 
 #### Usage
 
@@ -197,7 +215,7 @@ TODO
 
 ### `jointjs_element$set_shadow()`
 
-TODO
+Set shadow attributes for the element.
 
 #### Usage
 
@@ -221,7 +239,7 @@ TODO
 
 ### `jointjs_element$set_outline()`
 
-TODO
+Set outline attributes for the element.
 
 #### Usage
 
@@ -245,7 +263,7 @@ TODO
 
 ### `jointjs_element$set_wrapper()`
 
-TODO
+Set wrapper attributes for the element.
 
 #### Usage
 
@@ -269,7 +287,7 @@ TODO
 
 ### `jointjs_element$set_header()`
 
-TODO
+Set header attributes for the element.
 
 #### Usage
 
@@ -279,7 +297,7 @@ TODO
 
 - `fill`:
 
-  TODO
+  Fill colour
 
 - `stroke`:
 
@@ -297,7 +315,7 @@ TODO
 
 ### `jointjs_element$set_headerText()`
 
-TODO
+Set headerText attributes for the element.
 
 #### Usage
 
@@ -329,7 +347,7 @@ TODO
 
 ### `jointjs_element$set_bodyText()`
 
-TODO
+Set bodyText attributes for the element.
 
 #### Usage
 
@@ -361,7 +379,7 @@ TODO
 
 ### `jointjs_element$set_body()`
 
-TODO
+Set body attributes for the element.
 
 #### Usage
 
@@ -371,7 +389,7 @@ TODO
 
 - `fill`:
 
-  TODO
+  Fill colour
 
 - `stroke`:
 
@@ -383,7 +401,8 @@ TODO
 
 - `magnet`:
 
-  TODO
+  When set to `TRUE`, the element can be used as source or target for a
+  [jointjs_link](https://pepijn-devries.github.io/jointjs/reference/jointjs_link.md).
 
 - `...`:
 
@@ -393,7 +412,7 @@ TODO
 
 ### `jointjs_element$set_label()`
 
-TODO
+Set label attributes for the element.
 
 #### Usage
 
@@ -425,7 +444,7 @@ TODO
 
 ### `jointjs_element$get_list()`
 
-TODO
+Returns a named list representation of the element.
 
 #### Usage
 

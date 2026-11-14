@@ -4,6 +4,12 @@ Create interactive 'JointJS' diagrams. Wraps the JavaScript library
 'JointJS' to create interactive html widgets. It will let the user draw
 and interact with diagrams.
 
+## See also
+
+Useful links:
+
+- <https://pepijn-devries.github.io/jointjs/>
+
 ## Author
 
 **Maintainer**: Pepijn de Vries <pepijn.devries@outlook.com>

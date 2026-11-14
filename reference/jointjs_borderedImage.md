@@ -1,24 +1,27 @@
-# TODO
+# A Bordered Image Element
 
-TODO
+An image with a border and label.
 
 ## Super classes
 
 [`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)
 -\>
 [`jointjs_element`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.md)
--\> `jointjs_element`
+-\>
+[`jointjs_image`](https://pepijn-devries.github.io/jointjs/reference/jointjs_image.md)
+-\> `jointjs_borderedImage`
 
 ## Methods
 
 ### Public methods
 
-- [`jointjs_element$new()`](#method-jointjs_element-initialize)
+- [`jointjs_borderedImage$new()`](#method-jointjs_borderedImage-initialize)
 
-- [`jointjs_element$clone()`](#method-jointjs_element-clone)
+- [`jointjs_borderedImage$clone()`](#method-jointjs_borderedImage-clone)
 
 Inherited methods
 
+- [`jointjs_cell$set_attrs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.html#method-set_attrs)
 - [`jointjs_element$get_list()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-get_list)
 - [`jointjs_element$set_background()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_background)
 - [`jointjs_element$set_body()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_body)
@@ -37,33 +40,33 @@ Inherited methods
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$new()`
+### `jointjs_borderedImage$new()`
 
-TODO
+Initialise the object
 
 #### Usage
 
-    jointjs_element$new(href, ...)
+    jointjs_borderedImage$new(href, ...)
 
 #### Arguments
 
 - `href`:
 
-  TODO
+  A Uniform Resource Identifier (URI) to locate the image
 
 - `...`:
 
-  TODO
+  Arguments passed to parent class initialiser
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$clone()`
+### `jointjs_borderedImage$clone()`
 
 The objects of this class are cloneable with this method.
 
 #### Usage
 
-    jointjs_element$clone(deep = FALSE)
+    jointjs_borderedImage$clone(deep = FALSE)
 
 #### Arguments
 

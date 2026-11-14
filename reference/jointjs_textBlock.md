@@ -1,24 +1,25 @@
-# TODO
+# A Text Block Element
 
-TODO
+A rectangle shape with text.
 
 ## Super classes
 
 [`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)
 -\>
 [`jointjs_element`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.md)
--\> `jointjs_element`
+-\> `jointjs_textBlock`
 
 ## Methods
 
 ### Public methods
 
-- [`jointjs_element$new()`](#method-jointjs_element-initialize)
+- [`jointjs_textBlock$new()`](#method-jointjs_textBlock-initialize)
 
-- [`jointjs_element$clone()`](#method-jointjs_element-clone)
+- [`jointjs_textBlock$clone()`](#method-jointjs_textBlock-clone)
 
 Inherited methods
 
+- [`jointjs_cell$set_attrs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.html#method-set_attrs)
 - [`jointjs_element$get_list()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-get_list)
 - [`jointjs_element$set_background()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_background)
 - [`jointjs_element$set_body()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_body)
@@ -37,29 +38,33 @@ Inherited methods
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$new()`
+### `jointjs_textBlock$new()`
 
-TODO
+Initialise the object
 
 #### Usage
 
-    jointjs_element$new(...)
+    jointjs_textBlock$new(text, ...)
 
 #### Arguments
 
+- `text`:
+
+  A `character` string to be displayed.
+
 - `...`:
 
-  TODO
+  Arguments passed to parent class initialiser
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$clone()`
+### `jointjs_textBlock$clone()`
 
 The objects of this class are cloneable with this method.
 
 #### Usage
 
-    jointjs_element$clone(deep = FALSE)
+    jointjs_textBlock$clone(deep = FALSE)
 
 #### Arguments
 

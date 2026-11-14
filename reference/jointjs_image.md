@@ -1,24 +1,25 @@
-# TODO
+# An Image Element
 
-TODO
+An image with a label.
 
 ## Super classes
 
 [`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)
 -\>
 [`jointjs_element`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.md)
--\> `jointjs_element`
+-\> `jointjs_image`
 
 ## Methods
 
 ### Public methods
 
-- [`jointjs_element$new()`](#method-jointjs_element-initialize)
+- [`jointjs_image$new()`](#method-jointjs_image-initialize)
 
-- [`jointjs_element$clone()`](#method-jointjs_element-clone)
+- [`jointjs_image$clone()`](#method-jointjs_image-clone)
 
 Inherited methods
 
+- [`jointjs_cell$set_attrs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.html#method-set_attrs)
 - [`jointjs_element$get_list()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-get_list)
 - [`jointjs_element$set_background()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_background)
 - [`jointjs_element$set_body()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_body)
@@ -37,33 +38,33 @@ Inherited methods
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$new()`
+### `jointjs_image$new()`
 
-TODO
+Initialise the object
 
 #### Usage
 
-    jointjs_element$new(href, ...)
+    jointjs_image$new(href, ...)
 
 #### Arguments
 
 - `href`:
 
-  TODO
+  A Uniform Resource Identifier (URI) to locate the image
 
 - `...`:
 
-  TODO
+  Arguments passed to parent class initialiser
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$clone()`
+### `jointjs_image$clone()`
 
 The objects of this class are cloneable with this method.
 
 #### Usage
 
-    jointjs_element$clone(deep = FALSE)
+    jointjs_image$clone(deep = FALSE)
 
 #### Arguments
 

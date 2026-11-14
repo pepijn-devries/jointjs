@@ -1,8 +1,8 @@
-# jointjs_cell: The Basis for JointJS Elements
+# The Backbone of JointJS Elements
 
 It is a backbone structure used by jointjs to construct elements for a
 diagram. Usually you don't initiate cells directly. Rather, it is more
-efficient to create its grandchildren:
+efficient to create its children and grandchildren, e.g.:
 [jointjs_circle](https://pepijn-devries.github.io/jointjs/reference/jointjs_circle.md),
 [jointjs_image](https://pepijn-devries.github.io/jointjs/reference/jointjs_image.md),
 [jointjs_rectangle](https://pepijn-devries.github.io/jointjs/reference/jointjs_rectangle.md),
@@ -13,6 +13,10 @@ etc.
 ### Public methods
 
 - [`jointjs_cell$new()`](#method-jointjs_cell-initialize)
+
+- [`jointjs_cell$set_attrs()`](#method-jointjs_cell-set_attrs)
+
+- [`jointjs_cell$get_list()`](#method-jointjs_cell-get_list)
 
 - [`jointjs_cell$clone()`](#method-jointjs_cell-clone)
 
@@ -51,6 +55,32 @@ Initialise a jointjs_cell class object.
 - `...`:
 
   Parameters that will be set as SVG attributes to this object.
+
+------------------------------------------------------------------------
+
+### `jointjs_cell$set_attrs()`
+
+Set attributes to the cell
+
+#### Usage
+
+    jointjs_cell$set_attrs(...)
+
+#### Arguments
+
+- `...`:
+
+  Any valid attributes to a JointJS cell.
+
+------------------------------------------------------------------------
+
+### `jointjs_cell$get_list()`
+
+Coerce the `jointjs_cell` object to a named list.
+
+#### Usage
+
+    jointjs_cell$get_list()
 
 ------------------------------------------------------------------------
 

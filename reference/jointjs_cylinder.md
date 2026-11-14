@@ -1,26 +1,27 @@
-# TODO
+# A Cylinder Element
 
-TODO
+A cylinder with a vertical base and an elliptical top.
 
 ## Super classes
 
 [`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)
 -\>
 [`jointjs_element`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.md)
--\> `jointjs_element`
+-\> `jointjs_cylinder`
 
 ## Methods
 
 ### Public methods
 
-- [`jointjs_element$new()`](#method-jointjs_element-initialize)
+- [`jointjs_cylinder$new()`](#method-jointjs_cylinder-initialize)
 
-- [`jointjs_element$set_body()`](#method-jointjs_element-set_body)
+- [`jointjs_cylinder$set_body()`](#method-jointjs_cylinder-set_body)
 
-- [`jointjs_element$clone()`](#method-jointjs_element-clone)
+- [`jointjs_cylinder$clone()`](#method-jointjs_cylinder-clone)
 
 Inherited methods
 
+- [`jointjs_cell$set_attrs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.html#method-set_attrs)
 - [`jointjs_element$get_list()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-get_list)
 - [`jointjs_element$set_background()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_background)
 - [`jointjs_element$set_bodyText()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_bodyText)
@@ -38,35 +39,35 @@ Inherited methods
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$new()`
+### `jointjs_cylinder$new()`
 
-TODO
+Initialise the object
 
 #### Usage
 
-    jointjs_element$new(...)
+    jointjs_cylinder$new(...)
 
 #### Arguments
 
 - `...`:
 
-  TODO
+  Arguments passed to parent class initialiser
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$set_body()`
+### `jointjs_cylinder$set_body()`
 
-TODO
+Set body attributes for the element.
 
 #### Usage
 
-    jointjs_element$set_body(fill, stroke, strokeWidth, magnet, topRy, ...)
+    jointjs_cylinder$set_body(fill, stroke, strokeWidth, magnet, topRy, ...)
 
 #### Arguments
 
 - `fill`:
 
-  TODO
+  Fill colour
 
 - `stroke`:
 
@@ -78,25 +79,27 @@ TODO
 
 - `magnet`:
 
-  TODO
+  When set to `TRUE`, the element can be used as source or target for a
+  [jointjs_link](https://pepijn-devries.github.io/jointjs/reference/jointjs_link.md).
 
 - `topRy`:
 
-  TODO
+  The vertical radius of the exposed area of the cylinder base, as an
+  absolute value or a percentage.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Arguments passed to parent class initialiser
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$clone()`
+### `jointjs_cylinder$clone()`
 
 The objects of this class are cloneable with this method.
 
 #### Usage
 
-    jointjs_element$clone(deep = FALSE)
+    jointjs_cylinder$clone(deep = FALSE)
 
 #### Arguments
 

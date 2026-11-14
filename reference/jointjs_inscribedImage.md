@@ -1,24 +1,27 @@
-# TODO
+# An Inscribed Image Element
 
-TODO
+An image inscribed in an ellipse with a label.
 
 ## Super classes
 
 [`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)
 -\>
 [`jointjs_element`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.md)
--\> `jointjs_element`
+-\>
+[`jointjs_image`](https://pepijn-devries.github.io/jointjs/reference/jointjs_image.md)
+-\> `jointjs_inscribedImage`
 
 ## Methods
 
 ### Public methods
 
-- [`jointjs_element$new()`](#method-jointjs_element-initialize)
+- [`jointjs_inscribedImage$new()`](#method-jointjs_inscribedImage-initialize)
 
-- [`jointjs_element$clone()`](#method-jointjs_element-clone)
+- [`jointjs_inscribedImage$clone()`](#method-jointjs_inscribedImage-clone)
 
 Inherited methods
 
+- [`jointjs_cell$set_attrs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.html#method-set_attrs)
 - [`jointjs_element$get_list()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-get_list)
 - [`jointjs_element$set_background()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_background)
 - [`jointjs_element$set_body()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_body)
@@ -37,33 +40,33 @@ Inherited methods
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$new()`
+### `jointjs_inscribedImage$new()`
 
-TODO
+Initialise the object
 
 #### Usage
 
-    jointjs_element$new(...)
+    jointjs_inscribedImage$new(href, ...)
 
 #### Arguments
 
-- `...`:
-
-  TODO
-
 - `href`:
 
-  TODO
+  A Uniform Resource Identifier (URI) to locate the image
+
+- `...`:
+
+  Arguments passed to parent class initialiser
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$clone()`
+### `jointjs_inscribedImage$clone()`
 
 The objects of this class are cloneable with this method.
 
 #### Usage
 
-    jointjs_element$clone(deep = FALSE)
+    jointjs_inscribedImage$clone(deep = FALSE)
 
 #### Arguments
 

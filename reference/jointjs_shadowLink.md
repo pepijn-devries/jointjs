@@ -1,77 +1,66 @@
-# TODO
+# Shadow Links Between Elements in a JointJS Diagram
 
-TODO
+Create a thicker line link with shadow between a source and target
+element or location in a JointJS diagram.
 
 ## Super classes
 
 [`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)
 -\>
-[`jointjs_element`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.md)
--\> `jointjs_element`
+[`jointjs_link`](https://pepijn-devries.github.io/jointjs/reference/jointjs_link.md)
+-\> `jointjs_shadowLink`
 
 ## Methods
 
 ### Public methods
 
-- [`jointjs_element$new()`](#method-jointjs_element-initialize)
+- [`jointjs_shadowLink$new()`](#method-jointjs_shadowLink-initialize)
 
-- [`jointjs_element$clone()`](#method-jointjs_element-clone)
+- [`jointjs_shadowLink$clone()`](#method-jointjs_shadowLink-clone)
 
 Inherited methods
 
-- [`jointjs_element$get_list()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-get_list)
-- [`jointjs_element$set_background()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_background)
-- [`jointjs_element$set_body()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_body)
-- [`jointjs_element$set_bodyText()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_bodyText)
-- [`jointjs_element$set_border()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_border)
-- [`jointjs_element$set_header()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_header)
-- [`jointjs_element$set_headerText()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_headerText)
-- [`jointjs_element$set_image()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_image)
-- [`jointjs_element$set_label()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_label)
-- [`jointjs_element$set_line()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_line)
-- [`jointjs_element$set_outline()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_outline)
-- [`jointjs_element$set_position()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_position)
-- [`jointjs_element$set_shadow()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_shadow)
-- [`jointjs_element$set_top()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_top)
-- [`jointjs_element$set_wrapper()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_wrapper)
+- [`jointjs_cell$get_list()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.html#method-get_list)
+- [`jointjs_cell$set_attrs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.html#method-set_attrs)
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$new()`
+### `jointjs_shadowLink$new()`
 
-TODO
+The link initialiser.
 
 #### Usage
 
-    jointjs_element$new(source, target, vertices, ...)
+    jointjs_shadowLink$new(source, target, vertices, ...)
 
 #### Arguments
 
-- `source`:
+- `source, target`:
 
-  TODO
-
-- `target`:
-
-  TODO
+  `source` and `target` indicate the route the link should take. It can
+  be a point (a `list` with an `x` and `y` coordinate), or a `list`
+  containing an `id` of the element that should be linked. You can also
+  provide a `port` value to that list if you wish to connect to a
+  specific port on the element.
 
 - `vertices`:
 
-  TODO
+  A `list` of coordinates where the link should pass through. The list
+  is unnamed and each element should be a list of and `x` and `y` value.
 
 - `...`:
 
-  TODO
+  Arguments passed to parent class initialiser.
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$clone()`
+### `jointjs_shadowLink$clone()`
 
 The objects of this class are cloneable with this method.
 
 #### Usage
 
-    jointjs_element$clone(deep = FALSE)
+    jointjs_shadowLink$clone(deep = FALSE)
 
 #### Arguments
 

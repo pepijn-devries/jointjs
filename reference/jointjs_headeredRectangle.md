@@ -1,24 +1,25 @@
-# TODO
+# A Headered Rectangle Element
 
-TODO
+A rectangle with a header.
 
 ## Super classes
 
 [`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)
 -\>
 [`jointjs_element`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.md)
--\> `jointjs_element`
+-\> `jointjs_headeredRectangle`
 
 ## Methods
 
 ### Public methods
 
-- [`jointjs_element$new()`](#method-jointjs_element-initialize)
+- [`jointjs_headeredRectangle$new()`](#method-jointjs_headeredRectangle-initialize)
 
-- [`jointjs_element$clone()`](#method-jointjs_element-clone)
+- [`jointjs_headeredRectangle$clone()`](#method-jointjs_headeredRectangle-clone)
 
 Inherited methods
 
+- [`jointjs_cell$set_attrs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.html#method-set_attrs)
 - [`jointjs_element$get_list()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-get_list)
 - [`jointjs_element$set_background()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_background)
 - [`jointjs_element$set_body()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_body)
@@ -37,41 +38,43 @@ Inherited methods
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$new()`
+### `jointjs_headeredRectangle$new()`
 
-TODO
+Initialise the object
 
 #### Usage
 
-    jointjs_element$new(headerFill, headerText, bodyText, ...)
+    jointjs_headeredRectangle$new(header, headerText, bodyText, ...)
 
 #### Arguments
 
-- `headerFill`:
+- `header`:
 
-  TODO
+  Either a
+  [jointjs_rectangle](https://pepijn-devries.github.io/jointjs/reference/jointjs_rectangle.md)
+  or a named `list` with SVG rectangle attributes.
 
 - `headerText`:
 
-  TODO
+  A named `list` with SVG text element properties
 
 - `bodyText`:
 
-  TODO
+  A named `list` with SVG text element properties
 
 - `...`:
 
-  TODO
+  Arguments passed to parent class initialiser
 
 ------------------------------------------------------------------------
 
-### `jointjs_element$clone()`
+### `jointjs_headeredRectangle$clone()`
 
 The objects of this class are cloneable with this method.
 
 #### Usage
 
-    jointjs_element$clone(deep = FALSE)
+    jointjs_headeredRectangle$clone(deep = FALSE)
 
 #### Arguments
 

@@ -32,17 +32,16 @@ graph <-
   add_elements(
     ## Add a rectangle:
     jointjs_rectangle$new(id = "hello")$
-      set_body("white", "black", 2L, magnet = TRUE, rx = 5, ry = 5)$
-      set_label("Hello", "black")$
+      set_body(rx = 5, ry = 5)$
+      set_label("Hello")$
       set_position(10, 10),
     ## Add a circle:
     jointjs_circle$new(id = "world")$
-      set_body("white", "black", 2L, magnet = TRUE)$
-      set_label("world", "black")$
+      set_label("world")$
+      set_body("white", "black")$
       set_position(100, 10),
     ## Add a link, joining the rectangle and circle:
-    jointjs_link$new(list(id = "hello"), list(id = "world"))$
-      set_line("black", 2)
+    jointjs_doubleLink$new(list(id = "hello"), list(id = "world"))
   )
 ## Get and show widget:
 my_widget <- graph$get_widget(width = 170, height = 70)

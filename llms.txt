@@ -32,17 +32,16 @@ graph <-
   add_elements(
     ## Add a rectangle:
     jointjs_rectangle$new(id = "hello")$
-      set_body("white", "black", 2L, magnet = TRUE, rx = 5, ry = 5)$
-      set_label("Hello", "black")$
+      set_body(rx = 5, ry = 5)$
+      set_label("Hello")$
       set_position(10, 10),
     ## Add a circle:
     jointjs_circle$new(id = "world")$
-      set_body("white", "black", 2L, magnet = TRUE)$
-      set_label("world", "black")$
+      set_label("world")$
+      set_body("white", "black")$
       set_position(100, 10),
     ## Add a link, joining the rectangle and circle:
-    jointjs_link$new(list(id = "hello"), list(id = "world"))$
-      set_line("black", 2)
+    jointjs_doubleLink$new(list(id = "hello"), list(id = "world"))
   )
 ## Get and show widget:
 my_widget <- graph$get_widget(width = 170, height = 70)
@@ -106,41 +105,43 @@ fly. If you need such user interaction, jointjs is for you.
 - [`jointjs()`](https://pepijn-devries.github.io/jointjs/reference/jointjs.md)
   : Create an Interactive JointJS Diagram
 - [`jointjs_borderedImage`](https://pepijn-devries.github.io/jointjs/reference/jointjs_borderedImage.md)
-  : TODO
+  : A Bordered Image Element
 - [`jointjs_cell`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cell.md)
-  : jointjs_cell: The Basis for JointJS Elements
+  : The Backbone of JointJS Elements
 - [`jointjs_circle`](https://pepijn-devries.github.io/jointjs/reference/jointjs_circle.md)
-  : TODO
+  : A Circle Element
 - [`jointjs_cylinder`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cylinder.md)
-  : TODO
+  : A Cylinder Element
 - [`jointjs_doubleLink`](https://pepijn-devries.github.io/jointjs/reference/jointjs_doubleLink.md)
-  : TODO
+  : Double Links Between Elements in a JointJS Diagram
 - [`jointjs_element`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.md)
-  : TODO
+  : Elements to Build a JointJS Diagram
 - [`jointjs_ellipse`](https://pepijn-devries.github.io/jointjs/reference/jointjs_ellipse.md)
-  : TODO
+  : An Ellipse Element
 - [`jointjs_embeddedImage`](https://pepijn-devries.github.io/jointjs/reference/jointjs_embeddedImage.md)
-  : TODO
+  : A Embedded Image Element
 - [`jointjs_graph`](https://pepijn-devries.github.io/jointjs/reference/jointjs_graph.md)
   : TODO
 - [`jointjs_headeredRectangle`](https://pepijn-devries.github.io/jointjs/reference/jointjs_headeredRectangle.md)
-  : TODO
+  : A Headered Rectangle Element
 - [`jointjs_image`](https://pepijn-devries.github.io/jointjs/reference/jointjs_image.md)
-  : TODO
+  : An Image Element
 - [`jointjs_inscribedImage`](https://pepijn-devries.github.io/jointjs/reference/jointjs_inscribedImage.md)
-  : TODO
+  : An Inscribed Image Element
 - [`jointjs_link`](https://pepijn-devries.github.io/jointjs/reference/jointjs_link.md)
-  : TODO
+  : Links Between Elements in a JointJS Diagram
+- [`jointjs_paper`](https://pepijn-devries.github.io/jointjs/reference/jointjs_paper.md)
+  : A Paper to Draw JointJS Diagrams on
 - [`jointjs_path`](https://pepijn-devries.github.io/jointjs/reference/jointjs_path.md)
-  : TODO
+  : A Path Element
 - [`jointjs_polygon`](https://pepijn-devries.github.io/jointjs/reference/jointjs_polygon.md)
-  : TODO
+  : A Polygon Element
 - [`jointjs_polyline`](https://pepijn-devries.github.io/jointjs/reference/jointjs_polyline.md)
-  : TODO
+  : A Polyline Element
 - [`jointjs_rectangle`](https://pepijn-devries.github.io/jointjs/reference/jointjs_rectangle.md)
-  : TODO
+  : A Rectangle Element
 - [`jointjs_shadowLink`](https://pepijn-devries.github.io/jointjs/reference/jointjs_shadowLink.md)
-  : TODO
+  : Shadow Links Between Elements in a JointJS Diagram
 - [`jointjs_textBlock`](https://pepijn-devries.github.io/jointjs/reference/jointjs_textBlock.md)
-  : TODO
+  : A Text Block Element
 
