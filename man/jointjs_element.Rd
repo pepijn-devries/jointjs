@@ -18,6 +18,21 @@ attributes are renamed in camel-case conform the JointJS spefications.
 So, SVG attribute \code{font-family} becomes \code{fontFamily}, \code{stroke-width}
 becomes \code{strokeWidth}, etc.
 }
+\seealso{
+Other elements:
+\code{\link{jointjs_circle}},
+\code{\link{jointjs_cylinder}},
+\code{\link{jointjs_ellipse}},
+\code{\link{jointjs_headeredRectangle}},
+\code{\link{jointjs_image}},
+\code{\link{jointjs_inscribedImage}},
+\code{\link{jointjs_path}},
+\code{\link{jointjs_polygon}},
+\code{\link{jointjs_polyline}},
+\code{\link{jointjs_rectangle}},
+\code{\link{jointjs_textBlock}}
+}
+\concept{elements}
 \section{Super class}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{jointjs_element}
 }

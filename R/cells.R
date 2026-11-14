@@ -5,6 +5,7 @@
 #' create its children and grandchildren, e.g.:
 #' [jointjs_circle], [jointjs_image], [jointjs_rectangle], etc.
 #' @include helpers.R
+#' @family root-classes
 #' @export
 jointjs_cell <-
   R6::R6Class(

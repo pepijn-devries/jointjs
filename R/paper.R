@@ -30,6 +30,7 @@
 #' a connection between a specific source and target is allowed. It
 #' should return a logical value.
 #' @param ... Other options passed to the JointJS JavaScript library.
+#' @family root-classes
 #' @export
 jointjs_paper <- R6::R6Class(
   "jointjs_paper",

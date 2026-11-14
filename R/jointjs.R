@@ -22,6 +22,7 @@
 #'       )
 #'   jointjs(graph = graph)
 #' }
+#' @family widgets
 #' @export
 jointjs <- function(
     paper = jointjs_paper$new(),
@@ -61,7 +62,7 @@ jointjs <- function(
 #'   is useful if you want to save an expression in a variable.
 #'
 #' @name jointjs-shiny
-#'
+#' @family widgets
 #' @export
 jointjsOutput <- function(outputId, width = "100%", height = "400px") {
   htmlwidgets::shinyWidgetOutput(outputId, "jointjs", width, height, package = "jointjs")

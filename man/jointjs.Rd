@@ -55,3 +55,8 @@ if (interactive()) {
   jointjs(graph = graph)
 }
 }
+\seealso{
+Other widgets:
+\code{\link{jointjs-shiny}}
+}
+\concept{widgets}

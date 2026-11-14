@@ -6,6 +6,21 @@
 \description{
 An elliptical shape.
 }
+\seealso{
+Other elements:
+\code{\link{jointjs_circle}},
+\code{\link{jointjs_cylinder}},
+\code{\link{jointjs_element}},
+\code{\link{jointjs_headeredRectangle}},
+\code{\link{jointjs_image}},
+\code{\link{jointjs_inscribedImage}},
+\code{\link{jointjs_path}},
+\code{\link{jointjs_polygon}},
+\code{\link{jointjs_polyline}},
+\code{\link{jointjs_rectangle}},
+\code{\link{jointjs_textBlock}}
+}
+\concept{elements}
 \section{Super classes}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_ellipse}
 }

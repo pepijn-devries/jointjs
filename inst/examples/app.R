@@ -24,7 +24,6 @@ server <- function(input, output, session) {
   })
   
   output$my_text <- shiny::renderText({
-    # shiny::req(input$my_jointjs_svg) #TODO
     jsonlite::toJSON(input$my_jointjs_graph_state, auto_unbox = TRUE)
   })
 }

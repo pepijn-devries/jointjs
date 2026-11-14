@@ -8,6 +8,12 @@ Set up a sheet of paper to draw jointjs diagrams on. This class can be used
 to define the paper specifications. These specifications are needed when
 creating a widget with \code{\link[=jointjs]{jointjs()}}.
 }
+\seealso{
+Other root-classes:
+\code{\link{jointjs_cell}},
+\code{\link{jointjs_graph}}
+}
+\concept{root-classes}
 \section{Methods}{
 \subsection{Public methods}{
   \itemize{

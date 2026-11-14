@@ -18,6 +18,12 @@ jointjs_link$new(vertices = list(
     list(x = 40, y = 60)
   ))
 }
+\seealso{
+Other link:
+\code{\link{jointjs_doubleLink}},
+\code{\link{jointjs_shadowLink}}
+}
+\concept{link}
 \section{Super class}{
 \code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{jointjs_link}
 }
