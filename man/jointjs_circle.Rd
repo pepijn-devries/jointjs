@@ -8,9 +8,11 @@ A circle shape.
 }
 \seealso{
 Other elements:
+\code{\link{jointjs_borderedImage}},
 \code{\link{jointjs_cylinder}},
 \code{\link{jointjs_element}},
 \code{\link{jointjs_ellipse}},
+\code{\link{jointjs_embeddedImage}},
 \code{\link{jointjs_headeredRectangle}},
 \code{\link{jointjs_image}},
 \code{\link{jointjs_inscribedImage}},

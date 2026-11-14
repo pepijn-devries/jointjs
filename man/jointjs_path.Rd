@@ -11,10 +11,12 @@ jointjs_path$new('M 0 5 10 0 C 20 0 20 20 10 20 L 0 15 Z')
 }
 \seealso{
 Other elements:
+\code{\link{jointjs_borderedImage}},
 \code{\link{jointjs_circle}},
 \code{\link{jointjs_cylinder}},
 \code{\link{jointjs_element}},
 \code{\link{jointjs_ellipse}},
+\code{\link{jointjs_embeddedImage}},
 \code{\link{jointjs_headeredRectangle}},
 \code{\link{jointjs_image}},
 \code{\link{jointjs_inscribedImage}},

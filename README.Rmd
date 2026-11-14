@@ -53,8 +53,8 @@ graph <-
       set_position(10, 10),
     ## Add a circle:
     jointjs_circle$new(id = "world")$
-      set_label("world")$
       set_body("white", "black")$
+      set_label("world")$
       set_position(100, 10),
     ## Add a link, joining the rectangle and circle:
     jointjs_doubleLink$new(list(id = "hello"), list(id = "world"))

@@ -1,6 +1,6 @@
 Package: jointjs
 Title: Interactive JointJS Diagrams
-Version: 0.0.0.9003
+Version: 0.0.0.9004
 Authors@R:
     c(
       person(
@@ -24,6 +24,8 @@ Imports:
     R6,
     rlang
 Suggests:
+    knitr,
+    rmarkdown,
     shiny,
     testthat (>= 3.0.0)
 License: GPL (>= 3)
@@ -42,3 +44,4 @@ Collate:
     'paper.R'
 URL: https://pepijn-devries.github.io/jointjs/
 Config/testthat/edition: 3
+VignetteBuilder: knitr
