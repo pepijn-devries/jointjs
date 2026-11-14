@@ -5,7 +5,7 @@ JointJS diagram.
 
 ## See also
 
-Other link:
+Other links:
 [`jointjs_doubleLink`](https://pepijn-devries.github.io/jointjs/reference/jointjs_doubleLink.md),
 [`jointjs_shadowLink`](https://pepijn-devries.github.io/jointjs/reference/jointjs_shadowLink.md)
 

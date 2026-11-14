@@ -5,10 +5,12 @@ An image inscribed in an ellipse with a label.
 ## See also
 
 Other elements:
+[`jointjs_borderedImage`](https://pepijn-devries.github.io/jointjs/reference/jointjs_borderedImage.md),
 [`jointjs_circle`](https://pepijn-devries.github.io/jointjs/reference/jointjs_circle.md),
 [`jointjs_cylinder`](https://pepijn-devries.github.io/jointjs/reference/jointjs_cylinder.md),
 [`jointjs_element`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.md),
 [`jointjs_ellipse`](https://pepijn-devries.github.io/jointjs/reference/jointjs_ellipse.md),
+[`jointjs_embeddedImage`](https://pepijn-devries.github.io/jointjs/reference/jointjs_embeddedImage.md),
 [`jointjs_headeredRectangle`](https://pepijn-devries.github.io/jointjs/reference/jointjs_headeredRectangle.md),
 [`jointjs_image`](https://pepijn-devries.github.io/jointjs/reference/jointjs_image.md),
 [`jointjs_path`](https://pepijn-devries.github.io/jointjs/reference/jointjs_path.md),

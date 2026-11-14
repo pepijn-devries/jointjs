@@ -13,12 +13,12 @@
 ## Citation
 
 de Vries P (2026). *jointjs: Interactive JointJS Diagrams*. R package
-version 0.0.0.9002, <https://pepijn-devries.github.io/jointjs/>.
+version 0.0.0.9004, <https://pepijn-devries.github.io/jointjs/>.
 
     @Manual{,
       title = {jointjs: Interactive JointJS Diagrams},
       author = {Pepijn {de Vries}},
       year = {2026},
-      note = {R package version 0.0.0.9002},
+      note = {R package version 0.0.0.9004},
       url = {https://pepijn-devries.github.io/jointjs/},
     }

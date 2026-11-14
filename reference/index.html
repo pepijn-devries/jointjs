@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">jointjs</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9002</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9004</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,6 +16,10 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/gallery.html">Gallery</a></li>
+  </ul></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
       </ul></div>
@@ -29,9 +33,9 @@
     </div>
 
     <div class="section level2">
-      <h2 id="all-functions">All functions<a class="anchor" aria-label="anchor" href="#all-functions"></a></h2>
+      <h2 id="widget-functions">Widget Functions<a class="anchor" aria-label="anchor" href="#widget-functions"></a></h2>
 
-
+      <div class="section-desc"><p>Functions to build html widgets</p></div>
 
       <dl></dl></div><div class="section level2">
 
@@ -51,20 +55,52 @@
 
         </dt>
         <dd>Create an Interactive JointJS Diagram</dd>
+      </dl></div><div class="section level2">
+      <h2 id="root-classes">Root Classes<a class="anchor" aria-label="anchor" href="#root-classes"></a></h2>
 
-        <dt>
+      <div class="section-desc"><p>Essential R6 classes used to construct diagrams for interactive widgets</p></div>
 
-          <code><a href="jointjs_borderedImage.html">jointjs_borderedImage</a></code>
+      <dl></dl></div><div class="section level2">
 
-        </dt>
-        <dd>A Bordered Image Element</dd>
 
-        <dt>
+
+
+      <dl><dt>
 
           <code><a href="jointjs_cell.html">jointjs_cell</a></code>
 
         </dt>
         <dd>The Backbone of JointJS Elements</dd>
+
+        <dt>
+
+          <code><a href="jointjs_graph.html">jointjs_graph</a></code>
+
+        </dt>
+        <dd>Create A JointJS Graph</dd>
+
+        <dt>
+
+          <code><a href="jointjs_paper.html">jointjs_paper</a></code>
+
+        </dt>
+        <dd>A Paper to Draw JointJS Diagrams on</dd>
+      </dl></div><div class="section level2">
+      <h2 id="diagram-elements">Diagram Elements<a class="anchor" aria-label="anchor" href="#diagram-elements"></a></h2>
+
+      <div class="section-desc"><p>Elements for constructing diagrams for interactive widgets</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="jointjs_borderedImage.html">jointjs_borderedImage</a></code>
+
+        </dt>
+        <dd>A Bordered Image Element</dd>
 
         <dt>
 
@@ -79,13 +115,6 @@
 
         </dt>
         <dd>A Cylinder Element</dd>
-
-        <dt>
-
-          <code><a href="jointjs_doubleLink.html">jointjs_doubleLink</a></code>
-
-        </dt>
-        <dd>Double Links Between Elements in a JointJS Diagram</dd>
 
         <dt>
 
@@ -110,13 +139,6 @@
 
         <dt>
 
-          <code><a href="jointjs_graph.html">jointjs_graph</a></code>
-
-        </dt>
-        <dd>Create A JointJS Graph</dd>
-
-        <dt>
-
           <code><a href="jointjs_headeredRectangle.html">jointjs_headeredRectangle</a></code>
 
         </dt>
@@ -135,20 +157,6 @@
 
         </dt>
         <dd>An Inscribed Image Element</dd>
-
-        <dt>
-
-          <code><a href="jointjs_link.html">jointjs_link</a></code>
-
-        </dt>
-        <dd>Links Between Elements in a JointJS Diagram</dd>
-
-        <dt>
-
-          <code><a href="jointjs_paper.html">jointjs_paper</a></code>
-
-        </dt>
-        <dd>A Paper to Draw JointJS Diagrams on</dd>
 
         <dt>
 
@@ -180,19 +188,43 @@
 
         <dt>
 
-          <code><a href="jointjs_shadowLink.html">jointjs_shadowLink</a></code>
-
-        </dt>
-        <dd>Shadow Links Between Elements in a JointJS Diagram</dd>
-
-        <dt>
-
           <code><a href="jointjs_textBlock.html">jointjs_textBlock</a></code>
 
         </dt>
         <dd>A Text Block Element</dd>
+      </dl></div><div class="section level2">
+      <h2 id="link-diagram-elements">Link Diagram Elements<a class="anchor" aria-label="anchor" href="#link-diagram-elements"></a></h2>
+
+      <div class="section-desc"><p>Create links between elements in a diagram</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="jointjs_doubleLink.html">jointjs_doubleLink</a></code>
+
+        </dt>
+        <dd>Double Links Between Elements in a JointJS Diagram</dd>
+
+        <dt>
+
+          <code><a href="jointjs_link.html">jointjs_link</a></code>
+
+        </dt>
+        <dd>Links Between Elements in a JointJS Diagram</dd>
+
+        <dt>
+
+          <code><a href="jointjs_shadowLink.html">jointjs_shadowLink</a></code>
+
+        </dt>
+        <dd>Shadow Links Between Elements in a JointJS Diagram</dd>
       </dl></div>
-  </main></div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside></div>
 
 
     <footer><div class="pkgdown-footer-left">

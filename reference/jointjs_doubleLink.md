@@ -5,7 +5,7 @@ location in a JointJS diagram.
 
 ## See also
 
-Other link:
+Other links:
 [`jointjs_link`](https://pepijn-devries.github.io/jointjs/reference/jointjs_link.md),
 [`jointjs_shadowLink`](https://pepijn-devries.github.io/jointjs/reference/jointjs_shadowLink.md)
 

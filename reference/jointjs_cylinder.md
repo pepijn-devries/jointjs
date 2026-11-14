@@ -5,9 +5,11 @@ A cylinder with a vertical base and an elliptical top.
 ## See also
 
 Other elements:
+[`jointjs_borderedImage`](https://pepijn-devries.github.io/jointjs/reference/jointjs_borderedImage.md),
 [`jointjs_circle`](https://pepijn-devries.github.io/jointjs/reference/jointjs_circle.md),
 [`jointjs_element`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.md),
 [`jointjs_ellipse`](https://pepijn-devries.github.io/jointjs/reference/jointjs_ellipse.md),
+[`jointjs_embeddedImage`](https://pepijn-devries.github.io/jointjs/reference/jointjs_embeddedImage.md),
 [`jointjs_headeredRectangle`](https://pepijn-devries.github.io/jointjs/reference/jointjs_headeredRectangle.md),
 [`jointjs_image`](https://pepijn-devries.github.io/jointjs/reference/jointjs_image.md),
 [`jointjs_inscribedImage`](https://pepijn-devries.github.io/jointjs/reference/jointjs_inscribedImage.md),
