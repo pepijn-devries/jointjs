@@ -1,6 +1,6 @@
 Package: jointjs
 Title: Interactive JointJS Diagrams
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R:
     c(
       person(
@@ -37,4 +37,6 @@ Collate:
     'graphs.R'
     'jointjs-package.R'
     'jointjs.R'
+    'links.R'
+    'paper.R'
 URL: https://pepijn-devries.github.io/jointjs/

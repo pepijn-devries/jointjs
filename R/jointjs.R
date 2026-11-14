@@ -1,27 +1,37 @@
 #' Create an Interactive JointJS Diagram
 #'
-#' TODO
-#' @param paper TODO
-#' @param graph TODO
-#' @param width TODO
-#' @param height TODO
-#' @param elementId TODO
-#' @returns TODO
+#' A wrapper around the JavaScript JointJS library to create an
+#' interactive html widget. It can be used to draw and edit diagrams.
+#' @param paper Either a named list with paper properties, or
+#' a [jointjs_paper] class object.
+#' @param graph Either a named list of cells to draw, or a
+#' [jointjs_graph] class object
+#' @inheritParams htmlwidgets::createWidget
+#' @inherit htmlwidgets::createWidget return
 #' @examples
 #' if (interactive()) {
-#'   jointjs(list(gridSize = 20, drawGrid = TRUE, backgroundColor = "#E9ECEF"))
+#'   graph <-
+#'     jointjs_graph$new()$
+#'       add_elements(
+#'         jointjs_rectangle$new(id = "hello", label = list(text = "Hello"))$
+#'           set_position(5, 5),
+#'         jointjs_circle$new(id = "world", label = list(text = "World"))$
+#'           set_position(70, 5),
+#'         jointjs_doubleLink$new(source = list(id = "hello"),
+#'                                target = list(id = "world"))
+#'       )
+#'   jointjs(graph = graph)
 #' }
 #' @export
 jointjs <- function(
-    paper = list(
-      gridSize = 20,
-      drawGrid = TRUE,
-      color = "#E9ECEF"
-    ),
+    paper = jointjs_paper$new(),
     graph = NULL,
     width = NULL,
     height = NULL,
     elementId = NULL) {
+
+  if (inherits(paper, "jointjs_paper")) paper <- paper$get_list()
+  if (inherits(graph, "jointjs_graph")) graph <- graph$get_list()
   
   htmlwidgets::createWidget(
     name      = "jointjs",

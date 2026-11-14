@@ -2,17 +2,19 @@
 % Please edit documentation in R/cells.R
 \name{jointjs_cell}
 \alias{jointjs_cell}
-\title{jointjs_cell: The Basis for JointJS Elements}
+\title{The Backbone of JointJS Elements}
 \description{
 It is a backbone structure used by jointjs to construct elements for a diagram.
 Usually you don't initiate cells directly. Rather, it is more efficient to
-create its grandchildren: \link{jointjs_circle}, \link{jointjs_image}, \link{jointjs_rectangle},
-etc.
+create its children and grandchildren, e.g.:
+\link{jointjs_circle}, \link{jointjs_image}, \link{jointjs_rectangle}, etc.
 }
 \section{Methods}{
 \subsection{Public methods}{
   \itemize{
     \item \href{#method-jointjs_cell-initialize}{\code{jointjs_cell$new()}}
+    \item \href{#method-jointjs_cell-set_attrs}{\code{jointjs_cell$set_attrs()}}
+    \item \href{#method-jointjs_cell-get_list}{\code{jointjs_cell$get_list()}}
     \item \href{#method-jointjs_cell-clone}{\code{jointjs_cell$clone()}}
   }
 }
@@ -41,6 +43,37 @@ assign the correct type for you. By default it will be set to
 parent container.}
       \item{\code{...}}{Parameters that will be set as SVG attributes to this object.}
     }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_cell-set_attrs"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_cell-set_attrs}{}}}
+\subsection{\code{jointjs_cell$set_attrs()}}{
+  Set attributes to the cell
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_cell$set_attrs(...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{...}}{Any valid attributes to a JointJS cell.}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_cell-get_list"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_cell-get_list}{}}}
+\subsection{\code{jointjs_cell$get_list()}}{
+  Coerce the \code{jointjs_cell} object to a named list.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_cell$get_list()}
     \if{html}{\out{</div>}}
   }
 }

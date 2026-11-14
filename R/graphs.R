@@ -37,6 +37,6 @@ jointjs_graph <- R6::R6Class(
     }
   ),
   private = list(
-    graph = list()
+    graph = list(cells = list())
   )
 )

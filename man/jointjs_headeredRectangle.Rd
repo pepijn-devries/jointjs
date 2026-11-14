@@ -2,22 +2,23 @@
 % Please edit documentation in R/elements.R
 \name{jointjs_headeredRectangle}
 \alias{jointjs_headeredRectangle}
-\title{TODO}
+\title{A Headered Rectangle Element}
 \description{
-TODO
+A rectangle with a header.
 }
 \section{Super classes}{
-\code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_element}
+\code{\link[jointjs:jointjs_cell]{jointjs_cell}} -> \code{\link[jointjs:jointjs_element]{jointjs_element}} -> \code{jointjs_headeredRectangle}
 }
 \section{Methods}{
 \subsection{Public methods}{
   \itemize{
-    \item \href{#method-jointjs_element-initialize}{\code{jointjs_element$new()}}
-    \item \href{#method-jointjs_element-clone}{\code{jointjs_element$clone()}}
+    \item \href{#method-jointjs_headeredRectangle-initialize}{\code{jointjs_headeredRectangle$new()}}
+    \item \href{#method-jointjs_headeredRectangle-clone}{\code{jointjs_headeredRectangle$clone()}}
   }
 }
 \if{html}{\out{<details><summary>Inherited methods</summary>
 <ul>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_cell" data-id="set_attrs"><a href='../../jointjs/html/jointjs_cell.html#method-jointjs_cell-set_attrs'><code>jointjs_cell$set_attrs()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="get_list"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-get_list'><code>jointjs_element$get_list()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_background"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_background'><code>jointjs_element$set_background()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_body"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_body'><code>jointjs_element$set_body()</code></a></span></li>
@@ -36,35 +37,36 @@ TODO
 </ul>
 </details>}}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-jointjs_element-initialize"></a>}}
-\if{latex}{\out{\hypertarget{method-jointjs_element-initialize}{}}}
-\subsection{\code{jointjs_element$new()}}{
-  TODO
+\if{html}{\out{<a id="method-jointjs_headeredRectangle-initialize"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_headeredRectangle-initialize}{}}}
+\subsection{\code{jointjs_headeredRectangle$new()}}{
+  Initialise the object
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$new(headerFill, headerText, bodyText, ...)}
+    \preformatted{jointjs_headeredRectangle$new(header, headerText, bodyText, ...)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{headerFill}}{TODO}
-      \item{\code{headerText}}{TODO}
-      \item{\code{bodyText}}{TODO}
-      \item{\code{...}}{TODO}
+      \item{\code{header}}{Either a \link{jointjs_rectangle} or a named \code{list} with
+SVG rectangle attributes.}
+      \item{\code{headerText}}{A named \code{list} with SVG text element properties}
+      \item{\code{bodyText}}{A named \code{list} with SVG text element properties}
+      \item{\code{...}}{Arguments passed to parent class initialiser}
     }
     \if{html}{\out{</div>}}
   }
 }
 
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-jointjs_element-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-jointjs_element-clone}{}}}
-\subsection{\code{jointjs_element$clone()}}{
+\if{html}{\out{<a id="method-jointjs_headeredRectangle-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_headeredRectangle-clone}{}}}
+\subsection{\code{jointjs_headeredRectangle$clone()}}{
   The objects of this class are cloneable with this method.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
-    \preformatted{jointjs_element$clone(deep = FALSE)}
+    \preformatted{jointjs_headeredRectangle$clone(deep = FALSE)}
     \if{html}{\out{</div>}}
   }
   \subsection{Arguments}{

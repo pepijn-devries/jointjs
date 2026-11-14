@@ -14,79 +14,97 @@ HTMLWidgets.widget({
 
   factory: function(el, width, height) {
 
-    var graph = new joint.dia.Graph();
+    var graph = new joint.dia.Graph({}, { cellNamespace: joint.shapes });
     var paper = null;
+    var elId = el.id;
+
+    function syncGraphToShiny() {
+      if (window.Shiny) {
+        var graphJSON = graph.toJSON();
+        Shiny.setInputValue(elId + '_graph_state', graphJSON);
+      }
+    }
+
+    function syncSvgToShiny() {
+      var svgElement = el.querySelector('svg');
+      if (!svgElement) return;
+
+      var serializer = new XMLSerializer();
+      var svgString = serializer.serializeToString(svgElement);
+
+      if (!svgString.startsWith('<?xml')) {
+        svgString = '<?xml version="1.0" encoding="utf-8"?>\n' + svgString;
+      }
+
+      if (window.Shiny) {
+        Shiny.setInputValue(elId + '_svg', svgString);
+      }
+    }
+
+    // Attach graph listener ONCE in factory so it never stacks on re-renders
+    graph.on('add remove change change:position', function() {
+      syncSvgToShiny();
+      syncGraphToShiny();
+    });
 
     return {
 
       renderValue: function(x) {
-        
-        // Wipe out old elements inside the container target
-        el.innerHTML = '';
-        
-        function syncGraphToShiny() {
-          if (window.Shiny) {
-            var graphJSON = graph.toJSON();
-            Shiny.setInputValue(elId + '_graph_state', graphJSON);
-          }
-        }
+        // Update elId in case Shiny assigned it dynamically after factory creation
+        elId = el.id;
 
-        function syncSvgToShiny() {
-          // Locate the native SVG element rendered by JointJS inside wrapper div
-          var svgElement = el.querySelector('svg');
-          if (!svgElement) return;
-
-          // Serialize the live DOM element into an XML text string
-          var serializer = new XMLSerializer();
-          var svgString = serializer.serializeToString(svgElement);
-
-          // Wrap it in standard XML headers so it's a valid standalone SVG file
-          if (!svgString.startsWith('<?xml')) {
-            svgString = '<?xml version="1.0" encoding="utf-8"?>\n' + svgString;
+        // Re-initialize paper if it hasn't been created OR if its SVG was wiped
+        if (!paper || !el.querySelector('svg')) {
+          if (paper) {
+            paper.remove();
           }
 
-          // Stream the raw string back to Shiny app
-          if (window.Shiny) {
-            Shiny.setInputValue(elId + '_svg', svgString);
+          var config = x.paper || {};
+          Object.keys(config).forEach(function(key) {
+            if (config[key] === null) delete config[key];
+          });
+
+          config.el = el;
+          config.model = graph;
+          config.cellNamespace = joint.shapes;
+          if (!config.width) config.width = width || '100%';
+          if (!config.height) config.height = height || 400;
+
+          if (config.defaultLink) {
+            config.defaultLink = new joint.shapes.standard.Link(config.defaultLink);
           }
-        }
 
-        // Initialize JointJS Paper using 3.7.7 syntax
-        paper = new joint.dia.Paper({
-          el: el,
-          model: graph,
-          width: el.clientWidth || width || 800,
-          height: el.clientHeight || height || 500,
-          gridSize: x.paper.gridSize || 10,
-          drawGrid: x.paper.drawGrid || false,
-          background: { color: x.paper.color || '#F8F9FA' },
-          interactive: x.paper.interactive || true,
-          snapLinks: { radius: 20 },
-          allowLink: x.paper.allowLink || true,
-    
-          // This function decides if a link can connect to a target element
-          validateConnection: function(cellViewS, magnetS, cellViewT, magnetT, end, linkView) {
-            // Prevent linking an element to itself
-            if (cellViewS === cellViewT) return false;
-            // Ensure a connection is only made if dragging onto a valid target element
-            return cellViewT && cellViewT.model.isElement();
-          },
+          paper = new joint.dia.Paper(config);
 
-          // This tells JointJS what kind of link object to create when the user drags a new connection
-          defaultLink: new joint.dia.Link({
-            attrs: {
-              '.connection': { stroke: '#2c3e50', 'stroke-width': 2 },
-              '.marker-target': { fill: '#2c3e50', d: 'M 10 0 L 0 5 L 10 10 z' } // Adds an arrowhead
+          var linkToolsView = new joint.dia.ToolsView({
+            tools: [
+              new joint.linkTools.Vertices(),
+              new joint.linkTools.Segments(),
+              new joint.linkTools.SourceArrowhead(),
+              new joint.linkTools.TargetArrowhead(),
+              new joint.linkTools.Boundary(),
+              new joint.linkTools.Remove()
+            ]
+          });
+
+          paper.on('link:mouseenter', function(linkView) {
+            linkView.addTools(linkToolsView);
+          });
+
+          paper.on('link:mouseleave', function(linkView) {
+            linkView.removeTools();
+          });
+
+          paper.on('cell:pointerclick', function(cellView) {
+            var model = cellView.model;
+            var eventData = { 
+              id: model.id, 
+              type: model.get('type'),
+              timestamp: new Date().getTime() 
+            };
+            if (window.Shiny) {
+              Shiny.setInputValue(elId + '_cell_click', eventData, {priority: 'event'});
             }
-          })
-        });
-
-        // Optional Grid styling overrides for JointJS v3.x
-        if (x.drawGrid) {
-          paper.setGridSize(x.gridSize || 20);
-          paper.drawGrid({
-            name: 'dot',
-            args: { color: '#A0A0A0', thickness: 1 }
           });
         }
 
@@ -94,30 +112,9 @@ HTMLWidgets.widget({
         if (x.graph) {
           graph.fromJSON(x.graph);
         }
-        
-        var elId = el.id;
 
-        paper.on('cell:pointerclick', function(cellView) {
-          var model = cellView.model;
-          var eventData = { 
-            id: model.id, 
-            type: model.get('type'),
-            timestamp: new Date().getTime() 
-          };
-          if (window.Shiny) {
-            Shiny.setInputValue(elId + '_cell_click', eventData, {priority: 'event'});
-          }
-        });
-        
-        graph.on('add remove change change:position', function() {
-          syncSvgToShiny();
-          syncGraphToShiny();
-        });
-
-        paper.on('render:done', function() {
-          syncSvgToShiny();
-          syncGraphToShiny();
-        });
+        syncSvgToShiny();
+        syncGraphToShiny();
       },
 
       resize: function(width, height) {
