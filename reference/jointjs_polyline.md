@@ -50,6 +50,7 @@ Inherited methods
 - [`jointjs_element$set_outline()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_outline)
 - [`jointjs_element$set_position()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_position)
 - [`jointjs_element$set_shadow()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_shadow)
+- [`jointjs_element$set_size()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_size)
 - [`jointjs_element$set_top()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_top)
 - [`jointjs_element$set_wrapper()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_wrapper)
 
@@ -113,6 +114,7 @@ jointjs_polyline$new("10,10 30,10 30,30")
 #>     set_outline: function (stroke, strokeWidth, ...) 
 #>     set_position: function (x, y) 
 #>     set_shadow: function (stroke, strokeWidth, ...) 
+#>     set_size: function (width, height) 
 #>     set_top: function (fill, stroke, strokeWidth, ...) 
 #>     set_wrapper: function (stroke, strokeWidth, ...) 
 #>   Private:

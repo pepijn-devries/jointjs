@@ -2,8 +2,7 @@
 
 A generic template to create shapes for a
 [jointjs_graph](https://pepijn-devries.github.io/jointjs/reference/jointjs_graph.md).
-Shapes are visualised by
-[https://www.w3.org/groups/wg/svg/](https://pepijn-devries.github.io/jointjs/reference/SVG)
+Shapes are visualised by [SVG](https://www.w3.org/groups/wg/svg/)
 elements. `jointjs_element` objects are R's representation of such
 elements. This R class specifies the elements such that they can be used
 to construct a
@@ -16,7 +15,7 @@ etc.
 
 Parameters are all based on SVG attributes, you can use the `...`
 arguments to pass other valid attributes. Note that the attributes are
-renamed in camel-case conform the JointJS spefications. So, SVG
+renamed in camel-case conform the JointJS specifications. So, SVG
 attribute `font-family` becomes `fontFamily`, `stroke-width` becomes
 `strokeWidth`, etc.
 
@@ -47,6 +46,8 @@ Other elements:
 ### Public methods
 
 - [`jointjs_element$set_position()`](#method-jointjs_element-set_position)
+
+- [`jointjs_element$set_size()`](#method-jointjs_element-set_size)
 
 - [`jointjs_element$set_image()`](#method-jointjs_element-set_image)
 
@@ -101,6 +102,22 @@ Set the element's position relative to its parent container.
 
 ------------------------------------------------------------------------
 
+### `jointjs_element$set_size()`
+
+Set the element's size
+
+#### Usage
+
+    jointjs_element$set_size(width, height)
+
+#### Arguments
+
+- `width, height`:
+
+  Width and height of the element.
+
+------------------------------------------------------------------------
+
 ### `jointjs_element$set_image()`
 
 Set image attributes for the element.
@@ -113,11 +130,11 @@ Set image attributes for the element.
 
 - `href`:
 
-  A Uniform Resource Identifier (URI) to locate a resource (e.g. image)
+  A Uniform Resource Identifier (URI) to locate a resource (e.g. image).
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
@@ -133,19 +150,19 @@ Set border attributes for the element.
 
 - `fill`:
 
-  Fill colour
+  Fill colour.
 
 - `stroke`:
 
-  Stroke colour
+  Stroke colour.
 
 - `strokeWidth`:
 
-  Width of the stroke line
+  Width of the stroke line.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
@@ -161,19 +178,19 @@ Set background attributes for the element.
 
 - `fill`:
 
-  Fill colour
+  Fill colour.
 
 - `stroke`:
 
-  Stroke colour
+  Stroke colour.
 
 - `strokeWidth`:
 
-  Width of the stroke line
+  Width of the stroke line.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
@@ -190,19 +207,19 @@ cylinder base).
 
 - `fill`:
 
-  Fill colour
+  Fill colour.
 
 - `stroke`:
 
-  Stroke colour
+  Stroke colour.
 
 - `strokeWidth`:
 
-  Width of the stroke line
+  Width of the stroke line.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
@@ -218,15 +235,15 @@ Set line attributes for the element.
 
 - `stroke`:
 
-  Stroke colour
+  Stroke colour.
 
 - `strokeWidth`:
 
-  Width of the stroke line
+  Width of the stroke line.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
@@ -242,15 +259,15 @@ Set shadow attributes for the element.
 
 - `stroke`:
 
-  Stroke colour
+  Stroke colour.
 
 - `strokeWidth`:
 
-  Width of the stroke line
+  Width of the stroke line.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
@@ -266,15 +283,15 @@ Set outline attributes for the element.
 
 - `stroke`:
 
-  Stroke colour
+  Stroke colour.
 
 - `strokeWidth`:
 
-  Width of the stroke line
+  Width of the stroke line.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
@@ -290,15 +307,15 @@ Set wrapper attributes for the element.
 
 - `stroke`:
 
-  Stroke colour
+  Stroke colour.
 
 - `strokeWidth`:
 
-  Width of the stroke line
+  Width of the stroke line.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
@@ -314,25 +331,25 @@ Set header attributes for the element.
 
 - `fill`:
 
-  Fill colour
+  Fill colour.
 
 - `stroke`:
 
-  Stroke colour
+  Stroke colour.
 
 - `strokeWidth`:
 
-  Width of the stroke line
+  Width of the stroke line.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
 ### `jointjs_element$set_headerText()`
 
-Set headerText attributes for the element.
+Set `headerText` attributes for the element.
 
 #### Usage
 
@@ -342,29 +359,29 @@ Set headerText attributes for the element.
 
 - `text`:
 
-  A text to display
+  A text to display.
 
 - `color`:
 
-  Colour of the element
+  Colour of the element.
 
 - `fontFamily`:
 
-  Font family for the text to display
+  Font family for the text to display.
 
 - `fontSize`:
 
-  Font size for the text to display
+  Font size for the text to display.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
 ### `jointjs_element$set_bodyText()`
 
-Set bodyText attributes for the element.
+Set `bodyText` attributes for the element.
 
 #### Usage
 
@@ -374,23 +391,23 @@ Set bodyText attributes for the element.
 
 - `text`:
 
-  A text to display
+  A text to display.
 
 - `color`:
 
-  Colour of the element
+  Colour of the element.
 
 - `fontFamily`:
 
-  Font family for the text to display
+  Font family for the text to display.
 
 - `fontSize`:
 
-  Font size for the text to display
+  Font size for the text to display.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
@@ -406,15 +423,15 @@ Set body attributes for the element.
 
 - `fill`:
 
-  Fill colour
+  Fill colour.
 
 - `stroke`:
 
-  Stroke colour
+  Stroke colour.
 
 - `strokeWidth`:
 
-  Width of the stroke line
+  Width of the stroke line.
 
 - `magnet`:
 
@@ -423,7 +440,7 @@ Set body attributes for the element.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 
@@ -439,23 +456,23 @@ Set label attributes for the element.
 
 - `text`:
 
-  A text to display
+  A text to display.
 
 - `color`:
 
-  Colour of the element
+  Colour of the element.
 
 - `fontFamily`:
 
-  Font family for the text to display
+  Font family for the text to display.
 
 - `fontSize`:
 
-  Font size for the text to display
+  Font size for the text to display.
 
 - `...`:
 
-  Additional SVG attributes accepted by the specific SVG element
+  Additional SVG attributes accepted by the specific SVG element.
 
 ------------------------------------------------------------------------
 

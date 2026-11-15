@@ -24,7 +24,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">jointjs</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9004</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9006</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,6 +38,7 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
 <li><a class="dropdown-item" href="../articles/gallery.html">Gallery</a></li>
+    <li><a class="dropdown-item" href="../articles/jointjs-library.html">The JointJS Library</a></li>
   </ul>
 </li>
       </ul>
@@ -45,6 +46,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/pepijn-devries/jointjs/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -55,42 +57,148 @@
 
 
 <script src="gallery_files/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="gallery_files/lodash-4.17.21/lodash.min.js"></script><script src="gallery_files/backbone-1.5.0/backbone-min.js"></script><link href="gallery_files/jointjs-3.7.7/joint.min.css" rel="stylesheet">
-<script src="gallery_files/jointjs-3.7.7/joint.min.js"></script><script src="gallery_files/jointjs-binding-0.0.0.9004/jointjs.js"></script><div class="row">
+<script src="gallery_files/jointjs-3.7.7/joint.min.js"></script><script src="gallery_files/jointjs-binding-0.0.0.9006/jointjs.js"></script><div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.svg" class="logo" alt=""><h1>Gallery</h1>
             
       
-
+      <small class="dont-index">Source: <a href="https://github.com/pepijn-devries/jointjs/blob/main/vignettes/gallery.Rmd" class="external-link"><code>vignettes/gallery.Rmd</code></a></small>
       <div class="d-none name"><code>gallery.Rmd</code></div>
     </div>
 
     
     
+<p>JointJS Diagrams can use any <a href="https://www.w3.org/groups/wg/svg/" class="external-link">Scalable Vector Graphics
+(SVG)</a> element to represent elements in a diagram. The same is true
+for links in a diagram. JointJS JavaScript library (and this R package)
+comes with range of predefined shapes that can be used out of the
+box.</p>
+<p>Check documentation on <code><a href="../reference/jointjs_element.html">?jointjs_element</a></code> and
+<code><a href="../reference/jointjs_link.html">?jointjs_link</a></code> to learn more about customising the
+appearance of these shapes, or creating your own.</p>
+<p>The code chunk below demonstrates how to add these shapes to a
+diagram and how to create an interactive html widget from it.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://pepijn-devries.github.io/jointjs/">jointjs</a></span><span class="op">)</span></span>
-<span><span class="va">graph</span> <span class="op">&lt;-</span></span>
-<span>  <span class="va">jointjs_graph</span><span class="op">$</span></span>
-<span>  <span class="co">## Create a new graph:</span></span>
-<span>  <span class="fu">new</span><span class="op">(</span><span class="op">)</span><span class="op">$</span></span>
+<span><span class="va">x_offset</span> <span class="op">&lt;-</span> <span class="fl">20</span></span>
+<span><span class="va">y_offset</span> <span class="op">&lt;-</span> <span class="fl">20</span></span>
+<span><span class="va">delta</span>    <span class="op">&lt;-</span> <span class="fl">100</span></span>
+<span></span>
+<span><span class="va"><a href="../reference/jointjs_graph.html">jointjs_graph</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="op">)</span><span class="op">$</span></span>
+<span>  </span>
 <span>  <span class="co">## Add elements:</span></span>
 <span>  <span class="fu">add_elements</span><span class="op">(</span></span>
+<span>    </span>
 <span>    <span class="co">## Add a rectangle:</span></span>
-<span>    <span class="va"><a href="../reference/jointjs_rectangle.html">jointjs_rectangle</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span>id <span class="op">=</span> <span class="st">"hello"</span><span class="op">)</span><span class="op">$</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_rectangle.html">jointjs_rectangle</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="op">)</span><span class="op">$</span></span>
 <span>      <span class="fu">set_body</span><span class="op">(</span>rx <span class="op">=</span> <span class="fl">5</span>, ry <span class="op">=</span> <span class="fl">5</span>, magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
-<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"Hello"</span><span class="op">)</span><span class="op">$</span></span>
-<span>      <span class="fu">set_position</span><span class="op">(</span><span class="fl">10</span>, <span class="fl">10</span><span class="op">)</span>,</span>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"Rect"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span>, <span class="va">y_offset</span><span class="op">)</span>,</span>
+<span>    </span>
 <span>    <span class="co">## Add a circle:</span></span>
-<span>    <span class="va"><a href="../reference/jointjs_circle.html">jointjs_circle</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span>id <span class="op">=</span> <span class="st">"world"</span><span class="op">)</span><span class="op">$</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_circle.html">jointjs_circle</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="op">)</span><span class="op">$</span></span>
 <span>      <span class="fu">set_body</span><span class="op">(</span><span class="st">"white"</span>, <span class="st">"black"</span>, magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
-<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"world"</span><span class="op">)</span><span class="op">$</span></span>
-<span>      <span class="fu">set_position</span><span class="op">(</span><span class="fl">100</span>, <span class="fl">10</span><span class="op">)</span>,</span>
-<span>    <span class="co">## Add a link, joining the rectangle and circle:</span></span>
-<span>    <span class="va"><a href="../reference/jointjs_doubleLink.html">jointjs_doubleLink</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"hello"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"world"</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span>
-<span><span class="co">## Get and show widget:</span></span>
-<span><span class="va">graph</span><span class="op">$</span><span class="fu">get_widget</span><span class="op">(</span>width <span class="op">=</span> <span class="st">"100%"</span>, height <span class="op">=</span> <span class="st">"400px"</span><span class="op">)</span></span></code></pre></div>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"Circle"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span>, <span class="va">y_offset</span> <span class="op">+</span> <span class="va">delta</span><span class="op">)</span>,</span>
+<span>    </span>
+<span>    <span class="co">## Add a cylinder:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_cylinder.html">jointjs_cylinder</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span>topRy <span class="op">=</span> <span class="st">"10%"</span>, magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"Cyl"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_top</span><span class="op">(</span><span class="st">"lightgrey"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span>, <span class="va">y_offset</span> <span class="op">+</span> <span class="fl">2</span><span class="op">*</span><span class="va">delta</span><span class="op">)</span>,</span>
+<span>    </span>
+<span>    <span class="co">## Add a ellipse:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_ellipse.html">jointjs_ellipse</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span>rx <span class="op">=</span> <span class="fl">50</span>, ry <span class="op">=</span> <span class="fl">30</span>, magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"Ellip"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_size</span><span class="op">(</span><span class="fl">50</span>, <span class="fl">30</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span>, <span class="va">y_offset</span> <span class="op">+</span> <span class="fl">3</span><span class="op">*</span><span class="va">delta</span><span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co">## Add a headered rectangle:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_headeredRectangle.html">jointjs_headeredRectangle</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightblue"</span><span class="op">)</span>,</span>
+<span>                                  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>text <span class="op">=</span> <span class="st">"Head"</span><span class="op">)</span>,</span>
+<span>                                  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>text <span class="op">=</span> <span class="st">"Body"</span><span class="op">)</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span><span class="st">"pink"</span>, <span class="st">"black"</span>, <span class="fl">1</span>, magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span> <span class="op">+</span> <span class="va">delta</span>, <span class="va">y_offset</span><span class="op">)</span>,</span>
+<span>    </span>
+<span>    <span class="co">## Add a path:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_path.html">jointjs_path</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="st">"M 0 5 10 0 C 20 0 20 20 10 20 L 0 15 Z"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span>magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"Path"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span> <span class="op">+</span> <span class="va">delta</span>, <span class="va">y_offset</span> <span class="op">+</span> <span class="va">delta</span><span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co">## Add a polygon:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_polygon.html">jointjs_polygon</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="st">"0,10 0,5 5,0 10,0 15,5 15,10 10,15 5,15"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span>magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"Polyg"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span> <span class="op">+</span> <span class="va">delta</span>, <span class="va">y_offset</span> <span class="op">+</span> <span class="fl">2</span><span class="op">*</span><span class="va">delta</span><span class="op">)</span>,</span>
+<span>    </span>
+<span>    <span class="co">## Add a polyline:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_polyline.html">jointjs_polyline</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="st">"0,10 0,5 5,0 10,0 15,5 15,10 10,15 5,15"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span>magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"Polyl"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span> <span class="op">+</span> <span class="va">delta</span>, <span class="va">y_offset</span> <span class="op">+</span> <span class="fl">3</span><span class="op">*</span><span class="va">delta</span><span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co">## Add a rectangle:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_rectangle.html">jointjs_rectangle</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span>id <span class="op">=</span> <span class="st">"rect"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span>magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"Rect"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span> <span class="op">+</span> <span class="fl">2</span><span class="op">*</span><span class="va">delta</span>, <span class="va">y_offset</span><span class="op">)</span>,</span>
+<span>    </span>
+<span>    <span class="co">## Add a text block:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_textBlock.html">jointjs_textBlock</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="st">"Text block"</span>, id <span class="op">=</span> <span class="st">"tblock"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span>magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span> <span class="op">+</span> <span class="fl">2</span><span class="op">*</span><span class="va">delta</span>, <span class="va">y_offset</span> <span class="op">+</span> <span class="va">delta</span><span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co">## Add an image:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_image.html">jointjs_image</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="st">"https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true"</span>, id <span class="op">=</span> <span class="st">"img"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span>magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_size</span><span class="op">(</span>width <span class="op">=</span> <span class="fl">90</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"Img"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span> <span class="op">+</span> <span class="fl">2</span><span class="op">*</span><span class="va">delta</span>, <span class="va">y_offset</span> <span class="op">+</span> <span class="fl">2</span><span class="op">*</span><span class="va">delta</span><span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co">## Add a bordered image:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_borderedImage.html">jointjs_borderedImage</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span></span>
+<span>      <span class="st">"https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true"</span>,</span>
+<span>      border <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span>magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_size</span><span class="op">(</span>width <span class="op">=</span> <span class="fl">90</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"B img"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span> <span class="op">+</span> <span class="fl">2</span><span class="op">*</span><span class="va">delta</span>, <span class="va">y_offset</span> <span class="op">+</span> <span class="fl">3</span><span class="op">*</span><span class="va">delta</span><span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co">## Add an embedded image:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_embeddedImage.html">jointjs_embeddedImage</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="st">"https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span>magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_size</span><span class="op">(</span>width <span class="op">=</span> <span class="fl">90</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"E img"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span> <span class="op">+</span> <span class="fl">3</span><span class="op">*</span><span class="va">delta</span>, <span class="va">y_offset</span><span class="op">)</span>,</span>
+<span>    </span>
+<span>    <span class="co">## Add an inscribed image:</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_inscribedImage.html">jointjs_inscribedImage</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span></span>
+<span>      <span class="st">"https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true"</span>,</span>
+<span>      id <span class="op">=</span> <span class="st">"iimg"</span>,</span>
+<span>      border <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_body</span><span class="op">(</span>magnet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_size</span><span class="op">(</span>width <span class="op">=</span> <span class="fl">90</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_label</span><span class="op">(</span><span class="st">"I img"</span><span class="op">)</span><span class="op">$</span></span>
+<span>      <span class="fu">set_position</span><span class="op">(</span><span class="va">x_offset</span> <span class="op">+</span> <span class="fl">3</span><span class="op">*</span><span class="va">delta</span>, <span class="va">y_offset</span> <span class="op">+</span> <span class="va">delta</span><span class="op">)</span>,</span>
+<span>    </span>
+<span>    <span class="co">## Add link</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_link.html">jointjs_link</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"rect"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"iimg"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co">## Add double link</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_doubleLink.html">jointjs_doubleLink</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"tblock"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"iimg"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    </span>
+<span>    <span class="co">## Add shadow link</span></span>
+<span>    <span class="va"><a href="../reference/jointjs_shadowLink.html">jointjs_shadowLink</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"img"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"iimg"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span>  <span class="op">)</span><span class="op">$</span></span>
+<span>  </span>
+<span>  <span class="co">## Get and show widget</span></span>
+<span>  <span class="fu">get_widget</span><span class="op">(</span>width <span class="op">=</span> <span class="st">"100%"</span>, height <span class="op">=</span> <span class="st">"400px"</span><span class="op">)</span></span></code></pre></div>
 <div id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:100%;height:400px;" class="jointjs html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"paper":{"background":{"color":"#E9ECEF"},"defaultLink":{"attrs":{".connection":{"stroke":"#2C3E50","strokeWidth":2},".marker-target":{"fill":"#2C3E50","d":"M 10 0 L 0 5 L 10 10 z"}},"z":1,"type":"standard.Link"},"drawGrid":{"name":"dot","args":{"color":"#808080","thickness":1}},"gridSize":20,"interactive":true,"snapLinks":{"radius":20},"validateConnection":"\n        function(cellViewS, magnetS, cellViewT, magnetT, end, linkView) {\n          if (cellViewS === cellViewT) return false;\n          return cellViewT && cellViewT.model.isElement();\n        }\n      "},"graph":{"cells":[{"attrs":{"image":null,"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"magnet":true,"rx":5,"ry":5},"label":{"text":"Hello"}},"size":{"width":50,"height":50},"angle":0,"position":{"x":10,"y":10},"z":1,"type":"standard.Rectangle","id":"hello"},{"attrs":{"image":null,"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"fill":"white","stroke":"black","magnet":true},"label":{"text":"world"}},"size":{"width":50,"height":50},"angle":0,"position":{"x":100,"y":10},"z":1,"type":"standard.Circle","id":"world"},{"target":{"id":"world"},"source":{"id":"hello"},"z":1,"type":"standard.DoubleLink","id":"c6be45eee35844e7"}]}},"evals":["paper.validateConnection"],"jsHooks":[]}</script></main>
+<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"paper":{"background":{"color":"#E9ECEF"},"defaultLink":{"attrs":{".connection":{"stroke":"#2C3E50","strokeWidth":2},".marker-target":{"fill":"#2C3E50","d":"M 10 0 L 0 5 L 10 10 z"}},"z":1,"type":"standard.Link"},"drawGrid":{"name":"dot","args":{"color":"#808080","thickness":1}},"gridSize":20,"interactive":true,"snapLinks":{"radius":20},"validateConnection":"\n        function(cellViewS, magnetS, cellViewT, magnetT, end, linkView) {\n          if (cellViewS === cellViewT) return false;\n          return cellViewT && cellViewT.model.isElement();\n        }\n      "},"graph":{"cells":[{"attrs":{"image":null,"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"magnet":true,"rx":5,"ry":5},"label":{"text":"Rect"}},"size":{"width":50,"height":50},"angle":0,"position":{"x":20,"y":20},"z":1,"type":"standard.Rectangle","id":"c6be45eee35844e7"},{"attrs":{"image":null,"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"fill":"white","stroke":"black","magnet":true},"label":{"text":"Circle"}},"size":{"width":50,"height":50},"angle":0,"position":{"x":20,"y":120},"z":1,"type":"standard.Circle","id":"ec1d6ada44bc15ee"},{"attrs":{"image":null,"border":null,"background":null,"top":{"fill":"lightgrey"},"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"magnet":true,"topRy":"10%"},"label":{"text":"Cyl"}},"size":{"width":50,"height":50},"angle":0,"position":{"x":20,"y":220},"z":1,"type":"standard.Cylinder","id":"3f1285a6f4585e9f"},{"attrs":{"image":null,"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"magnet":true,"rx":50,"ry":30},"label":{"text":"Ellip"}},"size":{"width":50,"height":30},"angle":0,"position":{"x":20,"y":320},"z":1,"type":"standard.Ellipse","id":"410375e0512d08e1"},{"attrs":{"image":null,"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":{"fill":"lightblue"},"headerText":{"text":"Head"},"bodyText":{"text":"Body"},"body":{"fill":"pink","stroke":"black","strokeWidth":1,"magnet":true},"label":null},"size":{"width":50,"height":50},"angle":0,"position":{"x":120,"y":20},"z":1,"type":"standard.HeaderedRectangle","id":"470fb2bbfa921692"},{"target":{"id":null},"source":{"id":null},"attrs":{"image":null,"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"refD":"M 0 5 10 0 C 20 0 20 20 10 20 L 0 15 Z","magnet":true},"label":{"text":"Path"}},"size":{"width":50,"height":50},"angle":0,"position":{"x":120,"y":120},"z":1,"type":"standard.Path","id":"5390655281f70b06"},{"attrs":{"image":null,"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"refPoints":"0,10 0,5 5,0 10,0 15,5 15,10 10,15 5,15","magnet":true},"label":{"text":"Polyg"}},"size":{"width":50,"height":50},"angle":0,"position":{"x":120,"y":220},"z":1,"type":"standard.Polygon","id":"b589156b9b5d462b"},{"attrs":{"image":null,"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"refPoints":"0,10 0,5 5,0 10,0 15,5 15,10 10,15 5,15","magnet":true},"label":{"text":"Polyl"}},"size":{"width":50,"height":50},"angle":0,"position":{"x":120,"y":320},"z":1,"type":"standard.Polyline","id":"040c500c1f46a036"},{"attrs":{"image":null,"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"magnet":true},"label":{"text":"Rect"}},"size":{"width":50,"height":50},"angle":0,"position":{"x":220,"y":20},"z":1,"type":"standard.Rectangle","id":"rect"},{"attrs":{"image":null,"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"magnet":true},"label":{"text":"Text block"}},"size":{"width":50,"height":50},"angle":0,"position":{"x":220,"y":120},"z":1,"type":"standard.TextBlock","id":"tblock"},{"attrs":{"image":{"href":"https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true"},"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"magnet":true},"label":{"text":"Img"}},"size":{"width":90,"height":50},"angle":0,"position":{"x":220,"y":220},"z":1,"type":"standard.Image","id":"img"},{"attrs":{"border":{"color":"black"},"image":{"href":"https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true"},"body":{"magnet":true},"label":{"text":"B img"}},"size":{"width":90,"height":50},"angle":0,"position":{"x":220,"y":320},"z":1,"type":"standard.BorderedImage","id":"6717828ac5cc842c"},{"attrs":{"image":{"href":"https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true"},"border":null,"background":null,"top":null,"line":null,"shadow":null,"outline":null,"wrapper":null,"header":null,"headerText":null,"bodyText":null,"body":{"magnet":true},"label":{"text":"E img"}},"size":{"width":90,"height":50},"angle":0,"position":{"x":320,"y":20},"z":1,"type":"standard.EmbeddedImage","id":"163a3181d2b2f09b"},{"attrs":{"border":{"color":"black"},"image":{"href":"https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true"},"body":{"magnet":true},"label":{"text":"I img"}},"size":{"width":90,"height":50},"angle":0,"position":{"x":320,"y":120},"z":1,"type":"standard.InscribedImage","id":"iimg"},{"target":{"id":"iimg"},"source":{"id":"rect"},"z":1,"type":"standard.Link","id":"cf64302605ab6a97"},{"target":{"id":"iimg"},"source":{"id":"tblock"},"z":1,"type":"standard.DoubleLink","id":"50b3e1b549c923c5"},{"target":{"id":"iimg"},"source":{"id":"img"},"z":1,"type":"standard.ShadowLink","id":"d1842149b3273806"}]}},"evals":["paper.validateConnection"],"jsHooks":[]}</script></main>
 </div>
 
 

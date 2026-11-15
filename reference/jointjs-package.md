@@ -10,6 +10,8 @@ Useful links:
 
 - <https://pepijn-devries.github.io/jointjs/>
 
+- Report bugs at <https://github.com/pepijn-devries/jointjs/issues>
+
 ## Author
 
 **Maintainer**: Pepijn de Vries <pepijn.devries@outlook.com>

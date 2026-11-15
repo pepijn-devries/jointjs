@@ -51,6 +51,7 @@ Inherited methods
 - [`jointjs_element$set_outline()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_outline)
 - [`jointjs_element$set_position()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_position)
 - [`jointjs_element$set_shadow()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_shadow)
+- [`jointjs_element$set_size()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_size)
 - [`jointjs_element$set_top()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_top)
 - [`jointjs_element$set_wrapper()`](https://pepijn-devries.github.io/jointjs/reference/jointjs_element.html#method-set_wrapper)
 
@@ -84,15 +85,15 @@ Set body attributes for the element.
 
 - `fill`:
 
-  Fill colour
+  Fill colour.
 
 - `stroke`:
 
-  Stroke colour
+  Stroke colour.
 
 - `strokeWidth`:
 
-  Width of the stroke line
+  Width of the stroke line.
 
 - `magnet`:
 

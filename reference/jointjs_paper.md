@@ -67,7 +67,7 @@ Initiate a paper object
 
 - `gridSize`:
 
-  gridSize in CSS units
+  Grid size in CSS units
 
 - `drawGrid`:
 
