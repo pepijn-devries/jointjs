@@ -3,7 +3,7 @@
 \docType{package}
 \name{jointjs-package}
 \alias{jointjs-package}
-\title{jointjs: Interactive JointJS Diagrams}
+\title{jointjs: Interactive 'JointJS' Diagrams}
 \description{
 \if{html}{\figure{logo.svg}{options: style='float: right' alt='logo' width='120'}}
 
