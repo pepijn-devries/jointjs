@@ -58,7 +58,7 @@ background image (\code{width} and \code{height}), \code{repeat} a CSS \verb{bac
 property, \code{quality} coefficient for image quality, \code{opacity} in the
 range of 0-1, \code{watermarkAngle} in degrees. If set to \code{FALSE} no
 background is drawn.}
-      \item{\code{gridSize}}{gridSize in CSS units}
+      \item{\code{gridSize}}{Grid size in CSS units}
       \item{\code{drawGrid}}{A named list specifying how to draw a grid on the paper.
 An element \code{name} can use any of these predefined grid patterns:
 \code{"dot"} (default), \code{"fixedDot"}, \code{"mesh"}, or \code{"doubleMesh"}.

@@ -49,6 +49,7 @@ Other elements:
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_outline"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_outline'><code>jointjs_element$set_outline()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_position"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_position'><code>jointjs_element$set_position()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_shadow"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_shadow'><code>jointjs_element$set_shadow()</code></a></span></li>
+  <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_size"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_size'><code>jointjs_element$set_size()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_top"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_top'><code>jointjs_element$set_top()</code></a></span></li>
   <li><span class="pkg-link" data-pkg="jointjs" data-topic="jointjs_element" data-id="set_wrapper"><a href='../../jointjs/html/jointjs_element.html#method-jointjs_element-set_wrapper'><code>jointjs_element$set_wrapper()</code></a></span></li>
 </ul>
@@ -85,9 +86,9 @@ Other elements:
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{Fill colour}
-      \item{\code{stroke}}{Stroke colour}
-      \item{\code{strokeWidth}}{Width of the stroke line}
+      \item{\code{fill}}{Fill colour.}
+      \item{\code{stroke}}{Stroke colour.}
+      \item{\code{strokeWidth}}{Width of the stroke line.}
       \item{\code{magnet}}{When set to \code{TRUE}, the element can be used as
 source or target for a \link{jointjs_link}.}
       \item{\code{topRy}}{The vertical radius of the exposed area of the cylinder base,

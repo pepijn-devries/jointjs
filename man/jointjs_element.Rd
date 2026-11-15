@@ -5,7 +5,7 @@
 \title{Elements to Build a JointJS Diagram}
 \description{
 A generic template to create shapes for a \link{jointjs_graph}. Shapes are
-visualised by \href{SVG}{https://www.w3.org/groups/wg/svg/} elements.
+visualised by \href{https://www.w3.org/groups/wg/svg/}{SVG} elements.
 \code{jointjs_element} objects are R's representation of such elements.
 This R class specifies the elements such that they can be used to
 construct a \link{jointjs_graph}. It's usually more effective to initialise
@@ -14,7 +14,7 @@ etc.
 
 Parameters are all based on SVG attributes, you can use the
 \code{...} arguments to pass other valid attributes. Note that the
-attributes are renamed in camel-case conform the JointJS spefications.
+attributes are renamed in camel-case conform the JointJS specifications.
 So, SVG attribute \code{font-family} becomes \code{fontFamily}, \code{stroke-width}
 becomes \code{strokeWidth}, etc.
 }
@@ -42,6 +42,7 @@ Other elements:
 \subsection{Public methods}{
   \itemize{
     \item \href{#method-jointjs_element-set_position}{\code{jointjs_element$set_position()}}
+    \item \href{#method-jointjs_element-set_size}{\code{jointjs_element$set_size()}}
     \item \href{#method-jointjs_element-set_image}{\code{jointjs_element$set_image()}}
     \item \href{#method-jointjs_element-set_border}{\code{jointjs_element$set_border()}}
     \item \href{#method-jointjs_element-set_background}{\code{jointjs_element$set_background()}}
@@ -85,6 +86,25 @@ Other elements:
 }
 
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-jointjs_element-set_size"></a>}}
+\if{latex}{\out{\hypertarget{method-jointjs_element-set_size}{}}}
+\subsection{\code{jointjs_element$set_size()}}{
+  Set the element's size
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{jointjs_element$set_size(width, height)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{width, height}}{Width and height of the element.}
+    }
+    \if{html}{\out{</div>}}
+  }
+}
+
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-jointjs_element-set_image"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_image}{}}}
 \subsection{\code{jointjs_element$set_image()}}{
@@ -97,8 +117,8 @@ Other elements:
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{href}}{A Uniform Resource Identifier (URI) to locate a resource (e.g. image)}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{href}}{A Uniform Resource Identifier (URI) to locate a resource (e.g. image).}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -117,10 +137,10 @@ Other elements:
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{Fill colour}
-      \item{\code{stroke}}{Stroke colour}
-      \item{\code{strokeWidth}}{Width of the stroke line}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{fill}}{Fill colour.}
+      \item{\code{stroke}}{Stroke colour.}
+      \item{\code{strokeWidth}}{Width of the stroke line.}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -139,10 +159,10 @@ Other elements:
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{Fill colour}
-      \item{\code{stroke}}{Stroke colour}
-      \item{\code{strokeWidth}}{Width of the stroke line}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{fill}}{Fill colour.}
+      \item{\code{stroke}}{Stroke colour.}
+      \item{\code{strokeWidth}}{Width of the stroke line.}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -162,10 +182,10 @@ a cylinder base).
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{Fill colour}
-      \item{\code{stroke}}{Stroke colour}
-      \item{\code{strokeWidth}}{Width of the stroke line}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{fill}}{Fill colour.}
+      \item{\code{stroke}}{Stroke colour.}
+      \item{\code{strokeWidth}}{Width of the stroke line.}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -184,9 +204,9 @@ a cylinder base).
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{stroke}}{Stroke colour}
-      \item{\code{strokeWidth}}{Width of the stroke line}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{stroke}}{Stroke colour.}
+      \item{\code{strokeWidth}}{Width of the stroke line.}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -205,9 +225,9 @@ a cylinder base).
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{stroke}}{Stroke colour}
-      \item{\code{strokeWidth}}{Width of the stroke line}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{stroke}}{Stroke colour.}
+      \item{\code{strokeWidth}}{Width of the stroke line.}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -226,9 +246,9 @@ a cylinder base).
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{stroke}}{Stroke colour}
-      \item{\code{strokeWidth}}{Width of the stroke line}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{stroke}}{Stroke colour.}
+      \item{\code{strokeWidth}}{Width of the stroke line.}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -247,9 +267,9 @@ a cylinder base).
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{stroke}}{Stroke colour}
-      \item{\code{strokeWidth}}{Width of the stroke line}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{stroke}}{Stroke colour.}
+      \item{\code{strokeWidth}}{Width of the stroke line.}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -268,10 +288,10 @@ a cylinder base).
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{Fill colour}
-      \item{\code{stroke}}{Stroke colour}
-      \item{\code{strokeWidth}}{Width of the stroke line}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{fill}}{Fill colour.}
+      \item{\code{stroke}}{Stroke colour.}
+      \item{\code{strokeWidth}}{Width of the stroke line.}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -281,7 +301,7 @@ a cylinder base).
 \if{html}{\out{<a id="method-jointjs_element-set_headerText"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_headerText}{}}}
 \subsection{\code{jointjs_element$set_headerText()}}{
-  Set headerText attributes for the element.
+  Set \code{headerText} attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_headerText(text, color, fontFamily, fontSize, ...)}
@@ -290,11 +310,11 @@ a cylinder base).
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{text}}{A text to display}
-      \item{\code{color}}{Colour of the element}
-      \item{\code{fontFamily}}{Font family for the text to display}
-      \item{\code{fontSize}}{Font size for the text to display}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{text}}{A text to display.}
+      \item{\code{color}}{Colour of the element.}
+      \item{\code{fontFamily}}{Font family for the text to display.}
+      \item{\code{fontSize}}{Font size for the text to display.}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -304,7 +324,7 @@ a cylinder base).
 \if{html}{\out{<a id="method-jointjs_element-set_bodyText"></a>}}
 \if{latex}{\out{\hypertarget{method-jointjs_element-set_bodyText}{}}}
 \subsection{\code{jointjs_element$set_bodyText()}}{
-  Set bodyText attributes for the element.
+  Set \code{bodyText} attributes for the element.
   \subsection{Usage}{
     \if{html}{\out{<div class="r">}}
     \preformatted{jointjs_element$set_bodyText(text, color, fontFamily, fontSize, ...)}
@@ -313,11 +333,11 @@ a cylinder base).
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{text}}{A text to display}
-      \item{\code{color}}{Colour of the element}
-      \item{\code{fontFamily}}{Font family for the text to display}
-      \item{\code{fontSize}}{Font size for the text to display}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{text}}{A text to display.}
+      \item{\code{color}}{Colour of the element.}
+      \item{\code{fontFamily}}{Font family for the text to display.}
+      \item{\code{fontSize}}{Font size for the text to display.}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -336,12 +356,12 @@ a cylinder base).
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{fill}}{Fill colour}
-      \item{\code{stroke}}{Stroke colour}
-      \item{\code{strokeWidth}}{Width of the stroke line}
+      \item{\code{fill}}{Fill colour.}
+      \item{\code{stroke}}{Stroke colour.}
+      \item{\code{strokeWidth}}{Width of the stroke line.}
       \item{\code{magnet}}{When set to \code{TRUE}, the element can be used as
 source or target for a \link{jointjs_link}.}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
@@ -360,11 +380,11 @@ source or target for a \link{jointjs_link}.}
   \subsection{Arguments}{
     \if{html}{\out{<div class="arguments">}}
     \describe{
-      \item{\code{text}}{A text to display}
-      \item{\code{color}}{Colour of the element}
-      \item{\code{fontFamily}}{Font family for the text to display}
-      \item{\code{fontSize}}{Font size for the text to display}
-      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element}
+      \item{\code{text}}{A text to display.}
+      \item{\code{color}}{Colour of the element.}
+      \item{\code{fontFamily}}{Font family for the text to display.}
+      \item{\code{fontSize}}{Font size for the text to display.}
+      \item{\code{...}}{Additional SVG attributes accepted by the specific SVG element.}
     }
     \if{html}{\out{</div>}}
   }
