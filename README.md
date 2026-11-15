@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/pepijn-devries/jointjs/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/pepijn-devries/jointjs/actions/workflows/R-CMD-check.yaml)
+[![jointjs status
+badge](https://pepijn-devries.r-universe.dev/badges/jointjs)](https://pepijn-devries.r-universe.dev/jointjs)
 [![Codecov test
 coverage](https://codecov.io/gh/pepijn-devries/jointjs/graph/badge.svg)](https://app.codecov.io/gh/pepijn-devries/jointjs)
 <!-- badges: end -->
@@ -70,9 +72,9 @@ chunk. For an interactive example you can check out
 
 - [`dagitty`](https://www.dagitty.net/) A free web-based application and
   a matching R package used to draw, edit, and analyse causal diagrams.
-- [`diagram`](https://cran.r-project.org/web/packages/diagram/index.html)
-  Plots networks from transition matrices and plots food webs. It
-  focuses on R base plots.
+- [`diagram`](https://cran.r-project.org/package=diagram) Plots networks
+  from transition matrices and plots food webs. It focuses on R base
+  plots.
 - [`DiagrammeR`](https://rich-iannone.github.io/DiagrammeR/): Build and
   manipulate nodes and edges programmatically using R syntax or
   specialised text languages. Supports DOT language to create diagrams.
