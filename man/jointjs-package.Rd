@@ -13,6 +13,7 @@ Create interactive 'JointJS' diagrams. Wraps the JavaScript library 'JointJS' to
 Useful links:
 \itemize{
   \item \url{https://pepijn-devries.github.io/jointjs/}
+  \item Report bugs at \url{https://github.com/pepijn-devries/jointjs/issues}
 }
 
 }

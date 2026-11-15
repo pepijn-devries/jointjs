@@ -1,7 +1,7 @@
 #' Elements to Build a JointJS Diagram
 #' 
 #' A generic template to create shapes for a [jointjs_graph]. Shapes are
-#' visualised by [https://www.w3.org/groups/wg/svg/](SVG) elements.
+#' visualised by [SVG](https://www.w3.org/groups/wg/svg/) elements.
 #' `jointjs_element` objects are R's representation of such elements.
 #' This R class specifies the elements such that they can be used to
 #' construct a [jointjs_graph]. It's usually more effective to initialise
@@ -10,22 +10,23 @@
 #' 
 #' Parameters are all based on SVG attributes, you can use the
 #' `...` arguments to pass other valid attributes. Note that the
-#' attributes are renamed in camel-case conform the JointJS spefications.
+#' attributes are renamed in camel-case conform the JointJS specifications.
 #' So, SVG attribute `font-family` becomes `fontFamily`, `stroke-width`
 #' becomes `strokeWidth`, etc.
 #' @include cells.R
 #' @param x,y Coordinates relative to its parent container.
-#' @param fill Fill colour
-#' @param stroke Stroke colour
-#' @param strokeWidth Width of the stroke line
-#' @param text A text to display
-#' @param color Colour of the element
-#' @param fontFamily Font family for the text to display
-#' @param fontSize Font size for the text to display
-#' @param href A Uniform Resource Identifier (URI) to locate a resource (e.g. image)
+#' @param width,height Width and height of the element.
+#' @param fill Fill colour.
+#' @param stroke Stroke colour.
+#' @param strokeWidth Width of the stroke line.
+#' @param text A text to display.
+#' @param color Colour of the element.
+#' @param fontFamily Font family for the text to display.
+#' @param fontSize Font size for the text to display.
+#' @param href A Uniform Resource Identifier (URI) to locate a resource (e.g. image).
 #' @param magnet When set to `TRUE`, the element can be used as
 #' source or target for a [jointjs_link].
-#' @param ... Additional SVG attributes accepted by the specific SVG element
+#' @param ... Additional SVG attributes accepted by the specific SVG element.
 #' @family elements
 #' @export
 jointjs_element <- R6::R6Class(
@@ -36,6 +37,13 @@ jointjs_element <- R6::R6Class(
     #' Set the element's position relative to its parent container.
     set_position = \(x, y) {
       private$position <- list(x = x, y = y)
+      self
+    },
+    #' @description
+    #' Set the element's size
+    set_size = \(width, height) {
+      if (!missing(width))  private$size$width  <- width
+      if (!missing(height)) private$size$height <- height
       self
     },
     #' @description
@@ -103,14 +111,14 @@ jointjs_element <- R6::R6Class(
       self
     },
     #' @description
-    #' Set headerText attributes for the element.
+    #' Set `headerText` attributes for the element.
     set_headerText = function(text, color, fontFamily, fontSize, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$headerText[names(non_missing)] <- non_missing
       self
     },
     #' @description
-    #' Set bodyText attributes for the element.
+    #' Set `bodyText` attributes for the element.
     set_bodyText = function(text, color, fontFamily, fontSize, ...) {
       non_missing <- .capture_r6_inputs()
       private$attrs$bodyText[names(non_missing)] <- non_missing

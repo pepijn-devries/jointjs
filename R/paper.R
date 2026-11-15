@@ -12,7 +12,7 @@
 #' property, `quality` coefficient for image quality, `opacity` in the
 #' range of 0-1, `watermarkAngle` in degrees. If set to `FALSE` no
 #' background is drawn.
-#' @param gridSize gridSize in CSS units
+#' @param gridSize Grid size in CSS units
 #' @param drawGrid A named list specifying how to draw a grid on the paper.
 #' An element `name` can use any of these predefined grid patterns:
 #' `"dot"` (default), `"fixedDot"`, `"mesh"`, or `"doubleMesh"`.
