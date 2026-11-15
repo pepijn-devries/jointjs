@@ -1,4 +1,4 @@
-# jointjs: Interactive JointJS Diagrams
+# jointjs: Interactive 'JointJS' Diagrams
 
 Create interactive 'JointJS' diagrams. Wraps the JavaScript library
 'JointJS' to create interactive html widgets. It will let the user draw

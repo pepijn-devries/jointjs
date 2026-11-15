@@ -60,9 +60,9 @@ chunk. For an interactive example you can check out
 
 - [`dagitty`](https://www.dagitty.net/) A free web-based application and
   a matching R package used to draw, edit, and analyse causal diagrams.
-- [`diagram`](https://cran.r-project.org/web/packages/diagram/index.html)
-  Plots networks from transition matrices and plots food webs. It
-  focuses on R base plots.
+- [`diagram`](https://cran.r-project.org/package=diagram) Plots networks
+  from transition matrices and plots food webs. It focuses on R base
+  plots.
 - [`DiagrammeR`](https://rich-iannone.github.io/DiagrammeR/): Build and
   manipulate nodes and edges programmatically using R syntax or
   specialised text languages. Supports DOT language to create diagrams.

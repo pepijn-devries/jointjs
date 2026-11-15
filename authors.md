@@ -15,13 +15,13 @@
 Source:
 [`DESCRIPTION`](https://github.com/pepijn-devries/jointjs/blob/main/DESCRIPTION)
 
-de Vries P (2026). *jointjs: Interactive JointJS Diagrams*. R package
-version 0.0.0.9006, <https://pepijn-devries.github.io/jointjs/>.
+de Vries P (2026). *jointjs: Interactive 'JointJS' Diagrams*. R package
+version 0.0.1, <https://pepijn-devries.github.io/jointjs/>.
 
     @Manual{,
-      title = {jointjs: Interactive JointJS Diagrams},
+      title = {jointjs: Interactive 'JointJS' Diagrams},
       author = {Pepijn {de Vries}},
       year = {2026},
-      note = {R package version 0.0.0.9006},
+      note = {R package version 0.0.1},
       url = {https://pepijn-devries.github.io/jointjs/},
     }
