@@ -14,7 +14,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-JointJS Diagrams can use any Scaleable Vector Graphics (SVG) *TODO*
+JointJS Diagrams can use any
+[Scalable Vector Graphics (SVG)](https://www.w3.org/groups/wg/svg/)
 element to represent elements in a diagram. The same is true for links
 in a diagram. JointJS JavaScript library (and this R package) comes
 with range of predefined shapes that can be used out of the box.
@@ -71,7 +72,7 @@ jointjs_graph$new()$
       set_position(x_offset + delta, y_offset),
     
     ## Add a path:
-    jointjs_path$new('M 0 5 10 0 C 20 0 20 20 10 20 L 0 15 Z')$
+    jointjs_path$new("M 0 5 10 0 C 20 0 20 20 10 20 L 0 15 Z")$
       set_body(magnet = TRUE)$
       set_label("Path")$
       set_position(x_offset + delta, y_offset + delta),
@@ -100,7 +101,7 @@ jointjs_graph$new()$
       set_position(x_offset + 2*delta, y_offset + delta),
 
     ## Add an image:
-    jointjs_image$new("TODO img url", id = "img")$
+    jointjs_image$new("https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true", id = "img")$
       set_body(magnet = TRUE)$
       set_size(width = 90)$
       set_label("Img")$
@@ -108,7 +109,7 @@ jointjs_graph$new()$
 
     ## Add a bordered image:
     jointjs_borderedImage$new(
-      "TODO img url",
+      "https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true",
       border = list(color = "black"))$
       set_body(magnet = TRUE)$
       set_size(width = 90)$
@@ -116,7 +117,7 @@ jointjs_graph$new()$
       set_position(x_offset + 2*delta, y_offset + 3*delta),
 
     ## Add an embedded image:
-    jointjs_embeddedImage$new("TODO img url")$
+    jointjs_embeddedImage$new("https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true")$
       set_body(magnet = TRUE)$
       set_size(width = 90)$
       set_label("E img")$
@@ -124,7 +125,7 @@ jointjs_graph$new()$
     
     ## Add an inscribed image:
     jointjs_inscribedImage$new(
-      "TODO img url",
+      "https://github.com/pepijn-devries/jointjs/blob/main/man/figures/logo.png?raw=true",
       id = "iimg",
       border = list(color = "black"))$
       set_body(magnet = TRUE)$
