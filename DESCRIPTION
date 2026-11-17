@@ -1,6 +1,6 @@
 Package: jointjs
 Title: Interactive 'JointJS' Diagrams
-Version: 0.0.1
+Version: 0.0.1.0001
 Authors@R:
     c(
       person(
