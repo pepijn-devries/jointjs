@@ -2,17 +2,17 @@ dependencies:
   - name: jquery
     version: 3.7.1
     src: "htmlwidgets/lib"
-    script: jquery.min.js
+    script: jquery.js
   - name: lodash
     version: 4.17.21
     src: "htmlwidgets/lib"
-    script: lodash.min.js
+    script: lodash.js
   - name: backbone
     version: 1.5.0
     src: "htmlwidgets/lib"
-    script: backbone-min.js
+    script: backbone.js
   - name: jointjs
     version: 3.7.7
     src: "htmlwidgets/lib"
-    script: joint.min.js
-    stylesheet: joint.min.css
+    script: joint.js
+    stylesheet: joint.css
